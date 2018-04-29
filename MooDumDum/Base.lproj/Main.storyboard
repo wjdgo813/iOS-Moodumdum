@@ -40,7 +40,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Bs-2g-XIr">
-                                        <rect key="frame" x="269.66666666666669" y="39" width="18" height="18"/>
+                                        <rect key="frame" x="284.66666666666669" y="39" width="18" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="18" id="SUQ-op-H9W"/>
                                             <constraint firstAttribute="height" constant="18" id="kck-6Y-XYw"/>
@@ -63,10 +63,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oWO-4t-EZC">
-                                        <rect key="frame" x="153" y="24" width="108.66666666666669" height="31.666666666666671"/>
+                                        <rect key="frame" x="138" y="24" width="138.66666666666663" height="31.666666666666671"/>
                                         <subviews>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지나가던 영혼" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KhG-Fa-Uh0">
-                                                <rect key="frame" x="5" y="5" width="98.666666666666671" height="21.666666666666668"/>
+                                                <rect key="frame" x="20.000000000000007" y="5" width="98.666666666666686" height="21.666666666666668"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -74,9 +74,9 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.441961453" green="0.441961453" blue="0.441961453" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="KhG-Fa-Uh0" secondAttribute="trailing" constant="5" id="6HU-gJ-HtP"/>
+                                            <constraint firstAttribute="trailing" secondItem="KhG-Fa-Uh0" secondAttribute="trailing" constant="20" id="6HU-gJ-HtP"/>
                                             <constraint firstItem="KhG-Fa-Uh0" firstAttribute="top" secondItem="oWO-4t-EZC" secondAttribute="top" constant="5" id="9MX-q4-sME"/>
-                                            <constraint firstItem="KhG-Fa-Uh0" firstAttribute="leading" secondItem="oWO-4t-EZC" secondAttribute="leading" constant="5" id="gNH-Uy-UXq"/>
+                                            <constraint firstItem="KhG-Fa-Uh0" firstAttribute="leading" secondItem="oWO-4t-EZC" secondAttribute="leading" constant="20" id="gNH-Uy-UXq"/>
                                             <constraint firstAttribute="bottom" secondItem="KhG-Fa-Uh0" secondAttribute="bottom" constant="5" id="wvR-C7-GCs"/>
                                         </constraints>
                                     </view>

@@ -180,4 +180,26 @@ class MDAPIManager{
         }
     }
     
+    
+    /*
+     닉네임 변경 요청 api
+     */
+    func requestChangeNickname(nickname : String,completion: @escaping (_ result : JSON)->(Void)){
+        let parameters: Parameters = [
+            "user" : MDDeviceInfo.getCurrentDeviceID(),
+            "name" : nickname,
+            ]
+        
+        Alamofire.request("\(api_url)api/user/\(MDDeviceInfo.getCurrentDeviceID())/",method:.put,parameters:parameters).validate(statusCode: 200..<300).responseJSON { response in
+            let json = JSON(response.result.value)
+            switch response.result {
+            case .success:
+                completion(json)
+                break
+            case .failure:
+                break
+            }
+        }
+    }
+    
 }

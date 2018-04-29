@@ -35,12 +35,12 @@ class MD_NickNameViewController: UIViewController, UITextFieldDelegate{
     }
     
     @IBAction func nickSave(_ sender: Any) {
-        UserDefaults.standard.set(NickTextField.text, forKey: "nickname")
-        user.put(putparam: [
-            "user" : MDDeviceInfo.getCurrentDeviceID(),
-            "name" : self.NickTextField.text,
-        ])
-        self.dismiss(animated: true, completion: nil)
-        navigationController?.popViewController(animated: true)
+        
+        
+        MDAPIManager.sharedManager.requestChangeNickname(nickname: self.NickTextField.text!) { (result) -> (Void) in
+            UserDefaults.standard.set(self.NickTextField.text, forKey: "nickname")
+//            self.dismiss(animated: true, completion: nil)
+            self.navigationController?.popViewController(animated: true)
+        }
     }
 }

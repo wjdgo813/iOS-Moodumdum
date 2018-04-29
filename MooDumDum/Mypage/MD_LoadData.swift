@@ -24,8 +24,8 @@ extension MD_MyPageViewController {
                 if let board = dict["board_count"] as? Int {
                     self.fetchedmypost = board
                     self.myPost.text = String(self.fetchedmypost)
-                    
                 }
+                self.nickName.text = dict["name"] as? String
             }
             DispatchQueue.main.async(){
                 print("is ready for UI")

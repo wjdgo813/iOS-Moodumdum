@@ -9,13 +9,6 @@
 import Foundation
 import SwiftyJSON
 
-/*
- "count": 12,
- "next": "http://13.125.76.112:8000/api/board/search/category/3/?limit=10&offset=10",
- "previous": null,
- "results": [ ]
- */
-
 struct MDDetailCategorySet : MDListProtocol {
     var count : Int?
     var nextUrl : String?
