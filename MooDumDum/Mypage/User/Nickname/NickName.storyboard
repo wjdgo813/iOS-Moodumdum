@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UY9-LG-fCC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--닉네임-->
+        <scene sceneID="1bj-PM-az4">
+            <objects>
+                <viewController storyboardIdentifier="NVC" id="UY9-LG-fCC" customClass="MD_NickNameViewController" customModule="MooDumDum" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5S0-Mg-BsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임을 설정해 주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OtA-JR-ywh">
+                                <rect key="frame" x="20" y="90" width="225" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="8Zm-ot-xEY">
+                                <rect key="frame" x="20" y="136" width="335" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="yVx-3r-8Jf"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="doj-gB-6V8">
+                                <rect key="frame" x="313" y="90" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="doj-gB-6V8" firstAttribute="top" secondItem="iaM-aw-iQ8" secondAttribute="top" constant="70" id="3Gy-dk-Yk0"/>
+                            <constraint firstItem="OtA-JR-ywh" firstAttribute="leading" secondItem="iaM-aw-iQ8" secondAttribute="leading" constant="20" id="3id-uG-oLE"/>
+                            <constraint firstItem="doj-gB-6V8" firstAttribute="leading" secondItem="OtA-JR-ywh" secondAttribute="trailing" constant="68" id="5ez-zU-9sY"/>
+                            <constraint firstItem="iaM-aw-iQ8" firstAttribute="trailing" secondItem="8Zm-ot-xEY" secondAttribute="trailing" constant="20" id="Qcn-3H-dTy"/>
+                            <constraint firstItem="8Zm-ot-xEY" firstAttribute="top" secondItem="OtA-JR-ywh" secondAttribute="bottom" constant="25" id="TWy-3y-ys2"/>
+                            <constraint firstItem="8Zm-ot-xEY" firstAttribute="leading" secondItem="iaM-aw-iQ8" secondAttribute="leading" constant="20" id="WnL-LZ-KgK"/>
+                            <constraint firstItem="OtA-JR-ywh" firstAttribute="top" secondItem="iaM-aw-iQ8" secondAttribute="top" constant="70" id="oUT-Sa-e20"/>
+                            <constraint firstItem="iaM-aw-iQ8" firstAttribute="trailing" secondItem="doj-gB-6V8" secondAttribute="trailing" constant="20" id="pAw-ib-7Pg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iaM-aw-iQ8"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="닉네임" id="PPy-RS-BKD">
+                        <barButtonItem key="rightBarButtonItem" title="확인" id="7fA-tH-sSE">
+                            <connections>
+                                <action selector="nickSave:" destination="UY9-LG-fCC" id="Z9J-ql-bfV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="NickTextField" destination="8Zm-ot-xEY" id="aTh-PA-np9"/>
+                        <outlet property="countNick" destination="doj-gB-6V8" id="Pgz-Hu-shy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wi2-B3-jYC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2116.875" y="153.16901408450704"/>
+        </scene>
+    </scenes>
+</document>
