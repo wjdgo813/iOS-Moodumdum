@@ -17,6 +17,11 @@ class MDHomeViewController: UIViewController,UIGestureRecognizerDelegate {
     }
     
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.statusBarStyle = .default
+    }
+    
     private func addPullUpController() {
         guard
             let pullUpController = UIStoryboard(name: "Home", bundle: nil)
@@ -25,6 +30,7 @@ class MDHomeViewController: UIViewController,UIGestureRecognizerDelegate {
         
         addPullUpController(pullUpController)
     }
+    
     
     
     

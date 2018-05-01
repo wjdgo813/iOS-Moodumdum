@@ -38,8 +38,8 @@ class MDCategoryDetailViewController: MDItemViewController {
         if viewModel.numberOfItems == 0 {
             self.viewModel.loadDetailCategoryList(category_id: category_id!,sortType:sortType!)
         }
-        
-        self.navigationController?.navigationBar.tintColor = UIColor.black
+        navigationController?.navigationBar.tintColor = UIColor.black;
+        UIApplication.shared.statusBarStyle = .default
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
     }
     

@@ -48,8 +48,9 @@ class MDCardViewController: MDPullUpController,MDDraggableViewBackgroundDelegate
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        
+        if cardYPoiny == self.view.frame.height {
+            UIApplication.shared.statusBarStyle = .lightContent
+        }
     }
     
     @objc func completeWriteSubmit(){
@@ -85,6 +86,7 @@ class MDCardViewController: MDPullUpController,MDDraggableViewBackgroundDelegate
         self.navigationController?.pushViewController(vc!, animated: true)
         self.navigationController?.navigationBar.tintColor = UIColor(hexString: data.color)
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
+
     }
     
     

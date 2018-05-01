@@ -81,6 +81,8 @@ class MD_MyPageViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        navigationController?.navigationBar.tintColor = UIColor.black;
+        UIApplication.shared.statusBarStyle = .default
         dataLoad(url: myUrl)
         segmentContainer.selectedSegmentIndex = 0
         mySelfListType = .MDMySelfWriteBoard

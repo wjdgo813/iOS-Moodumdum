@@ -17,13 +17,14 @@ class MDCategoryListViewController: MDItemViewController {
         myCollectionView = collectionView
         viewModel = MDCategoryViewModel()
         super.viewDidLoad()
-        initNavigationBar()
+//        initNavigationBar()
         registerCollectionViewCell()
         NotificationCenter.default.addObserver(self, selector: #selector(reload), name: Notification.Name.CategoryViewModel.changedLists, object: nil)
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        initNavigationBar()
         if viewModel.numberOfItems == 0 {
             self.viewModel.load()
         }
@@ -37,10 +38,10 @@ class MDCategoryListViewController: MDItemViewController {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
-        navigationController?.navigationBar.tintColor = UIColor.black;
+        
         navigationController?.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
 
-        
+        navigationController?.navigationBar.tintColor = UIColor.black;
         UIApplication.shared.statusBarStyle = .default
     }
     
