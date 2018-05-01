@@ -65,8 +65,12 @@ class MD_MyPageViewController: UIViewController {
         buttonBar.backgroundColor = UIColor.black
         buttonBar.topAnchor.constraint(equalTo: segmentContainer.bottomAnchor).isActive = true
         buttonBar.heightAnchor.constraint(equalToConstant: 1).isActive = true
-        buttonBar.leftAnchor.constraint(equalTo: segmentContainer.leftAnchor).isActive = true
-        buttonBar.widthAnchor.constraint(equalTo: segmentContainer.widthAnchor, multiplier: 1 / CGFloat(segmentContainer.numberOfSegments)).isActive = true
+        
+        buttonBar.leftAnchor.constraint(equalTo: segmentContainer.leftAnchor, constant: 8).isActive = true
+        
+//        buttonBar.leftAnchor.constraint(equalTo: segmentContainer.leftAnchor).isActive = true
+        buttonBar.widthAnchor.constraint(equalToConstant: (self.view.frame.width / 2) - 8).isActive = true
+//        buttonBar.widthAnchor.constraint(equalTo: segmentContainer.widthAnchor, multiplier: 1 / CGFloat(segmentContainer.numberOfSegments)).isActive = true
         
         
         
@@ -81,8 +85,6 @@ class MD_MyPageViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        navigationController?.navigationBar.tintColor = UIColor.black;
-        UIApplication.shared.statusBarStyle = .default
         dataLoad(url: myUrl)
         segmentContainer.selectedSegmentIndex = 0
         mySelfListType = .MDMySelfWriteBoard
@@ -112,7 +114,7 @@ class MD_MyPageViewController: UIViewController {
     
     @IBAction func ChangeContainer(_ sender: UISegmentedControl) {
         UIView.animate(withDuration: 0.2) {
-            self.buttonBar.frame.origin.x = (self.segmentContainer.frame.width / CGFloat(self.segmentContainer.numberOfSegments)) * CGFloat(self.segmentContainer.selectedSegmentIndex)
+            self.buttonBar.frame.origin.x = (self.segmentContainer.frame.width / CGFloat(self.segmentContainer.numberOfSegments)) * CGFloat(self.segmentContainer.selectedSegmentIndex) + 8
         }
         if(sender.selectedSegmentIndex == 0) {
             self.mySelfListType = .MDMySelfWriteBoard

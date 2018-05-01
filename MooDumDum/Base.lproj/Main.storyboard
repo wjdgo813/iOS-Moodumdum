@@ -114,7 +114,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bSd-kL-849">
-                                <rect key="frame" x="5" y="250" width="414" height="486"/>
+                                <rect key="frame" x="5" y="262" width="414" height="474"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GG5-21-HBN">
                                     <size key="itemSize" width="50" height="50"/>
@@ -193,7 +193,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="bSd-kL-849" firstAttribute="top" secondItem="HdK-d0-Syt" secondAttribute="bottom" id="3Fe-Pg-NTb"/>
+                            <constraint firstItem="bSd-kL-849" firstAttribute="top" secondItem="HdK-d0-Syt" secondAttribute="bottom" constant="12" id="3Fe-Pg-NTb"/>
                             <constraint firstItem="bSd-kL-849" firstAttribute="bottom" secondItem="oL8-j9-Qyb" secondAttribute="bottom" id="3YK-9Y-NtN"/>
                             <constraint firstItem="bSd-kL-849" firstAttribute="trailing" secondItem="oL8-j9-Qyb" secondAttribute="trailing" constant="5" id="Tev-oG-w34"/>
                             <constraint firstItem="HdK-d0-Syt" firstAttribute="leading" secondItem="oL8-j9-Qyb" secondAttribute="leading" id="aY8-4q-fK6"/>
