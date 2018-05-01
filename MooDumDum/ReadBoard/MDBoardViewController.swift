@@ -54,11 +54,17 @@ class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate{
         tapGestureAdd()
     }
     
+    
+    
+    
     func initNavigationBar(){
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
     }
+    
+    
+    
     
     func drawSendCommentView(){
         inputTextView.delegate = self
@@ -70,6 +76,12 @@ class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate{
         sendButton.layer.cornerRadius = 10
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        UIApplication.shared.statusBarStyle = .lightContent
+    }
+    
+    
     
     func tapGestureAdd(){
         let doubleTapGestureRecog = UITapGestureRecognizer(target: self, action: #selector(handleDoubleTapGesture(recognizer:)))
@@ -83,6 +95,9 @@ class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate{
         NotificationCenter.default.addObserver(self, selector: #selector(onUIKeyboardWillHideNotification(noti:)), name: .UIKeyboardWillHide, object: nil)
     }
     
+    
+    
+    
     private func addPullUpController() {
         pullUpController = UIStoryboard(name: "Board", bundle: nil)
                    .instantiateViewController(withIdentifier: "MDCommentViewController") as? MDCommentViewController
@@ -92,8 +107,12 @@ class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate{
         addPullUpController(pullUpController!)
         self.view.bringSubview(toFront: self.commentView)
         self.view.bringSubview(toFront: self.commentBackForX)
+        self.view.bringSubview(toFront: self.likeMotionView)
         pullUpController?.tableView.isScrollEnabled = false;
     }
+    
+    
+    
     
     func requestBoardInfo(){
         if let boardId = data?.id {
@@ -106,6 +125,10 @@ class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate{
             }
         }
     }
+    
+    
+    
+    
     
     func refreshPrevInfo(boardData:MDDetailCategoryData){
         if self.prevView is DraggableView {
@@ -121,9 +144,14 @@ class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate{
         requestBoardInfo()
     }
     
+    
+    
+    
     @objc func handleDoubleTapGesture(recognizer : UITapGestureRecognizer){
         pressedLikeButton(boardData: data!)
     }
+    
+    
     
     
     @objc func onUIKeyboardWillShowNotification(noti : Notification){
@@ -134,10 +162,16 @@ class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate{
             self.commentViewBottom.constant = -keyboardHeight
         }
     }
+    
+    
+    
 
     @objc func onUIKeyboardWillHideNotification(noti : Notification){
         self.commentViewBottom.constant = 0
     }
+    
+    
+    
     
     @IBAction func pressedSendButton(_ sender: Any) {
         
@@ -166,19 +200,21 @@ class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate{
             
         }
         
-        
-        
         inputTextView.textColor = UIColor(hexString: "#979797")
         inputTextView.text = "가까운 영혼에게 위로 한 마디.."
         inputTextView.resignFirstResponder()
         
     }
     
+    
+    
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         super.view.endEditing(true)
     }
 }
+
 
 extension MDBoardViewController : MDCommentViewControllerDelegate{
     func pressedLikeButton(boardData:MDDetailCategoryData){

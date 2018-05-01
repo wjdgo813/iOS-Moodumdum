@@ -47,6 +47,9 @@
 		A1673751205FE90500DCE79A /* MDCategoryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1673750205FE90500DCE79A /* MDCategoryDetailViewModel.swift */; };
 		A1673753205FE92700DCE79A /* MDCategoryDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1673752205FE92700DCE79A /* MDCategoryDetailModel.swift */; };
 		A17E36882036AAA50077F486 /* MDHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC6EEB20234B5500DC9181 /* MDHomeViewController.swift */; };
+		A1AA45C62098437100F3EBF5 /* MDWirteCategorySlideCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AA45C42098437100F3EBF5 /* MDWirteCategorySlideCell.swift */; };
+		A1AA45C72098437100F3EBF5 /* MDWirteCategorySlideCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1AA45C52098437100F3EBF5 /* MDWirteCategorySlideCell.xib */; };
+		A1AA45CB209846FB00F3EBF5 /* MDWriteSlideCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AA45CA209846FB00F3EBF5 /* MDWriteSlideCollectionViewController.swift */; };
 		A1B75C98203D9385008B3EBF /* MDDeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B75C97203D9385008B3EBF /* MDDeviceInfo.swift */; };
 		A1B75CA2203DD15A008B3EBF /* MDItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B75CA1203DD15A008B3EBF /* MDItemViewController.swift */; };
 		A1B75CA4203DD26E008B3EBF /* MDCategoryItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B75CA3203DD26E008B3EBF /* MDCategoryItemViewModel.swift */; };
@@ -154,6 +157,9 @@
 		A15B6C35208346B300954831 /* MDDraggableViewBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDDraggableViewBackground.swift; sourceTree = "<group>"; };
 		A1673750205FE90500DCE79A /* MDCategoryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDCategoryDetailViewModel.swift; sourceTree = "<group>"; };
 		A1673752205FE92700DCE79A /* MDCategoryDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDCategoryDetailModel.swift; sourceTree = "<group>"; };
+		A1AA45C42098437100F3EBF5 /* MDWirteCategorySlideCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDWirteCategorySlideCell.swift; sourceTree = "<group>"; };
+		A1AA45C52098437100F3EBF5 /* MDWirteCategorySlideCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MDWirteCategorySlideCell.xib; sourceTree = "<group>"; };
+		A1AA45CA209846FB00F3EBF5 /* MDWriteSlideCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDWriteSlideCollectionViewController.swift; sourceTree = "<group>"; };
 		A1B75C97203D9385008B3EBF /* MDDeviceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDDeviceInfo.swift; sourceTree = "<group>"; };
 		A1B75CA1203DD15A008B3EBF /* MDItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDItemViewController.swift; sourceTree = "<group>"; };
 		A1B75CA3203DD26E008B3EBF /* MDCategoryItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDCategoryItemViewModel.swift; sourceTree = "<group>"; };
@@ -281,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				A1F3BF8D208CBED000E8F861 /* PickPhoto */,
+				A1AA45C32098433D00F3EBF5 /* WriteSlideCollectionView */,
 				356B0F7C2024C4C700218231 /* MD_WriteViewController.swift */,
 				35428F4A203AB435002DF28E /* MD_PhotoViewController.swift */,
 				35CBE5462086F3A100C76C69 /* MD_UrlString.swift */,
@@ -346,6 +353,16 @@
 				A1673752205FE92700DCE79A /* MDCategoryDetailModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		A1AA45C32098433D00F3EBF5 /* WriteSlideCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				A1AA45C42098437100F3EBF5 /* MDWirteCategorySlideCell.swift */,
+				A1AA45C52098437100F3EBF5 /* MDWirteCategorySlideCell.xib */,
+				A1AA45CA209846FB00F3EBF5 /* MDWriteSlideCollectionViewController.swift */,
+			);
+			path = WriteSlideCollectionView;
 			sourceTree = "<group>";
 		};
 		A1B75C94203D8F16008B3EBF /* Home */ = {
@@ -724,6 +741,7 @@
 				A13C5F762036703C006E5485 /* Home.storyboard in Resources */,
 				BADC6EF120234B5500DC9181 /* Assets.xcassets in Resources */,
 				BADC6EEF20234B5500DC9181 /* Main.storyboard in Resources */,
+				A1AA45C72098437100F3EBF5 /* MDWirteCategorySlideCell.xib in Resources */,
 				A1C60F76202F671C00E858A2 /* MDCategoryList.storyboard in Resources */,
 				A1263D9F207E3E24005E15CF /* moveSplash.gif in Resources */,
 				354D6A18206AC0AE0009C7AF /* Write.storyboard in Resources */,
@@ -938,6 +956,7 @@
 				A12936D4205FFA440087A074 /* MDDetailCategorySet.swift in Sources */,
 				A12936E3206021510087A074 /* MDBoardViewController.swift in Sources */,
 				A12936D1205FF7050087A074 /* MDDetailCategoryData.swift in Sources */,
+				A1AA45CB209846FB00F3EBF5 /* MDWriteSlideCollectionViewController.swift in Sources */,
 				A1B75CB1203DE678008B3EBF /* MDCategoryCollectionViewCell.swift in Sources */,
 				A1F3BF8F208CBEEC00E8F861 /* MDPickPhotoData.swift in Sources */,
 				A1C60F68202F109E00E858A2 /* OverlayView.m in Sources */,
@@ -971,6 +990,7 @@
 				BAD0E578203E6D7A00D91725 /* MDCategoryItemCellViewModel.swift in Sources */,
 				A1C60F7C202F67CD00E858A2 /* MDCategoryListViewController.swift in Sources */,
 				A15B6C30208268A300954831 /* MDUserAPIData.swift in Sources */,
+				A1AA45C62098437100F3EBF5 /* MDWirteCategorySlideCell.swift in Sources */,
 				A1F3BF94208CC1CF00E8F861 /* MDPickPhotoCell.swift in Sources */,
 				A12936E9206026300087A074 /* MDCommentViewController.swift in Sources */,
 				A12936DD20600BAF0087A074 /* MDCategoryDetailCollectionViewCell.swift in Sources */,

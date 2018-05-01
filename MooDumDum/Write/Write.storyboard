@@ -27,86 +27,52 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no"/>
                             </textView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" bounces="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bF-3Z-I7B">
-                                <rect key="frame" x="0.0" y="690" width="414" height="46"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Uy-gU-iSA">
+                                <rect key="frame" x="0.0" y="688" width="414" height="48"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1bJ-fZ-xQ7">
-                                        <rect key="frame" x="0.0" y="0.0" width="550" height="46"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="255" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5WI-bn-jeN">
-                                                <rect key="frame" x="11" y="8" width="74" height="30"/>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Fkn-9J-W6F">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="U4L-hj-hwv">
+                                            <size key="itemSize" width="50" height="50"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="EA0-Q1-u2I">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="relationshipUnact"/>
-                                                <connections>
-                                                    <action selector="Button1:" destination="QwO-Yv-kRa" eventType="touchUpInside" id="kzr-Mf-F7Q"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ff6-6e-iua">
-                                                <rect key="frame" x="94" y="8" width="74" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="familyUnact"/>
-                                                <connections>
-                                                    <action selector="Button2:" destination="QwO-Yv-kRa" eventType="touchUpInside" id="4Ze-rJ-2Lm"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLm-e8-P9u">
-                                                <rect key="frame" x="177" y="8" width="74" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="jobUnact"/>
-                                                <connections>
-                                                    <action selector="Button3:" destination="QwO-Yv-kRa" eventType="touchUpInside" id="XWI-0J-x8q"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIg-X1-H95">
-                                                <rect key="frame" x="260" y="8" width="74" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="selfEsteemUnact"/>
-                                                <connections>
-                                                    <action selector="Button4:" destination="QwO-Yv-kRa" eventType="touchUpInside" id="vdm-KU-Ixn"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FvK-QC-cg8">
-                                                <rect key="frame" x="343" y="8" width="74" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="darkHistoryUnact"/>
-                                                <connections>
-                                                    <action selector="Button5:" destination="QwO-Yv-kRa" eventType="touchUpInside" id="TWL-1u-nXB"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OAb-4d-5Wa">
-                                                <rect key="frame" x="426" y="8" width="74" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="etc_unact"/>
-                                                <connections>
-                                                    <action selector="Button6:" destination="QwO-Yv-kRa" eventType="touchUpInside" id="gOM-0c-5Sz"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="550" id="G4Q-FD-RBV"/>
-                                        </constraints>
-                                    </view>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </view>
+                                            </collectionViewCell>
+                                        </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="QwO-Yv-kRa" id="5vL-RF-9Tg"/>
+                                            <outlet property="delegate" destination="QwO-Yv-kRa" id="1dU-yN-eve"/>
+                                        </connections>
+                                    </collectionView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="1" green="0.044980095079999997" blue="0.1399733074" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstItem="1bJ-fZ-xQ7" firstAttribute="leading" secondItem="4bF-3Z-I7B" secondAttribute="leading" id="1bt-d6-kTE"/>
-                                    <constraint firstAttribute="trailing" secondItem="1bJ-fZ-xQ7" secondAttribute="trailing" constant="-136" id="Xyq-pg-zw9"/>
-                                    <constraint firstAttribute="bottom" secondItem="1bJ-fZ-xQ7" secondAttribute="bottom" id="dWs-1N-8VZ"/>
-                                    <constraint firstItem="1bJ-fZ-xQ7" firstAttribute="centerY" secondItem="4bF-3Z-I7B" secondAttribute="centerY" id="mWD-W6-tHf"/>
-                                    <constraint firstAttribute="height" constant="46" id="mp7-WW-BNF"/>
-                                    <constraint firstItem="1bJ-fZ-xQ7" firstAttribute="top" secondItem="4bF-3Z-I7B" secondAttribute="top" id="wVI-8W-ctf"/>
+                                    <constraint firstItem="Fkn-9J-W6F" firstAttribute="leading" secondItem="7Uy-gU-iSA" secondAttribute="leading" id="Y8H-CR-dih"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fkn-9J-W6F" secondAttribute="trailing" id="b1z-eK-t4k"/>
+                                    <constraint firstAttribute="bottom" secondItem="Fkn-9J-W6F" secondAttribute="bottom" id="cMc-2r-xQX"/>
+                                    <constraint firstItem="Fkn-9J-W6F" firstAttribute="top" secondItem="7Uy-gU-iSA" secondAttribute="top" id="iER-Tf-4PP"/>
+                                    <constraint firstAttribute="height" constant="48" id="sXj-Q7-Gzd"/>
                                 </constraints>
-                            </scrollView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="xmd-DC-nLi" firstAttribute="top" secondItem="cki-Wd-age" secondAttribute="top" constant="20" id="3st-zJ-Zhs"/>
                             <constraint firstItem="cki-Wd-age" firstAttribute="trailing" secondItem="xmd-DC-nLi" secondAttribute="trailing" constant="20" id="B5K-YA-rwX"/>
-                            <constraint firstItem="4bF-3Z-I7B" firstAttribute="leading" secondItem="cki-Wd-age" secondAttribute="leading" id="OhV-Kh-QNL"/>
                             <constraint firstItem="xmd-DC-nLi" firstAttribute="leading" secondItem="cki-Wd-age" secondAttribute="leading" constant="20" id="PZf-Vl-V4I"/>
-                            <constraint firstItem="cki-Wd-age" firstAttribute="trailing" secondItem="4bF-3Z-I7B" secondAttribute="trailing" id="SId-lq-24c"/>
-                            <constraint firstItem="cki-Wd-age" firstAttribute="bottom" secondItem="4bF-3Z-I7B" secondAttribute="bottom" id="lrG-n1-p9g"/>
+                            <constraint firstItem="cki-Wd-age" firstAttribute="trailing" secondItem="7Uy-gU-iSA" secondAttribute="trailing" id="VNu-dK-105"/>
+                            <constraint firstAttribute="bottom" secondItem="7Uy-gU-iSA" secondAttribute="bottom" id="qiP-Gs-NUc"/>
+                            <constraint firstItem="7Uy-gU-iSA" firstAttribute="leading" secondItem="cki-Wd-age" secondAttribute="leading" id="wpT-aw-b0G"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cki-Wd-age"/>
                     </view>
@@ -121,16 +87,10 @@
                     </navigationItem>
                     <connections>
                         <outlet property="WriteText" destination="xmd-DC-nLi" id="AI0-bq-akq"/>
-                        <outlet property="bottomMargin" destination="lrG-n1-p9g" id="kVv-AU-24d"/>
-                        <outlet property="btn1" destination="5WI-bn-jeN" id="Yxw-X8-XTR"/>
-                        <outlet property="btn2" destination="ff6-6e-iua" id="3hx-Wz-A2l"/>
-                        <outlet property="btn3" destination="gLm-e8-P9u" id="VF3-Sb-dou"/>
-                        <outlet property="btn4" destination="hIg-X1-H95" id="Yi9-Ib-hOC"/>
-                        <outlet property="btn5" destination="FvK-QC-cg8" id="plG-aT-mOb"/>
-                        <outlet property="btn6" destination="OAb-4d-5Wa" id="hi7-FV-Ea2"/>
                         <outlet property="buttonNext" destination="ajw-zr-LLi" id="0tN-nc-r4M"/>
-                        <outlet property="buttonView" destination="1bJ-fZ-xQ7" id="ZMr-yV-mav"/>
-                        <outlet property="scrollView" destination="4bF-3Z-I7B" id="xjQ-ft-Azm"/>
+                        <outlet property="categortCollectionview" destination="Fkn-9J-W6F" id="nBi-6N-gE8"/>
+                        <outlet property="categoryContainerView" destination="7Uy-gU-iSA" id="PGA-px-LN5"/>
+                        <outlet property="containerViewBottomConst" destination="qiP-Gs-NUc" id="naS-kI-f5n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9gZ-TA-oco" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -309,12 +269,4 @@
             <point key="canvasLocation" x="2883" y="1673"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="darkHistoryUnact" width="74" height="30"/>
-        <image name="etc_unact" width="74" height="30"/>
-        <image name="familyUnact" width="74" height="30"/>
-        <image name="jobUnact" width="74" height="30"/>
-        <image name="relationshipUnact" width="74" height="30"/>
-        <image name="selfEsteemUnact" width="74" height="30"/>
-    </resources>
 </document>
