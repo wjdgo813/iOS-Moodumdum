@@ -1172,18 +1172,18 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 594TR8CRP9;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MooDumDum/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nexters.MooDumDum;
 				PRODUCT_MODULE_NAME = MooDumDum;
 				PRODUCT_NAME = MooDumDum;
-				PROVISIONING_PROFILE = "c9128529-111e-4a8b-9db8-27527161e964";
-				PROVISIONING_PROFILE_SPECIFIER = MoodumdumProfile;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MooDumdum/MooDumdum-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1192,8 +1192,8 @@
 			baseConfigurationReference = 371195F30295A97495135176 /* Pods-MooDumDum.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 594TR8CRP9;
@@ -1203,11 +1203,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nexters.MooDumDum;
 				PRODUCT_MODULE_NAME = MooDumDum;
 				PRODUCT_NAME = MooDumDum;
-				PROVISIONING_PROFILE = "c9128529-111e-4a8b-9db8-27527161e964";
-				PROVISIONING_PROFILE_SPECIFIER = MoodumdumProfile;
+				PROVISIONING_PROFILE = "9aef9079-31d5-40f3-9924-ed64a88e8f85";
+				PROVISIONING_PROFILE_SPECIFIER = "Moodumdum-storeDistrib";
 				SWIFT_OBJC_BRIDGING_HEADER = "MooDumdum/MooDumdum-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
