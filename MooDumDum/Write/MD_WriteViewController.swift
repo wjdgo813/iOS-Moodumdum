@@ -32,6 +32,7 @@ class MD_WriteViewController: UIViewController,UITextViewDelegate {
         let leftItem = UIBarButtonItem(image: UIImage(named: "cancel"), style: .plain , target: self, action: #selector(exitButton))
         self.navigationItem.leftBarButtonItem = leftItem
         UIApplication.shared.statusBarStyle = .default
+        self.navigationController?.navigationBar.tintColor = UIColor.black;
         initPlaceholderLabel()
         
         self.categortCollectionview.register(UINib(nibName: "MDWirteCategorySlideCell", bundle: nil), forCellWithReuseIdentifier: "MDWirteCategorySlideCell")
