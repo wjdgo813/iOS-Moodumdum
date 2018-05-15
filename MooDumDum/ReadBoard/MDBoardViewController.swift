@@ -92,6 +92,8 @@ class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate{
         self.view.addGestureRecognizer(doubleTapGestureRecog)
     }
     
+    
+    
     func registerNotification(){
         NotificationCenter.default.addObserver(self, selector:  #selector(onUIKeyboardWillShowNotification(noti:)), name: .UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(onUIKeyboardWillHideNotification(noti:)), name: .UIKeyboardWillHide, object: nil)
