@@ -31,6 +31,8 @@ class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.hideKeyBoardAddGesture()
+        
         backgroundImageView.kf.setImage(with: data?.image_url)
         content.text = data?.description
         content.textColor = UIColor(hexString:(data?.color)!)
@@ -211,7 +213,7 @@ class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate{
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        super.view.endEditing(true)
+        self.view.endEditing(true)
     }
 }
 

@@ -114,6 +114,10 @@ class MDCommentViewController: MDPullUpController {
         }
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        self.view.endEditing(true)
+    }
     
     //MARK: overide PullUpController
     override var pullUpControllerPreferredSize: CGSize {

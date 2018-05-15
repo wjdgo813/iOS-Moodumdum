@@ -78,6 +78,7 @@
 		A1F3BF99208CE28500E8F861 /* MDCommentEmptyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1F3BF97208CE28500E8F861 /* MDCommentEmptyCell.xib */; };
 		BA7AD7442060E38E00306CBF /* MDDraggableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7AD7432060E38D00306CBF /* MDDraggableModel.swift */; };
 		BA7AD746206118E500306CBF /* DraggableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA7AD745206118E500306CBF /* DraggableView.xib */; };
+		BA956A6820AAF34000F3E604 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA956A6720AAF34000F3E604 /* UIViewControllerExtension.swift */; };
 		BAA0B52B2061FFDF00C82A84 /* MDCommentInfoSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA0B52A2061FFDF00C82A84 /* MDCommentInfoSet.swift */; };
 		BAA0B52E206206AC00C82A84 /* MDCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA0B52C206206AC00C82A84 /* MDCommentTableViewCell.swift */; };
 		BAA0B52F206206AC00C82A84 /* MDCommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAA0B52D206206AC00C82A84 /* MDCommentTableViewCell.xib */; };
@@ -192,6 +193,7 @@
 		A8EB5CA9609AEC5F6A78B7D2 /* Pods-MooDumDumTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MooDumDumTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MooDumDumTests/Pods-MooDumDumTests.release.xcconfig"; sourceTree = "<group>"; };
 		BA7AD7432060E38D00306CBF /* MDDraggableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDDraggableModel.swift; sourceTree = "<group>"; };
 		BA7AD745206118E500306CBF /* DraggableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DraggableView.xib; sourceTree = "<group>"; };
+		BA956A6720AAF34000F3E604 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		BAA0B52A2061FFDF00C82A84 /* MDCommentInfoSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDCommentInfoSet.swift; sourceTree = "<group>"; };
 		BAA0B52C206206AC00C82A84 /* MDCommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDCommentTableViewCell.swift; sourceTree = "<group>"; };
 		BAA0B52D206206AC00C82A84 /* MDCommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MDCommentTableViewCell.xib; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 			children = (
 				A1B75CA6203DDB60008B3EBF /* NoficationExtension.swift */,
 				A12936E6206024C60087A074 /* UIColorExtension.swift */,
+				BA956A6720AAF34000F3E604 /* UIViewControllerExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -971,6 +974,7 @@
 				BAD0E572203E654200D91725 /* MDCategoryData.swift in Sources */,
 				A1B75CA4203DD26E008B3EBF /* MDCategoryItemViewModel.swift in Sources */,
 				A15B6C3420833BBE00954831 /* MDAPIManager.swift in Sources */,
+				BA956A6820AAF34000F3E604 /* UIViewControllerExtension.swift in Sources */,
 				3564DB1E2024382100FD9C7E /* MD_MyPageViewController.swift in Sources */,
 				A12936E7206024C60087A074 /* UIColorExtension.swift in Sources */,
 				A1F3BF98208CE28500E8F861 /* MDCommentEmptyCell.swift in Sources */,
