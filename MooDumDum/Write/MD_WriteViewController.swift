@@ -37,7 +37,7 @@ class MD_WriteViewController: UIViewController,UITextViewDelegate {
         
         self.categortCollectionview.register(UINib(nibName: "MDWirteCategorySlideCell", bundle: nil), forCellWithReuseIdentifier: "MDWirteCategorySlideCell")
         
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(updateCategoryNumber(notification:)), name: NSNotification.Name(rawValue: "updateCategoryNumber"), object: nil)
     }
     

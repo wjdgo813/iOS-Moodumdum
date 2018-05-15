@@ -161,7 +161,11 @@ class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate{
         if let keyboardFrame: NSValue = noti.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue {
             let keyboardRectangle = keyboardFrame.cgRectValue
             let keyboardHeight = keyboardRectangle.height
-            self.commentViewBottom.constant = -keyboardHeight
+            if MDDeviceInfo.isIphoneX() {
+                self.commentViewBottom.constant = -keyboardHeight + 33
+            }else{
+                self.commentViewBottom.constant = -keyboardHeight
+            }
         }
     }
     

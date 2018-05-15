@@ -65,14 +65,8 @@ class MD_MyPageViewController: UIViewController {
         buttonBar.backgroundColor = UIColor.black
         buttonBar.topAnchor.constraint(equalTo: segmentContainer.bottomAnchor).isActive = true
         buttonBar.heightAnchor.constraint(equalToConstant: 1).isActive = true
-        
         buttonBar.leftAnchor.constraint(equalTo: segmentContainer.leftAnchor, constant: 8).isActive = true
-        
-//        buttonBar.leftAnchor.constraint(equalTo: segmentContainer.leftAnchor).isActive = true
         buttonBar.widthAnchor.constraint(equalToConstant: (self.view.frame.width / 2) - 8).isActive = true
-//        buttonBar.widthAnchor.constraint(equalTo: segmentContainer.widthAnchor, multiplier: 1 / CGFloat(segmentContainer.numberOfSegments)).isActive = true
-        
-        
         
         if MDDeviceInfo.isIphoneX() {
             self.button.setImage(UIImage(named: "writeButtonForX"), for: .normal)
