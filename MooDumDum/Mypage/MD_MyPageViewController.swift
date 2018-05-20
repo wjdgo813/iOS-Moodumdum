@@ -14,6 +14,8 @@ enum MDMySelfListType {
     case MDMySelfLikeBoard
 }
 
+
+
 class MD_MyPageViewController: UIViewController {
     
     @IBOutlet weak var button: UIButton!
@@ -23,6 +25,7 @@ class MD_MyPageViewController: UIViewController {
     @IBOutlet weak var myBoardCollectionView: UICollectionView!
     @IBOutlet weak var nickName: UILabel!
     @IBOutlet weak var segmentContainer: UISegmentedControl!
+    
     
     var fetchedmypost : Int = 0
     var fetchedreceived : Int = 0
@@ -42,6 +45,8 @@ class MD_MyPageViewController: UIViewController {
         self.requestMyBoardList(listType: self.mySelfListType!)
         
         self.myBoardCollectionView?.register(UINib(nibName: "MDMyBoardCell", bundle: nil), forCellWithReuseIdentifier: "MDMyBoardCell")
+        self.myBoardCollectionView?.register(UINib(nibName: "MDMyBoardEmptyCell", bundle: nil), forCellWithReuseIdentifier: "MDMyBoardEmptyCell")
+        self.myBoardCollectionView?.register(UINib(nibName: "MDMySelfLikeEmptyCell", bundle: nil), forCellWithReuseIdentifier: "MDMySelfLikeEmptyCell")
         
         nickView.layer.cornerRadius = 15
         nickView.clipsToBounds = true
@@ -188,10 +193,28 @@ class MD_MyPageViewController: UIViewController {
 extension MD_MyPageViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard self.data != nil else{ return 0 }
+        if self.data?.count == 0 {
+            return 1
+        }
         return (self.data?.count)!
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if self.data?.count == 0 {
+            if self.mySelfListType == .MDMySelfWriteBoard {
+                
+                let cell : MDMyBoardEmptyCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MDMyBoardEmptyCell", for: indexPath) as! MDMyBoardEmptyCell
+                return cell
+                
+            }else if self.mySelfListType == .MDMySelfLikeBoard{
+                
+                let cell : MDMySelfLikeEmptyCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MDMySelfLikeEmptyCell", for: indexPath) as! MDMySelfLikeEmptyCell
+                return cell
+            }
+            
+            
+        }
+        
         let cell : MDMyBoardCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MDMyBoardCell", for: indexPath) as! MDMyBoardCell
         cell.backgroundImageView.kf.setImage(with: self.data?.categoryDetailList[indexPath.row].image_url)
         cell.descriptionLabel.text = self.data?.categoryDetailList[indexPath.row].description
@@ -205,6 +228,10 @@ extension MD_MyPageViewController : UICollectionViewDataSource {
 
 extension MD_MyPageViewController : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if self.data?.count == 0 {
+            return CGSize(width: self.view.frame.size.width, height: 200)
+        }
+        
         let cellWidth = (self.view.frame.size.width) / 2 - 5
         return CGSize(width: cellWidth, height: cellWidth)
     }
@@ -212,6 +239,8 @@ extension MD_MyPageViewController : UICollectionViewDelegateFlowLayout {
 
 extension MD_MyPageViewController : UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard self.data?.count != 0 else { return }
+        
         let boardData = self.data?.categoryDetailList[indexPath.row]
         let sb = UIStoryboard(name: "Board", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "MDBoardViewController") as? MDBoardViewController

@@ -46,6 +46,10 @@
 		A15B6C36208346B300954831 /* MDDraggableViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15B6C35208346B300954831 /* MDDraggableViewBackground.swift */; };
 		A1673751205FE90500DCE79A /* MDCategoryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1673750205FE90500DCE79A /* MDCategoryDetailViewModel.swift */; };
 		A1673753205FE92700DCE79A /* MDCategoryDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1673752205FE92700DCE79A /* MDCategoryDetailModel.swift */; };
+		A17E0C9220B1D2D600D11A68 /* MDMyBoardEmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17E0C9020B1D2D600D11A68 /* MDMyBoardEmptyCell.swift */; };
+		A17E0C9320B1D2D600D11A68 /* MDMyBoardEmptyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A17E0C9120B1D2D600D11A68 /* MDMyBoardEmptyCell.xib */; };
+		A17E0C9620B1D55F00D11A68 /* MDMySelfLikeEmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17E0C9420B1D55F00D11A68 /* MDMySelfLikeEmptyCell.swift */; };
+		A17E0C9720B1D55F00D11A68 /* MDMySelfLikeEmptyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A17E0C9520B1D55F00D11A68 /* MDMySelfLikeEmptyCell.xib */; };
 		A17E36882036AAA50077F486 /* MDHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC6EEB20234B5500DC9181 /* MDHomeViewController.swift */; };
 		A1AA45C62098437100F3EBF5 /* MDWirteCategorySlideCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AA45C42098437100F3EBF5 /* MDWirteCategorySlideCell.swift */; };
 		A1AA45C72098437100F3EBF5 /* MDWirteCategorySlideCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1AA45C52098437100F3EBF5 /* MDWirteCategorySlideCell.xib */; };
@@ -158,6 +162,10 @@
 		A15B6C35208346B300954831 /* MDDraggableViewBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDDraggableViewBackground.swift; sourceTree = "<group>"; };
 		A1673750205FE90500DCE79A /* MDCategoryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDCategoryDetailViewModel.swift; sourceTree = "<group>"; };
 		A1673752205FE92700DCE79A /* MDCategoryDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDCategoryDetailModel.swift; sourceTree = "<group>"; };
+		A17E0C9020B1D2D600D11A68 /* MDMyBoardEmptyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDMyBoardEmptyCell.swift; sourceTree = "<group>"; };
+		A17E0C9120B1D2D600D11A68 /* MDMyBoardEmptyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MDMyBoardEmptyCell.xib; sourceTree = "<group>"; };
+		A17E0C9420B1D55F00D11A68 /* MDMySelfLikeEmptyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDMySelfLikeEmptyCell.swift; sourceTree = "<group>"; };
+		A17E0C9520B1D55F00D11A68 /* MDMySelfLikeEmptyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MDMySelfLikeEmptyCell.xib; sourceTree = "<group>"; };
 		A1AA45C42098437100F3EBF5 /* MDWirteCategorySlideCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDWirteCategorySlideCell.swift; sourceTree = "<group>"; };
 		A1AA45C52098437100F3EBF5 /* MDWirteCategorySlideCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MDWirteCategorySlideCell.xib; sourceTree = "<group>"; };
 		A1AA45CA209846FB00F3EBF5 /* MDWriteSlideCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDWriteSlideCollectionViewController.swift; sourceTree = "<group>"; };
@@ -307,6 +315,10 @@
 				A126040320961F2100C14ADA /* MDMyBoardCell.swift */,
 				A126040420961F2100C14ADA /* MDMyBoardCell.xib */,
 				3564DB1D2024382100FD9C7E /* MD_MyPageViewController.swift */,
+				A17E0C9420B1D55F00D11A68 /* MDMySelfLikeEmptyCell.swift */,
+				A17E0C9520B1D55F00D11A68 /* MDMySelfLikeEmptyCell.xib */,
+				A17E0C9020B1D2D600D11A68 /* MDMyBoardEmptyCell.swift */,
+				A17E0C9120B1D2D600D11A68 /* MDMyBoardEmptyCell.xib */,
 				A126040120961EDE00C14ADA /* MD_LoadData.swift */,
 			);
 			path = Mypage;
@@ -758,8 +770,10 @@
 				BADC6EEF20234B5500DC9181 /* Main.storyboard in Resources */,
 				A1B75CB2203DE678008B3EBF /* MDCategoryCollectionViewCell.xib in Resources */,
 				A12936F12062AA8A0087A074 /* MDHeaderCommentTableViewCell.xib in Resources */,
+				A17E0C9320B1D2D600D11A68 /* MDMyBoardEmptyCell.xib in Resources */,
 				BAA0B52F206206AC00C82A84 /* MDCommentTableViewCell.xib in Resources */,
 				BA7AD746206118E500306CBF /* DraggableView.xib in Resources */,
+				A17E0C9720B1D55F00D11A68 /* MDMySelfLikeEmptyCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -985,6 +999,7 @@
 				A1F3BF8C208CBA9500E8F861 /* MDPickPhotoViewController.swift in Sources */,
 				A1B75CAB203DDEA8008B3EBF /* MDCategoryModel.swift in Sources */,
 				35FBA73420596BA300BD2119 /* MD_PhotoCell.swift in Sources */,
+				A17E0C9620B1D55F00D11A68 /* MDMySelfLikeEmptyCell.swift in Sources */,
 				A15B6C36208346B300954831 /* MDDraggableViewBackground.swift in Sources */,
 				BAD0E570203E644E00D91725 /* MDListProtocol.swift in Sources */,
 				BADC6EEA20234B5500DC9181 /* AppDelegate.swift in Sources */,
@@ -994,6 +1009,7 @@
 				BAD0E578203E6D7A00D91725 /* MDCategoryItemCellViewModel.swift in Sources */,
 				A1C60F7C202F67CD00E858A2 /* MDCategoryListViewController.swift in Sources */,
 				A15B6C30208268A300954831 /* MDUserAPIData.swift in Sources */,
+				A17E0C9220B1D2D600D11A68 /* MDMyBoardEmptyCell.swift in Sources */,
 				A1AA45C62098437100F3EBF5 /* MDWirteCategorySlideCell.swift in Sources */,
 				A1F3BF94208CC1CF00E8F861 /* MDPickPhotoCell.swift in Sources */,
 				A12936E9206026300087A074 /* MDCommentViewController.swift in Sources */,
