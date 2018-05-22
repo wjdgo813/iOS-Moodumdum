@@ -76,7 +76,38 @@
                             </view>
                             <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Xv-OO-T2P">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nCl-BD-7hO">
+                                        <rect key="frame" x="62.666666666666657" y="0.0" width="249.99999999999997" height="130"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="2Jg-1d-vL4"/>
+                                            <constraint firstAttribute="height" constant="130" id="Zpu-23-7PD"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="etz-Dx-g7S">
+                                        <rect key="frame" x="144" y="445.66666666666669" width="87.333333333333314" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="87.5" id="gFq-Bs-seS"/>
+                                            <constraint firstAttribute="height" constant="25" id="tGa-Xj-JXQ"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7b1-pr-Nuy">
+                                        <rect key="frame" x="150.33333333333334" y="268" width="75" height="137.66666666666663"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="1SE-4M-Xcn"/>
+                                            <constraint firstAttribute="height" constant="137.5" id="Tqp-Vb-qJK"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="nCl-BD-7hO" firstAttribute="top" secondItem="2Xv-OO-T2P" secondAttribute="top" id="28r-ZL-vUj"/>
+                                    <constraint firstItem="nCl-BD-7hO" firstAttribute="centerX" secondItem="2Xv-OO-T2P" secondAttribute="centerX" id="PNm-yB-9v3"/>
+                                    <constraint firstItem="etz-Dx-g7S" firstAttribute="centerX" secondItem="2Xv-OO-T2P" secondAttribute="centerX" id="Rbf-SK-21j"/>
+                                    <constraint firstItem="7b1-pr-Nuy" firstAttribute="top" secondItem="nCl-BD-7hO" secondAttribute="bottom" constant="138" id="TAn-m1-b8o"/>
+                                    <constraint firstItem="7b1-pr-Nuy" firstAttribute="centerX" secondItem="2Xv-OO-T2P" secondAttribute="centerX" id="bhI-fK-oeV"/>
+                                    <constraint firstItem="etz-Dx-g7S" firstAttribute="top" secondItem="7b1-pr-Nuy" secondAttribute="bottom" constant="40" id="xpx-Md-HZW"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -115,6 +146,9 @@
                         <outlet property="gradientView" destination="UMp-gF-Ltb" id="6We-dq-UYy"/>
                         <outlet property="inputTextView" destination="FfU-VK-P9X" id="oml-Wu-LBq"/>
                         <outlet property="likeMotionView" destination="2Xv-OO-T2P" id="ZoR-TS-uwB"/>
+                        <outlet property="moveFlowerView" destination="7b1-pr-Nuy" id="h0J-sd-LcQ"/>
+                        <outlet property="movePetalView" destination="nCl-BD-7hO" id="F9s-9x-Ef2"/>
+                        <outlet property="moveTextView" destination="etz-Dx-g7S" id="aFA-iG-FeS"/>
                         <outlet property="sendButton" destination="wyc-gV-orH" id="JcO-6V-Jmy"/>
                     </connections>
                 </viewController>

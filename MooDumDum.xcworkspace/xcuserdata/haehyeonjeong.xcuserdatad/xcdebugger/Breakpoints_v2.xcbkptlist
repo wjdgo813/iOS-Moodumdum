@@ -68,7 +68,7 @@
                   moduleName = "MooDumDum"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/haehyeonjeong/Documents/dev/iOS-Moodumdum/MooDumDum/Write/PickPhoto/MDPickPhotoViewController.swift"
-                  timestampString = "546861019.256635"
+                  timestampString = "548669037.742371"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "58"
@@ -83,7 +83,7 @@
                   moduleName = "MooDumDum"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/haehyeonjeong/Documents/dev/iOS-Moodumdum/MooDumDum/Write/PickPhoto/MDPickPhotoViewController.swift"
-                  timestampString = "546861019.258721"
+                  timestampString = "548669037.745195"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "60"
@@ -106,6 +106,198 @@
             startingLineNumber = "98"
             endingLineNumber = "98"
             landmarkName = "updateCategoryNumber(notification:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MooDumDum.MD_WriteViewController.updateCategoryNumber(notification: __ObjC.NSNotification) -&gt; ()"
+                  moduleName = "MooDumDum"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haehyeonjeong/Documents/dev/iOS-Moodumdum/MooDumDum/Write/MD_WriteViewController.swift"
+                  timestampString = "548669037.7550581"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "336">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MooDumDum.MD_WriteViewController.updateCategoryNumber(notification: __ObjC.NSNotification) -&gt; ()"
+                  moduleName = "MooDumDum"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haehyeonjeong/Documents/dev/iOS-Moodumdum/MooDumDum/Write/MD_WriteViewController.swift"
+                  timestampString = "548669037.75713"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "644">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MooDumDum/Mypage/MD_MyPageViewController.swift"
+            timestampString = "548671258.263396"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
+            landmarkName = "requestMyBoardList(listType:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MooDumDum/Mypage/MD_MyPageViewController.swift"
+            timestampString = "548671258.263468"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
+            landmarkName = "requestMyBoardList(listType:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MooDumDum/Mypage/MD_MyPageViewController.swift"
+            timestampString = "548671258.263521"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
+            landmarkName = "requestMyBoardList(listType:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MooDumDum.MD_MyPageViewController.requestMyBoardList(listType: MooDumDum.MDMySelfListType) -&gt; ()"
+                  moduleName = "MooDumDum"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haehyeonjeong/Documents/dev/iOS-Moodumdum/MooDumDum/Mypage/MD_MyPageViewController.swift"
+                  timestampString = "548669037.786188"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "163"
+                  endingLineNumber = "163"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SwiftyJSON.JSON) -&gt; () in MooDumDum.MD_MyPageViewController.requestMyBoardList(listType: MooDumDum.MDMySelfListType) -&gt; ()"
+                  moduleName = "MooDumDum"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haehyeonjeong/Documents/dev/iOS-Moodumdum/MooDumDum/Mypage/MD_MyPageViewController.swift"
+                  timestampString = "548669037.789933"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "164"
+                  endingLineNumber = "164"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MooDumDum/Mypage/MD_MyPageViewController.swift"
+            timestampString = "548671258.263569"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "170"
+            endingLineNumber = "170"
+            landmarkName = "requestMyBoardList(listType:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MooDumDum.MD_MyPageViewController.requestMyBoardList(listType: MooDumDum.MDMySelfListType) -&gt; ()"
+                  moduleName = "MooDumDum"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haehyeonjeong/Documents/dev/iOS-Moodumdum/MooDumDum/Mypage/MD_MyPageViewController.swift"
+                  timestampString = "548669037.846513"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "170"
+                  endingLineNumber = "170"
+                  offsetFromSymbolStart = "172">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (SwiftyJSON.JSON) -&gt; () in MooDumDum.MD_MyPageViewController.requestMyBoardList(listType: MooDumDum.MDMySelfListType) -&gt; ()"
+                  moduleName = "MooDumDum"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haehyeonjeong/Documents/dev/iOS-Moodumdum/MooDumDum/Mypage/MD_MyPageViewController.swift"
+                  timestampString = "548669037.849158"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "171"
+                  endingLineNumber = "171"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MooDumDum/Mypage/MD_MyPageViewController.swift"
+            timestampString = "548671258.263615"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
+            landmarkName = "collectionView(_:numberOfItemsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MooDumDum/ReadBoard/MDBoardViewController.swift"
+            timestampString = "548671258.263666"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "308"
+            endingLineNumber = "308"
+            landmarkName = "animateLikeMotion()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

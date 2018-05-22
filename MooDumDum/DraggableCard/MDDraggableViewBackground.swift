@@ -136,20 +136,41 @@ class MDDraggableViewBackground: UIView, DraggableViewDelegate,UIGestureRecogniz
             self.delegate.pressedCardView(draggableView: newCard!, data: cardData)
         }
         
-        let imageView = GIFImageView(frame: cardFrame)
         
-        newCard?.addSubview(imageView)
-        imageView.isHidden = true
+        let petalImageView = GIFImageView(frame: CGRect(x: 0, y: 0, width: 250, height: 130))
+        let flowerImageView = GIFImageView(frame: CGRect(x: 0, y: 0, width: 75, height: 137.5))
+        let textImageView = GIFImageView(frame: CGRect(x: 0, y: 0, width: 87.5, height: 25))
+        
+        petalImageView.center = CGPoint(x: (newCard?.center.x)!, y: petalImageView.center.y)
+        flowerImageView.center = (newCard?.center)!
+        textImageView.center = CGPoint(x: (newCard?.center.x)!, y: flowerImageView.center.y + flowerImageView.frame.height)
+        
+        newCard?.addSubview(petalImageView)
+        newCard?.addSubview(flowerImageView)
+        newCard?.addSubview(textImageView)
+        
+        petalImageView.isHidden = true
+        flowerImageView.isHidden = true
+        textImageView.isHidden = true
+        
+        
         
         newCard?.backgroundAlpahView.alpha = 0
         newCard?.doubleTapCard = {
-            if imageView.isAnimatingGIF {
+            if petalImageView.isAnimatingGIF ||
+                flowerImageView.isAnimatingGIF ||
+                textImageView.isAnimatingGIF {
                 return
             }
-            imageView.isHidden = false
-            imageView.animate(withGIFNamed: "likeMotion") {
-                
-            }
+          
+            petalImageView.isHidden = false
+            petalImageView.animate(withGIFNamed: "movePetal.gif")
+            flowerImageView.isHidden = false
+            flowerImageView.animate(withGIFNamed: "moveFlower")
+            textImageView.isHidden = false
+            textImageView.animate(withGIFNamed: "moveText")
+            
+            
             UIView.animate(withDuration: 1, animations: {
                 newCard?.backgroundAlpahView.alpha = 0.5
             })
@@ -157,9 +178,16 @@ class MDDraggableViewBackground: UIView, DraggableViewDelegate,UIGestureRecogniz
             
             newCard?.backgroundAlpahView.isHidden = false;
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2, execute: {
-                imageView.stopAnimatingGIF()
-                imageView.isHidden = true
+                petalImageView.stopAnimatingGIF()
+                flowerImageView.stopAnimatingGIF()
+                textImageView.stopAnimatingGIF()
+                
+                petalImageView.isHidden = true
+                flowerImageView.isHidden = true
+                textImageView.isHidden = true
+                
                 newCard?.backgroundAlpahView.isHidden = true;
+                
             })
             
             

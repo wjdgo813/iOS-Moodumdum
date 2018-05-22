@@ -16,6 +16,8 @@ class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate{
     @IBOutlet weak var gradientView: UIView!
     @IBOutlet weak var commentBackForX: UIView!
     
+    
+    
     @IBOutlet weak var content: UITextView!
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var commentView: UIView!
@@ -23,7 +25,17 @@ class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate{
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var commentViewBottom: NSLayoutConstraint!
     @IBOutlet weak var likeMotionView: UIView!
+    
+    @IBOutlet weak var movePetalView: UIView!
+    @IBOutlet weak var moveFlowerView: UIView!
+    @IBOutlet weak var moveTextView: UIView!
+    
+    var motionPetalImageView : GIFImageView!
+    var motionFlowerImageView : GIFImageView!
+    var motionTextImageView : GIFImageView!
+    
     var likeMotionImageView: GIFImageView!
+    
     var prevView : UIView?
     var data : MDDetailCategoryData?
     var pullUpController : MDCommentViewController?
@@ -37,17 +49,15 @@ class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate{
         content.text = data?.description
         content.textColor = UIColor(hexString:(data?.color)!)
         
-        likeMotionView.isHidden = true
-        likeMotionImageView = GIFImageView(frame: likeMotionView.frame)
-        likeMotionView.addSubview(likeMotionImageView)
-        likeMotionImageView.isHidden = true
-        likeMotionImageView.alpha = 0
+        
+        initMotionView()
         
         let gradient = CAGradientLayer()
         gradient.frame = self.gradientView.bounds
         gradient.colors = [UIColor.black.cgColor,UIColor.clear.cgColor]
         self.gradientView.layer.insertSublayer(gradient, at: 0)
         self.gradientView.alpha = 0.5
+        
         
         drawSendCommentView()
         initNavigationBar()
@@ -180,6 +190,34 @@ class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate{
     }
     
     
+    func initMotionView(){
+        
+        likeMotionView.isHidden = true
+
+        
+        movePetalView.isHidden = true
+        motionPetalImageView = GIFImageView(frame: CGRect(x: 0, y: 0, width: self.movePetalView.frame.width, height: self.movePetalView.frame.height))
+        movePetalView.addSubview(motionPetalImageView)
+        motionPetalImageView.isHidden = true
+        motionPetalImageView.alpha = 0
+        
+        
+        moveFlowerView.isHidden = true
+        motionFlowerImageView = GIFImageView(frame: CGRect(x: 0, y: 0, width: self.moveFlowerView.frame.width, height: self.moveFlowerView.frame.height))
+        moveFlowerView.addSubview(motionFlowerImageView)
+        motionFlowerImageView.isHidden = true
+        motionFlowerImageView.alpha = 0
+        
+        
+        moveTextView.isHidden = true
+        motionTextImageView = GIFImageView(frame: CGRect(x: 0, y: 0, width: self.moveTextView.frame.width, height: self.moveTextView.frame.height))
+        moveTextView.addSubview(motionTextImageView)
+        motionTextImageView.isHidden = true
+        motionTextImageView.alpha = 0
+        
+        
+    }
+    
     
     
     @IBAction func pressedSendButton(_ sender: Any) {
@@ -246,23 +284,56 @@ extension MDBoardViewController : MDCommentViewControllerDelegate{
             self.pullUpController?.data?.like_count = boardData.like_count
             self.pullUpController?.data?.is_liked = true
             self.pullUpController?.tableView.reloadData()
-            
-            
         }
     }
     
     func animateLikeMotion(){
-        if self.likeMotionImageView.isAnimatingGIF { return }
+        if  self.motionTextImageView.isAnimatingGIF ||
+            self.motionFlowerImageView.isAnimatingGIF ||
+            self.motionPetalImageView.isAnimatingGIF { return }
         
         self.likeMotionView.isHidden = false
-        self.likeMotionImageView.isHidden = false
-        self.likeMotionImageView.alpha = 1
-        self.likeMotionImageView.animate(withGIFNamed: "likeMotion")
+        self.likeMotionView.bringSubview(toFront: self.movePetalView)
+        self.likeMotionView.bringSubview(toFront: self.moveFlowerView)
+        self.likeMotionView.bringSubview(toFront: self.moveTextView)
+        
+        self.movePetalView.bringSubview(toFront: self.motionPetalImageView)
+        self.moveTextView.bringSubview(toFront: self.motionTextImageView)
+        self.movePetalView.bringSubview(toFront: self.motionPetalImageView)
+        
+        self.movePetalView.isHidden = false
+        self.motionPetalImageView.isHidden = false
+        self.motionPetalImageView.alpha = 1
+        self.motionPetalImageView.animate(withGIFNamed: "movePetal.gif", loopCount: 1, completionHandler: {
+            print("success")
+        })
+        
+        self.moveFlowerView.isHidden = false
+        self.motionFlowerImageView.isHidden = false
+        self.motionFlowerImageView.alpha = 1
+        self.motionFlowerImageView.animate(withGIFNamed: "moveFlower")
+        
+        self.moveTextView.isHidden = false
+        self.motionTextImageView.isHidden = false
+        self.motionTextImageView.alpha = 1
+        self.motionTextImageView.animate(withGIFNamed: "moveText")
+       
+        
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2, execute: {
-            self.likeMotionImageView.stopAnimatingGIF()
-            self.likeMotionImageView.isHidden = true
-            self.likeMotionView.isHidden = true;
+            self.motionPetalImageView.stopAnimatingGIF()
+            self.motionPetalImageView.isHidden = true
+            self.movePetalView.isHidden = true;
+            
+            self.motionFlowerImageView.stopAnimatingGIF()
+            self.motionFlowerImageView.isHidden = true
+            self.moveFlowerView.isHidden = true;
+            
+            self.motionTextImageView.stopAnimatingGIF()
+            self.motionTextImageView.isHidden = true
+            self.moveTextView.isHidden = true;
+            
+            self.likeMotionView.isHidden = true
         })
     }
 }
