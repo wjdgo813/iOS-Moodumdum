@@ -10,6 +10,7 @@ import Foundation
 
 import Alamofire
 import SwiftyJSON
+import Toaster
 
 class MDAPIManager{
     static let sharedManager = MDAPIManager()
@@ -29,6 +30,7 @@ class MDAPIManager{
             case .success:
                 completion(true)
             case .failure(let error):
+                self.showFailMessage()
                 completion(false)
             }
         }
@@ -45,6 +47,23 @@ class MDAPIManager{
     }
     
     /*
+     해당 게시글에 댓글 등록
+     */
+    func requestRegisterReply(parameters:Parameters,completion:@escaping (_ result : JSON)->(Void)){
+        Alamofire.request("http://13.125.76.112:8000/api/board/comment/?user=\(MDDeviceInfo.getCurrentDeviceID())",method:.post,parameters:parameters).validate(statusCode: 200..<300).responseJSON { response in
+            let json = JSON(response.result.value)
+            switch response.result {
+            case .success:
+                completion(json)
+                break
+            case .failure:
+                self.showFailMessage()
+                break
+            }
+        }
+    }
+    
+    /*
      해당 board의 좋아요
      */
     func reqeustBoardLike(parameters:Parameters,completion:@escaping (_ result : JSON)->(Void)){
@@ -55,6 +74,7 @@ class MDAPIManager{
                 completion(json)
                 break
             case .failure:
+                self.showFailMessage()
                 break
             }
         }
@@ -91,9 +111,11 @@ class MDAPIManager{
             let json = JSON(response.result.value)
             switch response.result {
             case .success:
+                Toast(text: "글이 등록되었습니다.", duration: Delay.long).show()
                 completion(json)
                 break
             case .failure:
+                self.showFailMessage()
                 break
             }
         }
@@ -107,6 +129,7 @@ class MDAPIManager{
                 completion(json)
                 break
             case .failure:
+                self.showFailMessage()
                 break
             }
         }
@@ -126,6 +149,7 @@ class MDAPIManager{
                 
                 break
             case .failure:
+                self.showFailMessage()
                 break
             }
         }
@@ -142,6 +166,7 @@ class MDAPIManager{
                 completion(json)
                 break
             case .failure:
+                self.showFailMessage()
                 break
             }
         }
@@ -159,6 +184,7 @@ class MDAPIManager{
                 completion(json)
                 break
             case .failure:
+                self.showFailMessage()
                 break
             }
         }
@@ -175,6 +201,7 @@ class MDAPIManager{
                 completion(json)
                 break
             case .failure:
+                self.showFailMessage()
                 break
             }
         }
@@ -197,9 +224,15 @@ class MDAPIManager{
                 completion(json)
                 break
             case .failure:
+                self.showFailMessage()
                 break
             }
         }
     }
     
+    
+    
+    func showFailMessage(){
+        Toast(text: "네트워크에 문제가 있습니다. 네트워크 상태를 확인해주세요.", duration: Delay.long).show()
+    }
 }

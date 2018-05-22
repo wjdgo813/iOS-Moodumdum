@@ -119,11 +119,13 @@ class MDDraggableViewBackground: UIView, DraggableViewDelegate,UIGestureRecogniz
 
         if cardData.color == "#ffffff"{
             newCard?.commentImageView.image = UIImage(named: "commentWh")
+            newCard?.likeButton.setImage(UIImage(named: "beforeLikeWhiteButton"), for: .normal)
             newCard?.commentCount.textColor = UIColor.white
             newCard?.likeCount.textColor = UIColor.white
             
         }else{
             newCard?.commentImageView.image = UIImage(named: "commentBl")
+            newCard?.likeButton.setImage(UIImage(named: "beforeLikeButton"), for: .normal)
             newCard?.commentCount.textColor = UIColor.black
             newCard?.likeCount.textColor = UIColor.black
         }

@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import Toaster
 
 class MD_PhotoViewController: UIViewController , UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout  {
     
@@ -105,8 +106,9 @@ class MD_PhotoViewController: UIViewController , UICollectionViewDataSource, UIC
             "color" : selectfont
             ]
         
-        //수정해야함 어디페이지로 갈껀지 
+
         Alamofire.request(post, method: .post, parameters: param, encoding: JSONEncoding.default)
+        
         let vc = self.navigationController?.viewControllers
         self.navigationController!.popToRootViewController(animated: true)
     }

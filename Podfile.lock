@@ -1,9 +1,10 @@
 PODS:
   - Alamofire (4.7.2)
   - Gifu (3.0.0)
-  - Kingfisher (4.7.0)
+  - Kingfisher (4.8.0)
   - SwiftyJSON (4.1.0)
-  - SwipeCellKit (2.2.0)
+  - SwipeCellKit (2.3.2)
+  - Toaster (2.1.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.6)
@@ -11,14 +12,16 @@ DEPENDENCIES:
   - Kingfisher (~> 4.0)
   - SwiftyJSON
   - SwipeCellKit
+  - Toaster
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   Gifu: 6543ca2056a3d697097c09fe543ef49348ccc892
-  Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
+  Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
-  SwipeCellKit: 8ae09401e1137566b187980d824310129233c959
+  SwipeCellKit: 52b160ea820245eb972b2eca270cb3a6f68e33af
+  Toaster: a6c9532de1ded8105e77376f7dffeb2e12b46dbb
 
-PODFILE CHECKSUM: ef30f25c70beaa6872bec2680e5b6ab6521c0773
+PODFILE CHECKSUM: 92522852d492514c8e77b0b5bb07cb450b910768
 
 COCOAPODS: 1.4.0

@@ -26,11 +26,13 @@ class MD_MyPageViewController: UIViewController {
     @IBOutlet weak var nickName: UILabel!
     @IBOutlet weak var segmentContainer: UISegmentedControl!
     
+    @IBOutlet weak var lineView: UIView!
+    @IBOutlet weak var lineViewWidth: NSLayoutConstraint!
+    @IBOutlet weak var lineViewLeftConst: NSLayoutConstraint!
     
     var fetchedmypost : Int = 0
     var fetchedreceived : Int = 0
     var isMoreLoading = false
-    let buttonBar = UIView()
     var user = MD_UserInfo()
     var mySelfListType : MDMySelfListType?
     private var data : MDDetailCategorySet?
@@ -64,14 +66,8 @@ class MD_MyPageViewController: UIViewController {
             NSAttributedStringKey.foregroundColor: UIColor.black
             ], for: .selected)
         
-        view.addSubview(buttonBar)
+        lineViewWidth.constant = segmentContainer.frame.width / 2 - 32
         
-        buttonBar.translatesAutoresizingMaskIntoConstraints = false
-        buttonBar.backgroundColor = UIColor.black
-        buttonBar.topAnchor.constraint(equalTo: segmentContainer.bottomAnchor).isActive = true
-        buttonBar.heightAnchor.constraint(equalToConstant: 1).isActive = true
-        buttonBar.leftAnchor.constraint(equalTo: segmentContainer.leftAnchor, constant: 8).isActive = true
-        buttonBar.widthAnchor.constraint(equalToConstant: (self.view.frame.width / 2) - 8).isActive = true
         
         if MDDeviceInfo.isIphoneX() {
             self.button.setImage(UIImage(named: "writeButtonForX"), for: .normal)
@@ -114,7 +110,9 @@ class MD_MyPageViewController: UIViewController {
     
     @IBAction func ChangeContainer(_ sender: UISegmentedControl) {
         UIView.animate(withDuration: 0.2) {
-            self.buttonBar.frame.origin.x = (self.segmentContainer.frame.width / CGFloat(self.segmentContainer.numberOfSegments)) * CGFloat(self.segmentContainer.selectedSegmentIndex) + 8
+            
+            self.lineViewLeftConst.constant = (self.segmentContainer.frame.width / CGFloat(self.segmentContainer.numberOfSegments)) * CGFloat(self.segmentContainer.selectedSegmentIndex) + 7
+            self.view.layoutIfNeeded()
         }
         if(sender.selectedSegmentIndex == 0) {
             self.mySelfListType = .MDMySelfWriteBoard
@@ -232,7 +230,7 @@ extension MD_MyPageViewController : UICollectionViewDelegateFlowLayout {
             return CGSize(width: self.view.frame.size.width, height: 200)
         }
         
-        let cellWidth = (self.view.frame.size.width) / 2 - 5
+        let cellWidth = (collectionView.frame.size.width) / 2 - 5
         return CGSize(width: cellWidth, height: cellWidth)
     }
 }

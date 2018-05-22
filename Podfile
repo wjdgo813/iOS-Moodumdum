@@ -8,6 +8,8 @@ target 'MooDumDum' do
     pod 'SwiftyJSON'
     pod 'Kingfisher', '~> 4.0'
     pod 'Gifu'
+    pod 'Toaster'
+
 pod 'SwipeCellKit'
 
   # Pods for MooDumDum

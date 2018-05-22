@@ -10,6 +10,8 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import Gifu
+import Toaster
+
 
 class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate{
 
@@ -237,14 +239,14 @@ class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate{
         var boardData = self.data
         let commentCount = boardData?.comment_counnt
         
-        Alamofire.request("http://13.125.76.112:8000/api/board/comment/?user=\(MDDeviceInfo.getCurrentDeviceID())",method:.post,parameters:parameters).responseJSON { response in
-            
-            let json = JSON(response.result.value)
+        MDAPIManager.sharedManager.requestRegisterReply(parameters: parameters) { (result) -> (Void) in
             self.pullUpController?.requestCommentInfo()
             
             boardData?.comment_counnt = commentCount! + 1
             self.refreshPrevInfo(boardData: boardData!)
             
+            Toast(text: "댓글이 등록되었습니다.", duration: Delay.long).show()
+
         }
         
         inputTextView.textColor = UIColor(hexString: "#979797")
