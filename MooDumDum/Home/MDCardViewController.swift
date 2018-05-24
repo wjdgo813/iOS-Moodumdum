@@ -88,8 +88,6 @@ class MDCardViewController: MDPullUpController,MDDraggableViewBackgroundDelegate
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
 
     }
-    
-    
 
     override var pullUpControllerPreferredSize: CGSize {
         return CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)

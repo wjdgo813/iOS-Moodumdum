@@ -79,6 +79,23 @@ class MDAPIManager{
             }
         }
     }
+    /*
+     해당 board 좋아요 취소
+     */
+    func requestRemoveLike(boardID:String,completion:@escaping (_ result : JSON)->(Void)){
+        Alamofire.request("\(api_url)api/board/like/\(MDDeviceInfo.getCurrentDeviceID())/\(boardID)",method:.delete).validate(statusCode: 200..<300).responseJSON { response in
+            let json = JSON(response.result.value)
+            switch response.result {
+            case .success:
+                completion(json)
+                break
+            case .failure:
+                self.showFailMessage()
+                break
+            }
+        }
+    }
+    
     
     /*
      글쓰기에 등록할 이미지 배경 불러오기

@@ -15,6 +15,7 @@ import SwipeCellKit
 
 protocol MDCommentViewControllerDelegate {
     func pressedLikeButton(boardData : MDDetailCategoryData)
+    func removeLike(boardData:MDDetailCategoryData)
 }
 
 enum MDCommentState {
@@ -184,7 +185,11 @@ extension MDCommentViewController : MDCommentTableViewCellDelegate{
 extension MDCommentViewController : MDHeaderCommentTableViewCellDelegate{
     func pressedBoardLikeButton(cell: MDHeaderCommentTableViewCell) {
         if delegate != nil {
-            self.delegate.pressedLikeButton(boardData: self.data!)
+            if !(self.data?.is_liked)! {
+                self.delegate.pressedLikeButton(boardData: self.data!)
+            }else{
+                self.delegate.removeLike(boardData: self.data!)
+            }
         }
     }
 }

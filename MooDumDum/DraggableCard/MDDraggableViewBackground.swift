@@ -114,7 +114,7 @@ class MDDraggableViewBackground: UIView, DraggableViewDelegate,UIGestureRecogniz
         newCard?.commentCount.text = String((cardData.comment_counnt))
         newCard?.likeCount.text = String((cardData.like_count))
         newCard?.content.textColor = UIColor(hexString: cardData.color)
-
+        newCard?.is_liked = cardData.is_liked
         
 
         if cardData.color == "#ffffff"{
@@ -138,6 +138,19 @@ class MDDraggableViewBackground: UIView, DraggableViewDelegate,UIGestureRecogniz
             self.delegate.pressedCardView(draggableView: newCard!, data: cardData)
         }
         
+        newCard?.removeLike = {
+            MDAPIManager.sharedManager.requestRemoveLike(boardID: cardData.id, completion: { (result) -> (Void) in
+                cardData.like_count = cardData.like_count - 1
+                cardData.is_liked = false
+                newCard?.likeCount.text = String(cardData.like_count)
+                newCard?.is_liked = false
+                if cardData.color == "#ffffff"{
+                    newCard?.likeButton.setImage(UIImage(named: "beforeLikeWhiteButton"), for: .normal)
+                }else{
+                    newCard?.likeButton.setImage(UIImage(named: "beforeLikeButton"), for: .normal)
+                }
+            })
+        }
         
         let petalImageView = GIFImageView(frame: CGRect(x: 0, y: 0, width: 250, height: 130))
         let flowerImageView = GIFImageView(frame: CGRect(x: 0, y: 0, width: 75, height: 137.5))
@@ -169,7 +182,7 @@ class MDDraggableViewBackground: UIView, DraggableViewDelegate,UIGestureRecogniz
         
         newCard?.backgroundAlpahView.alpha = 0
         newCard?.doubleTapCard = {
-            if petalImageView.isAnimatingGIF ||
+            if  petalImageView.isAnimatingGIF ||
                 flowerImageView.isAnimatingGIF {
                 return
             }
@@ -195,7 +208,7 @@ class MDDraggableViewBackground: UIView, DraggableViewDelegate,UIGestureRecogniz
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2, execute: {
                 
                 
-                UIView.animate(withDuration: 0.5, animations: {
+                UIView.animate(withDuration: 0.3, animations: {
                     petalImageView.stopAnimatingGIF()
                     flowerImageView.stopAnimatingGIF()
                     
@@ -224,6 +237,7 @@ class MDDraggableViewBackground: UIView, DraggableViewDelegate,UIGestureRecogniz
                 cardData.like_count = cardData.like_count + 1
                 cardData.is_liked = true
                 newCard?.likeCount.text = String(cardData.like_count)
+                newCard?.is_liked = true
                 newCard?.likeButton.setImage(UIImage(named: "afterLikeButton"), for: UIControlState.normal)
             })
         }

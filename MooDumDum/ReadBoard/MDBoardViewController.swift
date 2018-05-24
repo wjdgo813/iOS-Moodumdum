@@ -151,7 +151,12 @@ class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate{
         if self.prevView is DraggableView {
             let view = self.prevView as? DraggableView
             view?.likeCount.text = "\(boardData.like_count)"
-            view?.likeButton.setImage(UIImage(named: "afterLikeButton"), for: .normal)
+            if boardData.is_liked {
+                view?.likeButton.setImage(UIImage(named: "afterLikeButton"), for: .normal)
+            }else{
+                view?.likeButton.setImage(UIImage(named: "beforeLikeButton"), for: .normal)
+            }
+            
             view?.commentCount.text = "\(boardData.comment_counnt)"
         }else if self.prevView is MDCategoryDetailCollectionViewCell{
             let view = self.prevView as? MDCategoryDetailCollectionViewCell
@@ -277,10 +282,28 @@ extension MDBoardViewController : MDCommentViewControllerDelegate{
         
         MDAPIManager.sharedManager.reqeustBoardLike(parameters: parameters) { result -> (Void) in
             boardData.like_count = likeCount + 1
+            boardData.is_liked = true
             self.refreshPrevInfo(boardData: boardData)
             
             self.pullUpController?.data?.like_count = boardData.like_count
             self.pullUpController?.data?.is_liked = true
+            self.pullUpController?.tableView.reloadData()
+        }
+    }
+    
+    func removeLike(boardData:MDDetailCategoryData){
+        var boardData = boardData
+        
+        guard boardData.is_liked else {return}
+        let likeCount = boardData.like_count
+        
+        MDAPIManager.sharedManager.requestRemoveLike(boardID: (data?.id)!) { (result) -> (Void) in
+            boardData.like_count = likeCount - 1
+            boardData.is_liked = false
+            self.refreshPrevInfo(boardData: boardData)
+            
+            self.pullUpController?.data?.like_count = boardData.like_count
+            self.pullUpController?.data?.is_liked = false
             self.pullUpController?.tableView.reloadData()
         }
     }
@@ -308,18 +331,13 @@ extension MDBoardViewController : MDCommentViewControllerDelegate{
         self.motionFlowerImageView.isHidden = false
         self.motionFlowerImageView.alpha = 1
         self.motionFlowerImageView.animate(withGIFNamed: "moveFlower", loopCount: 1, completionHandler: nil)
-
         
         self.flowerTextLabel.isHidden = false
         self.flowerTextLabel.alpha = 1
 
-       
         
-        
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.7, execute: {
-
-            
-            UIView.animate(withDuration: 0.5, animations: {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.7, execute: {            
+            UIView.animate(withDuration: 0.3, animations: {
                 self.motionPetalImageView.stopAnimatingGIF()
                 self.motionFlowerImageView.stopAnimatingGIF()
                 

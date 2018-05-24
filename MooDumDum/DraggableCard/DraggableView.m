@@ -31,10 +31,15 @@
 @synthesize overlayView;
 @synthesize pressedCard;
 @synthesize doubleTapCard;
+//@synthesize removeLike;
 
 - (IBAction)pressedLikeButton:(id)sender {
     if(self.doubleTapCard != nil){
-        self.doubleTapCard();
+        if(self.is_liked){
+            self.removeLike();
+        }else{
+            self.doubleTapCard();
+        }
     }
 }
 
@@ -69,6 +74,10 @@
     return self;
 }
 
+-(void)setIs_liked:(BOOL)is_liked{
+    _is_liked = is_liked;
+}
+
 -(void)panGestureAdd{
     UITapGestureRecognizer *doubleTapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTap:)];
     doubleTapGestureRecognizer.numberOfTapsRequired = 2;
@@ -88,6 +97,8 @@
     self.layer.shadowOpacity = 0.2;
     self.layer.shadowOffset = CGSizeMake(1, 1);
 }
+
+
 
 -(void)tapCardView:(UITapGestureRecognizer *)gestureRecognizer{
     NSLog(@"hit card");

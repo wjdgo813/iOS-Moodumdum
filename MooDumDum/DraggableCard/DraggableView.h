@@ -37,6 +37,7 @@
 
 typedef void(^PressedCardView)(void);
 typedef void(^DoublePressedCardView)(void);
+typedef void(^RemoveLike)(void);
 @protocol DraggableViewDelegate <NSObject>
 -(void)cardSwiped:(UIView *)card;
 @end
@@ -44,6 +45,7 @@ typedef void(^DoublePressedCardView)(void);
 @interface DraggableView : UIView<UIGestureRecognizerDelegate>{
     PressedCardView pressedCard;
     DoublePressedCardView doubleTapCard;
+    RemoveLike removeLike;
 }
 
 @property (weak) id <DraggableViewDelegate> delegate;
@@ -60,9 +62,12 @@ typedef void(^DoublePressedCardView)(void);
 @property (weak, nonatomic) IBOutlet UILabel *likeCount;
 @property(readwrite, copy) PressedCardView pressedCard;
 @property(readwrite, copy) DoublePressedCardView doubleTapCard;
+@property(readwrite, copy) RemoveLike removeLike;
 @property (weak, nonatomic) IBOutlet UIView *backgroundAlpahView;
 @property (weak, nonatomic) IBOutlet UIView *gradientView;
 @property (weak, nonatomic) IBOutlet UIImageView *commentImageView;
+
+@property (nonatomic) BOOL is_liked;
 
 
 - (IBAction)pressedLikeButton:(id)sender;
