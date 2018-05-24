@@ -141,36 +141,49 @@ class MDDraggableViewBackground: UIView, DraggableViewDelegate,UIGestureRecogniz
         
         let petalImageView = GIFImageView(frame: CGRect(x: 0, y: 0, width: 250, height: 130))
         let flowerImageView = GIFImageView(frame: CGRect(x: 0, y: 0, width: 75, height: 137.5))
-        let textImageView = GIFImageView(frame: CGRect(x: 0, y: 0, width: 87.5, height: 25))
+        let textLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 150, height: 137.5))
+        textLabel.text = "애도합니다."
+        textLabel.textColor = UIColor.white
+        textLabel.font = UIFont(name: "System", size: 17)
+        textLabel.sizeToFit()
         
         petalImageView.center = CGPoint(x: (newCard?.center.x)!, y: petalImageView.center.y)
         flowerImageView.center = (newCard?.center)!
-        textImageView.center = CGPoint(x: (newCard?.center.x)!, y: flowerImageView.center.y + flowerImageView.frame.height)
+        textLabel.center = CGPoint(x: (newCard?.center.x)!, y: flowerImageView.center.y + flowerImageView.frame.height)
         
         newCard?.addSubview(petalImageView)
         newCard?.addSubview(flowerImageView)
-        newCard?.addSubview(textImageView)
+        newCard?.addSubview(textLabel)
+
         
         petalImageView.isHidden = true
         flowerImageView.isHidden = true
-        textImageView.isHidden = true
+        textLabel.isHidden = true
+        
+        petalImageView.alpha = 0
+        flowerImageView.alpha = 0
+        textLabel.alpha = 0
+
         
         
         
         newCard?.backgroundAlpahView.alpha = 0
         newCard?.doubleTapCard = {
             if petalImageView.isAnimatingGIF ||
-                flowerImageView.isAnimatingGIF ||
-                textImageView.isAnimatingGIF {
+                flowerImageView.isAnimatingGIF {
                 return
             }
           
             petalImageView.isHidden = false
-            petalImageView.animate(withGIFNamed: "movePetal.gif")
+            textLabel.isHidden = false
             flowerImageView.isHidden = false
-            flowerImageView.animate(withGIFNamed: "moveFlower")
-            textImageView.isHidden = false
-            textImageView.animate(withGIFNamed: "moveText")
+            
+            petalImageView.alpha = 1
+            flowerImageView.alpha = 1
+            textLabel.alpha = 1
+            
+            petalImageView.animate(withGIFNamed: "movePetal.gif", loopCount: 1, completionHandler: nil)
+            flowerImageView.animate(withGIFNamed: "moveFlower", loopCount: 1, completionHandler: nil)
             
             
             UIView.animate(withDuration: 1, animations: {
@@ -180,16 +193,22 @@ class MDDraggableViewBackground: UIView, DraggableViewDelegate,UIGestureRecogniz
             
             newCard?.backgroundAlpahView.isHidden = false;
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2, execute: {
-                petalImageView.stopAnimatingGIF()
-                flowerImageView.stopAnimatingGIF()
-                textImageView.stopAnimatingGIF()
                 
-                petalImageView.isHidden = true
-                flowerImageView.isHidden = true
-                textImageView.isHidden = true
                 
-                newCard?.backgroundAlpahView.isHidden = true;
-                
+                UIView.animate(withDuration: 0.5, animations: {
+                    petalImageView.stopAnimatingGIF()
+                    flowerImageView.stopAnimatingGIF()
+                    
+                    petalImageView.alpha = 0
+                    flowerImageView.alpha = 0
+                    textLabel.alpha = 0
+                    
+                }, completion: { (result) in
+                    petalImageView.isHidden = true
+                    flowerImageView.isHidden = true
+                    textLabel.isHidden = true
+                    newCard?.backgroundAlpahView.isHidden = true;
+                })
             })
             
             

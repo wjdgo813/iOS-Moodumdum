@@ -77,7 +77,7 @@ extension MDCategoryListViewController: MDItemViewControllerDelegate{
     }
     
     func itemViewController(_ itemViewController: MDItemViewController, heightForRowAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (self.collectionView.frame.size.width)/2 - 4 , height: 230)
+        return CGSize(width: (self.collectionView.frame.size.width)/3 - 4 , height: self.collectionView.frame.size.height/2 - 2)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

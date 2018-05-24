@@ -50,9 +50,9 @@
 		A17E0C9320B1D2D600D11A68 /* MDMyBoardEmptyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A17E0C9120B1D2D600D11A68 /* MDMyBoardEmptyCell.xib */; };
 		A17E0C9620B1D55F00D11A68 /* MDMySelfLikeEmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17E0C9420B1D55F00D11A68 /* MDMySelfLikeEmptyCell.swift */; };
 		A17E0C9720B1D55F00D11A68 /* MDMySelfLikeEmptyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A17E0C9520B1D55F00D11A68 /* MDMySelfLikeEmptyCell.xib */; };
-		A17E0C9B20B4053700D11A68 /* moveFlower.gif in Resources */ = {isa = PBXBuildFile; fileRef = A17E0C9820B4053700D11A68 /* moveFlower.gif */; };
-		A17E0C9C20B4053700D11A68 /* movePetal.gif in Resources */ = {isa = PBXBuildFile; fileRef = A17E0C9920B4053700D11A68 /* movePetal.gif */; };
-		A17E0C9D20B4053700D11A68 /* moveText.gif in Resources */ = {isa = PBXBuildFile; fileRef = A17E0C9A20B4053700D11A68 /* moveText.gif */; };
+		A17E0CA320B7094600D11A68 /* moveFlower.gif in Resources */ = {isa = PBXBuildFile; fileRef = A17E0CA020B7094600D11A68 /* moveFlower.gif */; };
+		A17E0CA420B7094600D11A68 /* movePetal.gif in Resources */ = {isa = PBXBuildFile; fileRef = A17E0CA120B7094600D11A68 /* movePetal.gif */; };
+		A17E0CA520B7094600D11A68 /* moveText.gif in Resources */ = {isa = PBXBuildFile; fileRef = A17E0CA220B7094600D11A68 /* moveText.gif */; };
 		A17E36882036AAA50077F486 /* MDHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC6EEB20234B5500DC9181 /* MDHomeViewController.swift */; };
 		A1AA45C62098437100F3EBF5 /* MDWirteCategorySlideCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AA45C42098437100F3EBF5 /* MDWirteCategorySlideCell.swift */; };
 		A1AA45C72098437100F3EBF5 /* MDWirteCategorySlideCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1AA45C52098437100F3EBF5 /* MDWirteCategorySlideCell.xib */; };
@@ -169,9 +169,9 @@
 		A17E0C9120B1D2D600D11A68 /* MDMyBoardEmptyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MDMyBoardEmptyCell.xib; sourceTree = "<group>"; };
 		A17E0C9420B1D55F00D11A68 /* MDMySelfLikeEmptyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDMySelfLikeEmptyCell.swift; sourceTree = "<group>"; };
 		A17E0C9520B1D55F00D11A68 /* MDMySelfLikeEmptyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MDMySelfLikeEmptyCell.xib; sourceTree = "<group>"; };
-		A17E0C9820B4053700D11A68 /* moveFlower.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = moveFlower.gif; sourceTree = "<group>"; };
-		A17E0C9920B4053700D11A68 /* movePetal.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = movePetal.gif; sourceTree = "<group>"; };
-		A17E0C9A20B4053700D11A68 /* moveText.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = moveText.gif; sourceTree = "<group>"; };
+		A17E0CA020B7094600D11A68 /* moveFlower.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = moveFlower.gif; sourceTree = "<group>"; };
+		A17E0CA120B7094600D11A68 /* movePetal.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = movePetal.gif; sourceTree = "<group>"; };
+		A17E0CA220B7094600D11A68 /* moveText.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = moveText.gif; sourceTree = "<group>"; };
 		A1AA45C42098437100F3EBF5 /* MDWirteCategorySlideCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDWirteCategorySlideCell.swift; sourceTree = "<group>"; };
 		A1AA45C52098437100F3EBF5 /* MDWirteCategorySlideCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MDWirteCategorySlideCell.xib; sourceTree = "<group>"; };
 		A1AA45CA209846FB00F3EBF5 /* MDWriteSlideCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDWriteSlideCollectionViewController.swift; sourceTree = "<group>"; };
@@ -499,9 +499,9 @@
 		A1D61924207BACC30046C2E2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A17E0C9820B4053700D11A68 /* moveFlower.gif */,
-				A17E0C9920B4053700D11A68 /* movePetal.gif */,
-				A17E0C9A20B4053700D11A68 /* moveText.gif */,
+				A17E0CA020B7094600D11A68 /* moveFlower.gif */,
+				A17E0CA120B7094600D11A68 /* movePetal.gif */,
+				A17E0CA220B7094600D11A68 /* moveText.gif */,
 				A1263D9E207E3E24005E15CF /* moveSplash.gif */,
 				A1263D9C207E3DD7005E15CF /* splashBackground.jpeg */,
 				A1D61927207BAFF30046C2E2 /* likeMotion.gif */,
@@ -767,13 +767,13 @@
 				BADC6EEF20234B5500DC9181 /* Main.storyboard in Resources */,
 				A1AA45C72098437100F3EBF5 /* MDWirteCategorySlideCell.xib in Resources */,
 				A1C60F76202F671C00E858A2 /* MDCategoryList.storyboard in Resources */,
-				A17E0C9D20B4053700D11A68 /* moveText.gif in Resources */,
-				A17E0C9C20B4053700D11A68 /* movePetal.gif in Resources */,
+				A17E0CA520B7094600D11A68 /* moveText.gif in Resources */,
+				A17E0CA420B7094600D11A68 /* movePetal.gif in Resources */,
 				A1263D9F207E3E24005E15CF /* moveSplash.gif in Resources */,
 				354D6A18206AC0AE0009C7AF /* Write.storyboard in Resources */,
 				A126040620961F2100C14ADA /* MDMyBoardCell.xib in Resources */,
 				A1D61928207BAFF30046C2E2 /* likeMotion.gif in Resources */,
-				A17E0C9B20B4053700D11A68 /* moveFlower.gif in Resources */,
+				A17E0CA320B7094600D11A68 /* moveFlower.gif in Resources */,
 				A1F3BF95208CC1CF00E8F861 /* MDPickPhotoCell.xib in Resources */,
 				BADC6EF120234B5500DC9181 /* Assets.xcassets in Resources */,
 				A1263D9B207E3D53005E15CF /* MDSplashViewController.xib in Resources */,

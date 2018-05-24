@@ -31,10 +31,10 @@ class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate{
     @IBOutlet weak var movePetalView: UIView!
     @IBOutlet weak var moveFlowerView: UIView!
     @IBOutlet weak var moveTextView: UIView!
+    @IBOutlet weak var flowerTextLabel: UILabel!
     
     var motionPetalImageView : GIFImageView!
     var motionFlowerImageView : GIFImageView!
-    var motionTextImageView : GIFImageView!
     
     var likeMotionImageView: GIFImageView!
     
@@ -210,12 +210,8 @@ class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate{
         motionFlowerImageView.isHidden = true
         motionFlowerImageView.alpha = 0
         
-        
-        moveTextView.isHidden = true
-        motionTextImageView = GIFImageView(frame: CGRect(x: 0, y: 0, width: self.moveTextView.frame.width, height: self.moveTextView.frame.height))
-        moveTextView.addSubview(motionTextImageView)
-        motionTextImageView.isHidden = true
-        motionTextImageView.alpha = 0
+        flowerTextLabel.isHidden = true
+        flowerTextLabel.alpha = 0
         
         
     }
@@ -290,17 +286,15 @@ extension MDBoardViewController : MDCommentViewControllerDelegate{
     }
     
     func animateLikeMotion(){
-        if  self.motionTextImageView.isAnimatingGIF ||
-            self.motionFlowerImageView.isAnimatingGIF ||
+        if  self.motionFlowerImageView.isAnimatingGIF ||
             self.motionPetalImageView.isAnimatingGIF { return }
         
         self.likeMotionView.isHidden = false
         self.likeMotionView.bringSubview(toFront: self.movePetalView)
         self.likeMotionView.bringSubview(toFront: self.moveFlowerView)
-        self.likeMotionView.bringSubview(toFront: self.moveTextView)
+        self.likeMotionView.bringSubview(toFront: self.flowerTextLabel)
         
         self.movePetalView.bringSubview(toFront: self.motionPetalImageView)
-        self.moveTextView.bringSubview(toFront: self.motionTextImageView)
         self.movePetalView.bringSubview(toFront: self.motionPetalImageView)
         
         self.movePetalView.isHidden = false
@@ -313,29 +307,37 @@ extension MDBoardViewController : MDCommentViewControllerDelegate{
         self.moveFlowerView.isHidden = false
         self.motionFlowerImageView.isHidden = false
         self.motionFlowerImageView.alpha = 1
-        self.motionFlowerImageView.animate(withGIFNamed: "moveFlower")
+        self.motionFlowerImageView.animate(withGIFNamed: "moveFlower", loopCount: 1, completionHandler: nil)
+
         
-        self.moveTextView.isHidden = false
-        self.motionTextImageView.isHidden = false
-        self.motionTextImageView.alpha = 1
-        self.motionTextImageView.animate(withGIFNamed: "moveText")
+        self.flowerTextLabel.isHidden = false
+        self.flowerTextLabel.alpha = 1
+
        
         
         
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2, execute: {
-            self.motionPetalImageView.stopAnimatingGIF()
-            self.motionPetalImageView.isHidden = true
-            self.movePetalView.isHidden = true;
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.7, execute: {
+
             
-            self.motionFlowerImageView.stopAnimatingGIF()
-            self.motionFlowerImageView.isHidden = true
-            self.moveFlowerView.isHidden = true;
-            
-            self.motionTextImageView.stopAnimatingGIF()
-            self.motionTextImageView.isHidden = true
-            self.moveTextView.isHidden = true;
-            
-            self.likeMotionView.isHidden = true
+            UIView.animate(withDuration: 0.5, animations: {
+                self.motionPetalImageView.stopAnimatingGIF()
+                self.motionFlowerImageView.stopAnimatingGIF()
+                
+
+                self.motionPetalImageView.alpha = 0
+                self.motionFlowerImageView.alpha = 0
+                self.flowerTextLabel.alpha = 0
+                
+            }, completion: { (result) in
+                self.motionPetalImageView.isHidden = true
+                self.motionFlowerImageView.isHidden = true
+                
+                self.movePetalView.isHidden = true;
+                self.moveFlowerView.isHidden = true;
+                
+                self.flowerTextLabel.isHidden = true;
+                self.likeMotionView.isHidden = true
+            })
         })
     }
 }
