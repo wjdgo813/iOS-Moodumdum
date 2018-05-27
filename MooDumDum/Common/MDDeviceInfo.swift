@@ -22,7 +22,6 @@ class MDDeviceInfo{
         if UUID == nil {
             let theUUID: CFUUID = CFUUIDCreate(nil)
             let string: CFString = CFUUIDCreateString(nil, theUUID)
-//            UUID = (string as? String)?.replacingOccurrences(of: "-", with: "")
             UUID = string as String
             UserDefaults.standard.setValue(string, forKey: "uniqueID")
         }

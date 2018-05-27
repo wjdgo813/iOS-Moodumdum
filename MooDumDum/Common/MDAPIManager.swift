@@ -30,7 +30,6 @@ class MDAPIManager{
             case .success:
                 completion(true)
             case .failure(let error):
-                self.showFailMessage()
                 completion(false)
             }
         }

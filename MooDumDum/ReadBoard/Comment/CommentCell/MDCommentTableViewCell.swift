@@ -12,6 +12,7 @@ import SwipeCellKit
 
 protocol MDCommentTableViewCellDelegate {
     func pressedCommentLikeButton(cell: MDCommentTableViewCell,data:MDCommentItem)
+    func pressedCommentUnLikeButton(cell: MDCommentTableViewCell,data:MDCommentItem)
 }
 
 class MDCommentTableViewCell: SwipeTableViewCell {
@@ -52,7 +53,10 @@ class MDCommentTableViewCell: SwipeTableViewCell {
     }
     
     @IBAction func pressedLikeButton(_ sender: Any) {
-        
-        self.cellDelegate?.pressedCommentLikeButton(cell:self ,data:commentData!)
+        if (commentData?.is_liked)! {
+            self.cellDelegate?.pressedCommentUnLikeButton(cell: self, data: commentData!)
+        }else{
+            self.cellDelegate?.pressedCommentLikeButton(cell:self ,data:commentData!)
+        }
     }
 }

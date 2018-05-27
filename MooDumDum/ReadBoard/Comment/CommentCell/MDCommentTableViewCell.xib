@@ -26,7 +26,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGx-E7-fvA">
-                        <rect key="frame" x="28" y="46" width="240" height="17"/>
+                        <rect key="frame" x="28" y="46" width="217" height="17"/>
                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                         <color key="textColor" red="0.45490196078431372" green="0.45490196078431372" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -45,10 +45,10 @@
                         </constraints>
                     </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uY7-6Q-IUI">
-                        <rect key="frame" x="278" y="43.5" width="17" height="22"/>
+                        <rect key="frame" x="255" y="34.5" width="40" height="40"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="17" id="ZGq-X3-As7"/>
-                            <constraint firstAttribute="height" constant="22" id="ht5-nY-W15"/>
+                            <constraint firstAttribute="width" constant="40" id="ZGq-X3-As7"/>
+                            <constraint firstAttribute="height" constant="40" id="ht5-nY-W15"/>
                         </constraints>
                         <state key="normal" image="beforeLikeButton"/>
                         <connections>

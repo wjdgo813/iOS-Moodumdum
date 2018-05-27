@@ -43,7 +43,7 @@ struct MDCommentItem : MDListProtocol{
     var board_id : String?
     var created : String?
     var updated : String?
-    var like_count : Int?
+    var like_count = 0
     var userObject : MDUserAPIData?
     var description : String?
     var category_id : Int?

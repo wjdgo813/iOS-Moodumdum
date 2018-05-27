@@ -29,7 +29,7 @@ class MDCommentViewController: MDPullUpController {
     @IBOutlet weak var tableView: UITableView!
     var delegate : MDCommentViewControllerDelegate!
     var data : MDDetailCategoryData?
-    var commentItem :MDCommentInfoSet?
+    var commentItem : MDCommentInfoSet?
     var isMoreLoading = false
     var commentState : MDCommentState?
     
@@ -170,14 +170,46 @@ extension MDCommentViewController : MDCommentTableViewCellDelegate{
         Alamofire.request("http://13.125.76.112:8000/api/board/comment/like/",method:.post,parameters:parameters).validate(statusCode: 200..<300).responseJSON { response in
             switch response.result{
             case .success:
+                
+                let indexPath = self.tableView.indexPath(for: cell)
+                var commentItemTemp = self.commentItem?.commentList[(indexPath?.row)! - 1]
+                commentItemTemp?.is_liked = true
+                commentItemTemp?.like_count = (self.commentItem?.commentList[(indexPath?.row)! - 1].like_count)! + 1
+                self.commentItem?.commentList[(indexPath?.row)! - 1] = commentItemTemp!
+                
+                cell.commentData?.like_count = (cell.commentData?.like_count)! + 1
+                cell.commentData?.is_liked = true
                 cell.likeButton.setImage(UIImage(named: "afterLikeButton"), for: .normal)
-                cell.commentCountLabel.text = "공감 \((data.like_count)! + 1)개"
+                cell.commentCountLabel.text = "공감 \((cell.commentData?.like_count)!)개"
                 break
             case .failure:
                 break
             }
-            
         }
+    }
+    
+    func pressedCommentUnLikeButton(cell: MDCommentTableViewCell, data: MDCommentItem) {
+        
+        Alamofire.request("http://13.125.76.112:8000/api/board/comment/like/\(MDDeviceInfo.getCurrentDeviceID())/\((data.comment_id)!)/",method:.delete).validate(statusCode: 200..<300).responseJSON { response in
+            switch response.result{
+            case .success:
+                
+                let indexPath = self.tableView.indexPath(for: cell)
+                var commentItemTemp = self.commentItem?.commentList[(indexPath?.row)! - 1]
+                commentItemTemp?.is_liked = false
+                commentItemTemp?.like_count = (self.commentItem?.commentList[(indexPath?.row)! - 1].like_count)! - 1
+                self.commentItem?.commentList[(indexPath?.row)! - 1] = commentItemTemp!
+                
+                cell.commentData?.like_count = (cell.commentData?.like_count)! - 1
+                cell.commentData?.is_liked = false
+                cell.likeButton.setImage(UIImage(named: "beforeLikeButton"), for: .normal)
+                cell.commentCountLabel.text = "공감 \((cell.commentData?.like_count)!)개"
+                break
+            case .failure:
+                break
+            }
+        }
+        
     }
 }
 

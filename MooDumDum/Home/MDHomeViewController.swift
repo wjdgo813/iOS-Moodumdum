@@ -12,6 +12,16 @@ class MDHomeViewController: UIViewController,UIGestureRecognizerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if !MDSettingData.firstPullUpGuide() {
+            let sb = UIStoryboard(name: "Home", bundle: nil)
+            let vc = sb.instantiateViewController(withIdentifier: "MDDescripViewController")
+            vc.providesPresentationContextTransitionStyle = true;
+            vc.definesPresentationContext = true;
+            vc.modalPresentationStyle = UIModalPresentationStyle.custom
+            self.navigationController?.present(vc, animated: true, completion: nil)
+        }
+    
         initNavigation()
         addPullUpController()
     }

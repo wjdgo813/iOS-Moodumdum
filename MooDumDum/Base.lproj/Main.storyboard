@@ -167,10 +167,6 @@
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUz-Uw-L0W">
                                 <rect key="frame" x="155" y="678" width="104" height="58"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="58" id="78b-GW-FCe"/>
-                                    <constraint firstAttribute="width" constant="104" id="DFE-ch-fC3"/>
-                                </constraints>
                                 <state key="normal" image="plusBtnBl"/>
                                 <connections>
                                     <segue destination="8h7-1x-kzt" kind="show" id="oek-w7-sgc"/>
@@ -372,7 +368,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="invalidName" translatesAutoresizingMaskIntoConstraints="NO" id="27O-bZ-1Tj">
-                                <rect key="frame" x="181" y="87" width="52" height="154"/>
+                                <rect key="frame" x="181" y="77" width="52" height="154"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="52" id="gFW-UZ-wr9"/>
                                     <constraint firstAttribute="height" constant="154" id="yKc-PI-e4E"/>
@@ -381,7 +377,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="27O-bZ-1Tj" firstAttribute="top" secondItem="DWh-qy-MPP" secondAttribute="top" constant="67" id="jeD-89-Euh"/>
+                            <constraint firstItem="27O-bZ-1Tj" firstAttribute="top" secondItem="UQU-1S-ZqD" secondAttribute="top" constant="77" id="jeD-89-Euh"/>
                             <constraint firstItem="27O-bZ-1Tj" firstAttribute="centerX" secondItem="UQU-1S-ZqD" secondAttribute="centerX" id="wqD-Ka-v6G"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DWh-qy-MPP"/>
