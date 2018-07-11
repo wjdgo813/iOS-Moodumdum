@@ -75,6 +75,10 @@
 		A1C60F7C202F67CD00E858A2 /* MDCategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C60F7B202F67CD00E858A2 /* MDCategoryListViewController.swift */; };
 		A1C60F802031E30800E858A2 /* MDCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C60F7F2031E30800E858A2 /* MDCardViewController.swift */; };
 		A1C60F822031E3C000E858A2 /* MDPullUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C60F812031E3C000E858A2 /* MDPullUpController.swift */; };
+		A1C862EF20F623470053907F /* MDDeveloperInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C862ED20F623470053907F /* MDDeveloperInfoViewController.swift */; };
+		A1C862F020F623470053907F /* MDDeveloperInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1C862EE20F623470053907F /* MDDeveloperInfoViewController.xib */; };
+		A1C862F320F62D260053907F /* MDDeveloperTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C862F120F62D260053907F /* MDDeveloperTableViewCell.swift */; };
+		A1C862F420F62D260053907F /* MDDeveloperTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1C862F220F62D260053907F /* MDDeveloperTableViewCell.xib */; };
 		A1D61928207BAFF30046C2E2 /* likeMotion.gif in Resources */ = {isa = PBXBuildFile; fileRef = A1D61927207BAFF30046C2E2 /* likeMotion.gif */; };
 		A1D6192A207CED810046C2E2 /* MDFirstDescriptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D61929207CED810046C2E2 /* MDFirstDescriptViewController.swift */; };
 		A1D6192C207CEE1C0046C2E2 /* MDFirstContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D6192B207CEE1C0046C2E2 /* MDFirstContentViewController.swift */; };
@@ -198,6 +202,10 @@
 		A1C60F7B202F67CD00E858A2 /* MDCategoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDCategoryListViewController.swift; sourceTree = "<group>"; };
 		A1C60F7F2031E30800E858A2 /* MDCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDCardViewController.swift; sourceTree = "<group>"; };
 		A1C60F812031E3C000E858A2 /* MDPullUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDPullUpController.swift; sourceTree = "<group>"; };
+		A1C862ED20F623470053907F /* MDDeveloperInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDDeveloperInfoViewController.swift; sourceTree = "<group>"; };
+		A1C862EE20F623470053907F /* MDDeveloperInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MDDeveloperInfoViewController.xib; sourceTree = "<group>"; };
+		A1C862F120F62D260053907F /* MDDeveloperTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDDeveloperTableViewCell.swift; sourceTree = "<group>"; };
+		A1C862F220F62D260053907F /* MDDeveloperTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MDDeveloperTableViewCell.xib; sourceTree = "<group>"; };
 		A1D61927207BAFF30046C2E2 /* likeMotion.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = likeMotion.gif; sourceTree = "<group>"; };
 		A1D61929207CED810046C2E2 /* MDFirstDescriptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDFirstDescriptViewController.swift; sourceTree = "<group>"; };
 		A1D6192B207CEE1C0046C2E2 /* MDFirstContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDFirstContentViewController.swift; sourceTree = "<group>"; };
@@ -321,6 +329,7 @@
 		35FBA72E20596AC200BD2119 /* Mypage */ = {
 			isa = PBXGroup;
 			children = (
+				A1C862EC20F623180053907F /* DeveloperInfoView */,
 				35174BAD20616CEF0006ED4E /* User */,
 				A126040320961F2100C14ADA /* MDMyBoardCell.swift */,
 				A126040420961F2100C14ADA /* MDMyBoardCell.xib */,
@@ -500,6 +509,17 @@
 				A1B75C9D203DD0FE008B3EBF /* View */,
 			);
 			path = CategoryList;
+			sourceTree = "<group>";
+		};
+		A1C862EC20F623180053907F /* DeveloperInfoView */ = {
+			isa = PBXGroup;
+			children = (
+				A1C862ED20F623470053907F /* MDDeveloperInfoViewController.swift */,
+				A1C862EE20F623470053907F /* MDDeveloperInfoViewController.xib */,
+				A1C862F120F62D260053907F /* MDDeveloperTableViewCell.swift */,
+				A1C862F220F62D260053907F /* MDDeveloperTableViewCell.xib */,
+			);
+			path = DeveloperInfoView;
 			sourceTree = "<group>";
 		};
 		A1D61924207BACC30046C2E2 /* Supporting Files */ = {
@@ -771,6 +791,7 @@
 				A13C5F762036703C006E5485 /* Home.storyboard in Resources */,
 				BADC6EF120234B5500DC9181 /* Assets.xcassets in Resources */,
 				BADC6EEF20234B5500DC9181 /* Main.storyboard in Resources */,
+				A1C862F020F623470053907F /* MDDeveloperInfoViewController.xib in Resources */,
 				A1AA45C72098437100F3EBF5 /* MDWirteCategorySlideCell.xib in Resources */,
 				A1C60F76202F671C00E858A2 /* MDCategoryList.storyboard in Resources */,
 				A17E0CA520B7094600D11A68 /* moveText.gif in Resources */,
@@ -789,6 +810,7 @@
 				A1B75CB2203DE678008B3EBF /* MDCategoryCollectionViewCell.xib in Resources */,
 				A12936F12062AA8A0087A074 /* MDHeaderCommentTableViewCell.xib in Resources */,
 				A17E0C9320B1D2D600D11A68 /* MDMyBoardEmptyCell.xib in Resources */,
+				A1C862F420F62D260053907F /* MDDeveloperTableViewCell.xib in Resources */,
 				BAA0B52F206206AC00C82A84 /* MDCommentTableViewCell.xib in Resources */,
 				BA7AD746206118E500306CBF /* DraggableView.xib in Resources */,
 				A17E0C9720B1D55F00D11A68 /* MDMySelfLikeEmptyCell.xib in Resources */,
@@ -994,6 +1016,7 @@
 				A12936E3206021510087A074 /* MDBoardViewController.swift in Sources */,
 				A12936D1205FF7050087A074 /* MDDetailCategoryData.swift in Sources */,
 				A1AA45CB209846FB00F3EBF5 /* MDWriteSlideCollectionViewController.swift in Sources */,
+				A1C862EF20F623470053907F /* MDDeveloperInfoViewController.swift in Sources */,
 				A1B75CB1203DE678008B3EBF /* MDCategoryCollectionViewCell.swift in Sources */,
 				A1F3BF8F208CBEEC00E8F861 /* MDPickPhotoData.swift in Sources */,
 				A1C60F68202F109E00E858A2 /* OverlayView.m in Sources */,
@@ -1024,6 +1047,7 @@
 				A17E0C9620B1D55F00D11A68 /* MDMySelfLikeEmptyCell.swift in Sources */,
 				A15B6C36208346B300954831 /* MDDraggableViewBackground.swift in Sources */,
 				BAD0E570203E644E00D91725 /* MDListProtocol.swift in Sources */,
+				A1C862F320F62D260053907F /* MDDeveloperTableViewCell.swift in Sources */,
 				BADC6EEA20234B5500DC9181 /* AppDelegate.swift in Sources */,
 				A1C60F6C202F10E400E858A2 /* RootRouter.swift in Sources */,
 				A1B75CA2203DD15A008B3EBF /* MDItemViewController.swift in Sources */,

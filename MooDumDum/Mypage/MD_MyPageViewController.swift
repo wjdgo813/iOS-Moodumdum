@@ -76,8 +76,6 @@ class MD_MyPageViewController: UIViewController {
     
     
     
-    
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         initNav()
@@ -95,7 +93,12 @@ class MD_MyPageViewController: UIViewController {
     
     func initNav(){
         let leftItem = UIBarButtonItem(image: UIImage(named: "cancel"), style: .plain , target: self, action: #selector(exitButton))
+        
+        let infoImage = UIImage(named: "infoButton")?.withRenderingMode(.alwaysOriginal)
+        let rightBarButtonItem = UIBarButtonItem(image: infoImage, style: .plain, target: self, action: #selector(pressedInfoButton))
+        
         self.navigationItem.leftBarButtonItem = leftItem
+        self.navigationItem.rightBarButtonItem = rightBarButtonItem
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
         self.navigationController?.navigationBar.tintColor = UIColor.black;
         UIApplication.shared.statusBarStyle = .default
@@ -151,6 +154,10 @@ class MD_MyPageViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @objc func pressedInfoButton(){
+        let vc = MDDeveloperInfoViewController(nibName: "MDDeveloperInfoViewController", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
     
     
