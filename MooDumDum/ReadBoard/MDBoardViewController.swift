@@ -72,6 +72,10 @@ class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate{
     
     
     func initNavigationBar(){
+
+        let infoImage = UIImage(named: "moreButton")?.withRenderingMode(.alwaysOriginal)
+        let rightBarButtonItem = UIBarButtonItem(image: infoImage, style: .plain, target: self, action: #selector(pressedMoreButton))
+        self.navigationItem.rightBarButtonItem = rightBarButtonItem
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
@@ -129,6 +133,9 @@ class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate{
     }
     
     
+    @objc func pressedMoreButton(){
+        
+    }
     
     
     func requestBoardInfo(){
