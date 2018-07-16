@@ -79,6 +79,7 @@
 		A1C862F020F623470053907F /* MDDeveloperInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1C862EE20F623470053907F /* MDDeveloperInfoViewController.xib */; };
 		A1C862F320F62D260053907F /* MDDeveloperTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C862F120F62D260053907F /* MDDeveloperTableViewCell.swift */; };
 		A1C862F420F62D260053907F /* MDDeveloperTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1C862F220F62D260053907F /* MDDeveloperTableViewCell.xib */; };
+		A1C862F920FD05320053907F /* MoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C862F820FD05320053907F /* MoreProtocol.swift */; };
 		A1D61928207BAFF30046C2E2 /* likeMotion.gif in Resources */ = {isa = PBXBuildFile; fileRef = A1D61927207BAFF30046C2E2 /* likeMotion.gif */; };
 		A1D6192A207CED810046C2E2 /* MDFirstDescriptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D61929207CED810046C2E2 /* MDFirstDescriptViewController.swift */; };
 		A1D6192C207CEE1C0046C2E2 /* MDFirstContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D6192B207CEE1C0046C2E2 /* MDFirstContentViewController.swift */; };
@@ -206,6 +207,7 @@
 		A1C862EE20F623470053907F /* MDDeveloperInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MDDeveloperInfoViewController.xib; sourceTree = "<group>"; };
 		A1C862F120F62D260053907F /* MDDeveloperTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDDeveloperTableViewCell.swift; sourceTree = "<group>"; };
 		A1C862F220F62D260053907F /* MDDeveloperTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MDDeveloperTableViewCell.xib; sourceTree = "<group>"; };
+		A1C862F820FD05320053907F /* MoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreProtocol.swift; sourceTree = "<group>"; };
 		A1D61927207BAFF30046C2E2 /* likeMotion.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = likeMotion.gif; sourceTree = "<group>"; };
 		A1D61929207CED810046C2E2 /* MDFirstDescriptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDFirstDescriptViewController.swift; sourceTree = "<group>"; };
 		A1D6192B207CEE1C0046C2E2 /* MDFirstContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDFirstContentViewController.swift; sourceTree = "<group>"; };
@@ -487,6 +489,7 @@
 		A1C60F72202F17D600E858A2 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A1C862F720FD051E0053907F /* Protocol */,
 				A1263D95207CFE29005E15CF /* Extension */,
 				A1B75C9E203DD10B008B3EBF /* Items */,
 				A1C60F812031E3C000E858A2 /* MDPullUpController.swift */,
@@ -520,6 +523,14 @@
 				A1C862F220F62D260053907F /* MDDeveloperTableViewCell.xib */,
 			);
 			path = DeveloperInfoView;
+			sourceTree = "<group>";
+		};
+		A1C862F720FD051E0053907F /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				A1C862F820FD05320053907F /* MoreProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		A1D61924207BACC30046C2E2 /* Supporting Files */ = {
@@ -1005,6 +1016,7 @@
 				BA7AD7442060E38E00306CBF /* MDDraggableModel.swift in Sources */,
 				A1D6192A207CED810046C2E2 /* MDFirstDescriptViewController.swift in Sources */,
 				35C5BB192076347100513A42 /* MD_UserInfo.swift in Sources */,
+				A1C862F920FD05320053907F /* MoreProtocol.swift in Sources */,
 				A1F3BF91208CBF0F00E8F861 /* MDPickPhotoSet.swift in Sources */,
 				35428F4B203AB435002DF28E /* MD_PhotoViewController.swift in Sources */,
 				A17E36882036AAA50077F486 /* MDHomeViewController.swift in Sources */,

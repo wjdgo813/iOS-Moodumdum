@@ -80,7 +80,7 @@ class MDCardViewController: MDPullUpController,MDDraggableViewBackgroundDelegate
     func pressedCardView(draggableView:DraggableView, data: MDDetailCategoryData) {
         let sb = UIStoryboard(name: "Board", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "MDBoardViewController") as? MDBoardViewController
-        vc?.data = data
+        vc?.detailData = data
         vc?.prevView = draggableView
         
         self.navigationController?.pushViewController(vc!, animated: true)

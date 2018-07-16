@@ -249,7 +249,7 @@ extension MD_MyPageViewController : UICollectionViewDelegate {
         let boardData = self.data?.categoryDetailList[indexPath.row]
         let sb = UIStoryboard(name: "Board", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "MDBoardViewController") as? MDBoardViewController
-        vc?.data = boardData
+        vc?.detailData = boardData
         
         self.navigationController?.pushViewController(vc!, animated: true)
         self.navigationController?.navigationBar.tintColor = UIColor(hexString: (boardData?.color)!)

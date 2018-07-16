@@ -35,54 +35,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MooDumDum/Common/MDAPIManager.swift"
-            timestampString = "553447432.033299"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "reqeustBoardLike(parameters:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MooDumDum.MDAPIManager.reqeustBoardLike(parameters: Swift.Dictionary&lt;Swift.String, Any&gt;, completion: (SwiftyJSON.JSON) -&gt; ()) -&gt; ()"
-                  moduleName = "MooDumDum"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/haehyeonjeong/Documents/dev/iOS-Moodumdum/MooDumDum/Common/MDAPIManager.swift"
-                  timestampString = "553447432.212819"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "69"
-                  endingLineNumber = "69"
-                  offsetFromSymbolStart = "50">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in MooDumDum.MDAPIManager.reqeustBoardLike(parameters: Swift.Dictionary&lt;Swift.String, Any&gt;, completion: (SwiftyJSON.JSON) -&gt; ()) -&gt; ()"
-                  moduleName = "MooDumDum"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/haehyeonjeong/Documents/dev/iOS-Moodumdum/MooDumDum/Common/MDAPIManager.swift"
-                  timestampString = "553447432.21509"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
-                  offsetFromSymbolStart = "29">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "MooDumDum/DraggableCard/DraggableView.m"
             timestampString = "553000971.380996"
             startingColumnNumber = "9223372036854775807"

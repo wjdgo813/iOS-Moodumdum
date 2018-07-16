@@ -94,14 +94,14 @@ extension MDCategoryDetailViewController: MDItemViewControllerDelegate{
         let sb = UIStoryboard(name: "Board", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "MDBoardViewController") as? MDBoardViewController
         if let cellItem = item as? MDDetailCategoryData{
-            vc?.data = cellItem
+            vc?.detailData = cellItem
             
         }
         vc?.prevView = itemViewController.myCollectionView.cellForItem(at: indexPath)
         self.navigationController?.pushViewController(vc!, animated: true)
         
         
-        self.navigationController?.navigationBar.tintColor = UIColor(hexString: (vc?.data?.color)!)
+        self.navigationController?.navigationBar.tintColor = UIColor(hexString: (vc?.detailData?.color)!)
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
         
         
