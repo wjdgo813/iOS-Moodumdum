@@ -12,7 +12,7 @@ import SwiftyJSON
 struct MDDetailCategoryData : MDListProtocol{
     let id : String
     let category_id : String
-    let user : String
+    let userObject : MDUserAPIData
     let name : String
     let description : String
     let views : Int
@@ -29,7 +29,7 @@ struct MDDetailCategoryData : MDListProtocol{
         
         id = json["id"].stringValue
         category_id = json["category_id"].stringValue
-        user = json["user"].stringValue
+        userObject = MDUserAPIData(rawJson: json["user_id"])
         name = json["name"].stringValue
         description = json["description"].stringValue
         views = json["views"].intValue

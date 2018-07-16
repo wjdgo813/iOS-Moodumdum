@@ -35,40 +35,8 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MooDumDum/Home/MDFirstContentViewController.swift"
-            timestampString = "548687907.407397"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "startMoodumdum(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MooDumDum/Home/MDFirstContentViewController.swift"
-            timestampString = "548687907.4077179"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "startMoodumdum(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "MooDumDum/Common/MDAPIManager.swift"
-            timestampString = "549093441.1558729"
+            timestampString = "553447432.033299"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "69"
@@ -84,12 +52,12 @@
                   moduleName = "MooDumDum"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/haehyeonjeong/Documents/dev/iOS-Moodumdum/MooDumDum/Common/MDAPIManager.swift"
-                  timestampString = "553013503.091477"
+                  timestampString = "553447432.212819"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "69"
                   endingLineNumber = "69"
-                  offsetFromSymbolStart = "48">
+                  offsetFromSymbolStart = "50">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -99,12 +67,12 @@
                   moduleName = "MooDumDum"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/haehyeonjeong/Documents/dev/iOS-Moodumdum/MooDumDum/Common/MDAPIManager.swift"
-                  timestampString = "553013503.093534"
+                  timestampString = "553447432.21509"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
                   endingLineNumber = "70"
-                  offsetFromSymbolStart = "32">
+                  offsetFromSymbolStart = "29">
                </Location>
             </Locations>
          </BreakpointContent>

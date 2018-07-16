@@ -25,8 +25,8 @@ class MDDetailCategoryCellViewModel : MDCategoryItemCellViewModel{
         return data.category_id
     }
     
-    var user : String{
-        return data.user
+    var user : MDUserAPIData{
+        return data.userObject
     }
     
     var name : String{

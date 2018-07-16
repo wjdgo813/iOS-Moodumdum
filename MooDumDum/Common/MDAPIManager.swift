@@ -137,6 +137,24 @@ class MDAPIManager{
         }
     }
     
+    /*
+     글 삭제하기 api
+     */
+    func deleteBoard(board_id:String,completion:@escaping (_ result : JSON)->(Void)){
+        Alamofire.request("\(api_url)api/board/\(board_id)",method:.delete).validate(statusCode: 200..<300).responseJSON { response in
+            switch response.result {
+            case .success:
+                Toast(text: "묻은 기억이 삭제 되었습니다.", duration: Delay.long).show()
+                let json = JSON(response.result.value)
+                completion(json)
+                break
+            case .failure:
+                self.showFailMessage()
+                break
+            }
+        }
+    }
+    
     func deleteComment(commentId : String,completion:@escaping (_ result : JSON)->(Void)){
         Alamofire.request("\(api_url)api/board/comment/\(commentId)/?user=\(MDDeviceInfo.getCurrentDeviceID())",method:.delete).validate(statusCode: 200..<300).responseJSON { response in
             let json = JSON(response.result.value)
@@ -246,6 +264,12 @@ class MDAPIManager{
         }
     }
     
+    /*
+     신고하기 API
+     */
+    func requestDeclare(){
+        
+    }
     
     
     func showFailMessage(){

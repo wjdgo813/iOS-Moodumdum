@@ -17,9 +17,6 @@ class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate{
 
     @IBOutlet weak var gradientView: UIView!
     @IBOutlet weak var commentBackForX: UIView!
-    
-    
-    
     @IBOutlet weak var content: UITextView!
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var commentView: UIView!
@@ -134,7 +131,43 @@ class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate{
     
     
     @objc func pressedMoreButton(){
+        print("Device info : \(MDDeviceInfo.getCurrentDeviceID())")
+        print("board info : \(data?.userObject.UUID)")
         
+        
+        
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let deleteButton = UIAlertAction(title: "삭제하기", style: .default, handler: { (action) -> Void in
+            MDAPIManager.sharedManager.deleteBoard(board_id: (self.data?.id)!, completion: { (result) -> (Void) in
+                self.dismiss(animated: true, completion: nil)
+            })
+        })
+        
+        let declareButton = UIAlertAction(title: "신고하기", style: .destructive, handler: { (action) -> Void in
+            print("Delete button tapped")
+        })
+        
+        let blockingButton = UIAlertAction(title: "차단하기", style: .default, handler: { (action) -> Void in
+            print("Delete button tapped")
+        })
+        
+        let cancelButton = UIAlertAction(title: "취소", style: .cancel, handler: { (action) -> Void in
+            print("Cancel button tapped")
+        })
+        
+        
+        
+        if MDDeviceInfo.getCurrentDeviceID() == (data?.userObject.UUID)!{ //내가 쓴 글
+            alertController.addAction(deleteButton)
+        }else{
+            alertController.addAction(declareButton)
+            alertController.addAction(blockingButton)
+        }
+        
+        alertController.addAction(cancelButton)
+
+        self.navigationController!.present(alertController, animated: true, completion: nil)
     }
     
     
