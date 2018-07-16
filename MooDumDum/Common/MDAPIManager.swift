@@ -266,9 +266,24 @@ class MDAPIManager{
     
     /*
      신고하기 API
+     @param
+     user : 신고 유저
+     title : 신고사유
+     description : 글 내용
+     board_id : id(pk)
      */
-    func requestDeclare(){
-        
+    func requestDeclare(parameters : Parameters,completion: @escaping (_ result : JSON)->(Void)){
+        Alamofire.request("\(api_url)api/declare/",method:.post,parameters:parameters).validate(statusCode: 200..<300).responseJSON { response in
+            let json = JSON(response.result.value)
+            switch response.result {
+            case .success:
+                completion(json)
+                break
+            case .failure:
+                self.showFailMessage()
+                break
+            }
+        }
     }
     
     
