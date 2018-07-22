@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MDDeclareViewController" customModule="MooDumDum" customModuleProvider="target">
+            <connections>
+                <outlet property="reportContentTextView" destination="1ZS-AR-zEf" id="gZ3-NC-Lad"/>
+                <outlet property="selectDeclareReason" destination="lwX-9E-Kh6" id="781-rD-Fph"/>
+                <outlet property="sendReportButton" destination="hph-sw-iVq" id="5Ok-if-qIC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PKi-pK-w3J">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oxf-Rp-hEA">
+                    <rect key="frame" x="20" y="143" width="374" height="450"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="신고를 총 3회 받은 사용자는 무덤덤에서 글을 쓸 수 없습니다." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yqa-cr-7Et">
+                            <rect key="frame" x="5.6666666666666572" y="45" width="363.33333333333337" height="15.666666666666664"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IK0-u0-DrZ">
+                            <rect key="frame" x="334" y="0.0" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="k4Q-wK-cuV"/>
+                                <constraint firstAttribute="height" constant="40" id="mxZ-I3-EYQ"/>
+                            </constraints>
+                            <state key="normal" image="delcareCloseButton"/>
+                            <connections>
+                                <action selector="dismissDeclareButton:" destination="-1" eventType="touchUpInside" id="w6D-dR-rBg"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwX-9E-Kh6">
+                            <rect key="frame" x="0.0" y="70.666666666666657" width="374" height="38"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="38" id="wOF-pn-S0Q"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="310" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="가장 적절한 범주를 선택하세요." image="declareReason">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="pressedSelectReason:" destination="-1" eventType="touchUpInside" id="WtB-TZ-jgW"/>
+                            </connections>
+                        </button>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1ZS-AR-zEf">
+                            <rect key="frame" x="0.0" y="122.66666666666669" width="374" height="286"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="286" id="hB1-eI-R5a"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hph-sw-iVq">
+                            <rect key="frame" x="257" y="418" width="117" height="32"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="5hC-lh-a2g"/>
+                                <constraint firstAttribute="width" constant="117" id="phH-Cc-WQk"/>
+                            </constraints>
+                            <state key="normal" title="신고하기">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="pressedReport:" destination="-1" eventType="touchUpInside" id="OoN-2h-eFm"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="IK0-u0-DrZ" firstAttribute="top" secondItem="oxf-Rp-hEA" secondAttribute="top" id="2Bb-Ig-GDL"/>
+                        <constraint firstAttribute="trailing" secondItem="hph-sw-iVq" secondAttribute="trailing" id="4X5-E4-Qke"/>
+                        <constraint firstItem="lwX-9E-Kh6" firstAttribute="leading" secondItem="oxf-Rp-hEA" secondAttribute="leading" id="5Vn-4i-Oti"/>
+                        <constraint firstAttribute="trailing" secondItem="1ZS-AR-zEf" secondAttribute="trailing" id="EST-Ku-mi3"/>
+                        <constraint firstAttribute="trailing" secondItem="yqa-cr-7Et" secondAttribute="trailing" constant="5" id="Iii-ja-m5n"/>
+                        <constraint firstItem="yqa-cr-7Et" firstAttribute="leading" secondItem="oxf-Rp-hEA" secondAttribute="leading" constant="5" id="POM-Yh-EjG"/>
+                        <constraint firstItem="yqa-cr-7Et" firstAttribute="top" secondItem="IK0-u0-DrZ" secondAttribute="bottom" constant="5" id="Tez-Be-y2a"/>
+                        <constraint firstItem="1ZS-AR-zEf" firstAttribute="leading" secondItem="oxf-Rp-hEA" secondAttribute="leading" id="bIN-IU-I9Q"/>
+                        <constraint firstItem="lwX-9E-Kh6" firstAttribute="top" secondItem="yqa-cr-7Et" secondAttribute="bottom" constant="10" id="eHv-9v-enu"/>
+                        <constraint firstItem="yqa-cr-7Et" firstAttribute="centerX" secondItem="oxf-Rp-hEA" secondAttribute="centerX" id="fmt-qb-Gmd"/>
+                        <constraint firstAttribute="bottom" secondItem="hph-sw-iVq" secondAttribute="bottom" id="g2g-Qv-i2h"/>
+                        <constraint firstItem="1ZS-AR-zEf" firstAttribute="top" secondItem="lwX-9E-Kh6" secondAttribute="bottom" constant="14" id="gez-4g-Pdh"/>
+                        <constraint firstAttribute="trailing" secondItem="IK0-u0-DrZ" secondAttribute="trailing" id="nZR-Vl-aGI"/>
+                        <constraint firstAttribute="trailing" secondItem="lwX-9E-Kh6" secondAttribute="trailing" id="sXM-Un-h6v"/>
+                        <constraint firstAttribute="height" constant="450" id="uvq-25-vNo"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="oxf-Rp-hEA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8Lr-gG-tsH"/>
+                <constraint firstItem="PKi-pK-w3J" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="E4m-2a-H4J"/>
+                <constraint firstItem="oxf-Rp-hEA" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Pht-WH-8o1"/>
+                <constraint firstItem="PKi-pK-w3J" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="V9p-Cf-eIe"/>
+                <constraint firstItem="PKi-pK-w3J" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Vqy-C0-daL"/>
+                <constraint firstItem="oxf-Rp-hEA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="hQU-7B-YCF"/>
+                <constraint firstItem="PKi-pK-w3J" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nYc-kj-x8B"/>
+                <constraint firstAttribute="trailing" secondItem="oxf-Rp-hEA" secondAttribute="trailing" constant="20" id="wgJ-lY-g8q"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="declareReason" width="17" height="10"/>
+        <image name="delcareCloseButton" width="15" height="15"/>
+    </resources>
+</document>

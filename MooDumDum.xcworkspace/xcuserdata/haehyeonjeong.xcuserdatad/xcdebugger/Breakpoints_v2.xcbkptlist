@@ -61,5 +61,69 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MooDumDum/Common/MDAPIManager.swift"
+            timestampString = "553954211.354565"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "277"
+            endingLineNumber = "277"
+            landmarkName = "requestDeclare(parameters:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MooDumDum/Common/MDAPIManager.swift"
+            timestampString = "553954211.354692"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "276"
+            endingLineNumber = "276"
+            landmarkName = "requestDeclare(parameters:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MooDumDum.MDAPIManager.requestDeclare(parameters: Swift.Dictionary&lt;Swift.String, Any&gt;, completion: (SwiftyJSON.JSON) -&gt; ()) -&gt; ()"
+                  moduleName = "MooDumDum"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haehyeonjeong/Documents/dev/iOS-Moodumdum/MooDumDum/Common/MDAPIManager.swift"
+                  timestampString = "553954211.571492"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "276"
+                  endingLineNumber = "276"
+                  offsetFromSymbolStart = "50">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in MooDumDum.MDAPIManager.requestDeclare(parameters: Swift.Dictionary&lt;Swift.String, Any&gt;, completion: (SwiftyJSON.JSON) -&gt; ()) -&gt; ()"
+                  moduleName = "MooDumDum"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haehyeonjeong/Documents/dev/iOS-Moodumdum/MooDumDum/Common/MDAPIManager.swift"
+                  timestampString = "553954211.574041"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "277"
+                  endingLineNumber = "277"
+                  offsetFromSymbolStart = "29">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
