@@ -25,7 +25,7 @@ class MD_PhotoViewController: UIViewController , UICollectionViewDataSource, UIC
     var selectImage : String = ""
     var selectfont : String = ""
     var url : String = "http://13.125.76.112/api/boardimage/random/?limit=20"
-    var post : String = "http://13.125.76.112:8000/api/board/?user=\(MDDeviceInfo.getCurrentDeviceID())"
+    var post : String = "http://13.125.76.112/api/board/?user=\(MDDeviceInfo.getCurrentDeviceID())"
     var nextPage = ""
     var isMoreLoading = false
 

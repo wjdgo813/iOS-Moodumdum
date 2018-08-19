@@ -16,7 +16,7 @@ class MDDraggableModel{
     var boardData : MDDetailCategorySet!
     
     func loadCard(){
-        Alamofire.request("http://13.125.76.112:8000/api/board/?user=\(MDDeviceInfo.getCurrentDeviceID())").responseJSON { response in
+        Alamofire.request("http://13.125.76.112/api/board/?user=\(MDDeviceInfo.getCurrentDeviceID())").responseJSON { response in
             let json = JSON(response.result.value)
             print("iwant : \(json)")
             print("iwant : \(json["results"])")

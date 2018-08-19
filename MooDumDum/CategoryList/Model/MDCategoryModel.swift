@@ -19,7 +19,7 @@ class MDCategoryModel{
     
     func loadCategory(){
         ///api/board/
-        Alamofire.request("http://13.125.76.112:8000/api/board/category/").responseJSON { response in
+        Alamofire.request("http://13.125.76.112/api/board/category/").responseJSON { response in
             let json = JSON(response.result.value)
             print("iwant : \(json)")
             print("iwant : \(json["results"])")

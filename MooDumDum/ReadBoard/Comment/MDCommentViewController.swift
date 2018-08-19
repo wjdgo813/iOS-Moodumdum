@@ -167,7 +167,7 @@ extension MDCommentViewController : MDCommentTableViewCellDelegate{
             "user":MDDeviceInfo.getCurrentDeviceID()
         ]
         
-        Alamofire.request("http://13.125.76.112:8000/api/board/comment/like/",method:.post,parameters:parameters).validate(statusCode: 200..<300).responseJSON { response in
+        Alamofire.request("http://13.125.76.112/api/board/comment/like/",method:.post,parameters:parameters).validate(statusCode: 200..<300).responseJSON { response in
             switch response.result{
             case .success:
                 
@@ -190,7 +190,7 @@ extension MDCommentViewController : MDCommentTableViewCellDelegate{
     
     func pressedCommentUnLikeButton(cell: MDCommentTableViewCell, data: MDCommentItem) {
         
-        Alamofire.request("http://13.125.76.112:8000/api/board/comment/like/\(MDDeviceInfo.getCurrentDeviceID())/\((data.comment_id)!)/",method:.delete).validate(statusCode: 200..<300).responseJSON { response in
+        Alamofire.request("http://13.125.76.112/api/board/comment/like/\(MDDeviceInfo.getCurrentDeviceID())/\((data.comment_id)!)/",method:.delete).validate(statusCode: 200..<300).responseJSON { response in
             switch response.result{
             case .success:
                 

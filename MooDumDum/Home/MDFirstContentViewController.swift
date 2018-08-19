@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import Toaster
 
 class MDFirstContentViewController: UIViewController {
 
@@ -49,7 +50,7 @@ class MDFirstContentViewController: UIViewController {
             "name":UserDefaults.standard.string(forKey: "nickname") ?? ""
         ]
         
-        Alamofire.request("http://13.125.76.112:8000/api/user/",method:.post,parameters:parameters).validate(statusCode: 200..<300).responseJSON { response in
+        Alamofire.request("http://13.125.76.112/api/user/",method:.post,parameters:parameters).validate(statusCode: 200..<300).responseJSON { response in
             switch response.result{
             case .success:
                 let sb = UIStoryboard(name: "Main", bundle: nil)
@@ -58,6 +59,7 @@ class MDFirstContentViewController: UIViewController {
 
                 break
             case .failure:
+                Toast(text: "알 수 없는 오류가 발생하였습니다. 잠시 후에 다시 시도해주세요.", duration: Delay.long).show()
                 break
             }
         }

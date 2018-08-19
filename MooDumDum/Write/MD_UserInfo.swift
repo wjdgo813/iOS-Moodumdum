@@ -13,7 +13,7 @@ class MD_UserInfo {
     var user : String = ""
     var name : String = ""
     var profile_image : String = ""
-    var URL = "http://13.125.76.112:8000/api/user/\(MDDeviceInfo.getCurrentDeviceID())/"
+    var URL = "http://13.125.76.112/api/user/\(MDDeviceInfo.getCurrentDeviceID())/"
 
     init(){
         self.user = MDDeviceInfo.getCurrentDeviceID()

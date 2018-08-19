@@ -64,7 +64,7 @@ class MD_ProfilePic: UIViewController ,UICollectionViewDataSource, UICollectionV
     }
     
     func loadData() {
-        Alamofire.request("http://13.125.76.112:8000/api/profileimage/").responseJSON {
+        Alamofire.request("http://13.125.76.112/api/profileimage/").responseJSON {
             (response) in
             let result = response.result
             if let dict = result.value as? Dictionary<String,AnyObject>{

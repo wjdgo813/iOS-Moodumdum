@@ -31,9 +31,16 @@ class MDDeclareViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     @IBAction func dismissDeclareButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    
     @IBAction func pressedSelectReason(_ sender: Any) {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
@@ -77,6 +84,8 @@ class MDDeclareViewController: UIViewController {
         self.present(alertController, animated: true, completion: nil)
         
     }
+    
+    
     @IBAction func pressedReport(_ sender: Any) {
         guard reasonString != "" else {
             let alertController = UIAlertController(title: "", message: "신고 사유를 선택해주세요.", preferredStyle: .alert)

@@ -14,7 +14,7 @@ import Toaster
 
 class MDAPIManager{
     static let sharedManager = MDAPIManager()
-    let api_url = "http://13.125.76.112:8000/"
+    let api_url = "http://13.125.76.112/"
     
     private init() {
         
@@ -49,7 +49,7 @@ class MDAPIManager{
      해당 게시글에 댓글 등록
      */
     func requestRegisterReply(parameters:Parameters,completion:@escaping (_ result : JSON)->(Void)){
-        Alamofire.request("http://13.125.76.112:8000/api/board/comment/?user=\(MDDeviceInfo.getCurrentDeviceID())",method:.post,parameters:parameters).validate(statusCode: 200..<300).responseJSON { response in
+        Alamofire.request("http://13.125.76.112/api/board/comment/?user=\(MDDeviceInfo.getCurrentDeviceID())",method:.post,parameters:parameters).validate(statusCode: 200..<300).responseJSON { response in
             let json = JSON(response.result.value)
             switch response.result {
             case .success:
@@ -274,6 +274,25 @@ class MDAPIManager{
      */
     func requestDeclare(parameters : Parameters,completion: @escaping (_ result : JSON)->(Void)){
         Alamofire.request("\(api_url)api/declare/",method:.post,parameters:parameters).validate(statusCode: 200..<300).responseJSON { response in
+            let json = JSON(response.result.value)
+            switch response.result {
+            case .success:
+                completion(json)
+                break
+            case .failure:
+                self.showFailMessage()
+                break
+            }
+        }
+    }
+    
+    
+    func requestBlockUser(blockUser:String,completion: @escaping (_ result : JSON)->(Void)){
+        
+        let parameter : Parameters = ["from_user":MDDeviceInfo.getCurrentDeviceID(),
+                                      "to_user":blockUser]
+        
+        Alamofire.request("\(api_url)api/block/user",method:.post,parameters:parameter).validate(statusCode: 200..<300).responseJSON { response in
             let json = JSON(response.result.value)
             switch response.result {
             case .success:

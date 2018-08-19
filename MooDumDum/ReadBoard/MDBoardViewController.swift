@@ -146,7 +146,6 @@ class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate,Press
         
         let deleteButton = UIAlertAction(title: "삭제하기", style: .default, handler: { (action) -> Void in
             self.deleteAction()
-            
         })
         
         let declareButton = UIAlertAction(title: "신고하기", style: .destructive, handler: { (action) -> Void in
@@ -162,6 +161,7 @@ class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate,Press
         
         let blockingButton = UIAlertAction(title: "차단하기", style: .default, handler: { (action) -> Void in
             print("Delete button tapped")
+            self.blockUser()
         })
         
         
