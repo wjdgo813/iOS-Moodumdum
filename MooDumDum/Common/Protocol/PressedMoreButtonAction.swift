@@ -10,11 +10,10 @@ import Foundation
 import Toaster
 
 
-protocol PressedMoreButtonAction where Self : UIViewController{
+protocol PressedMoreButtonAction where Self : MDBoardViewController{
     var detailData : MDDetailCategoryData? {get set}
     var navigationController: UINavigationController? { get }
     var viewController : UIViewController {get set}
-    func deleteAction()
 }
 
 extension PressedMoreButtonAction{
@@ -22,10 +21,11 @@ extension PressedMoreButtonAction{
         let deleteAlert = UIAlertController(title: "글 삭제", message: "내가 묻은 기억을 지워버리시겠어요?", preferredStyle: .alert)
         let deleteConfirmButton = UIAlertAction(title: "네", style: .default, handler: { (result) in
             MDAPIManager.sharedManager.deleteBoard(board_id: (self.detailData?.id)!, completion: { (result) -> (Void) in
-                
-                Toast(text: "묻은 기억이 삭제 되었습니다.", duration: Delay.long).show()
+
                 self.navigationController?.popViewController(animated: true)
+                Toast(text: "묻은 기억이 삭제 되었습니다.", duration: Delay.long).show()
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: "MDWriteSubmit"), object: nil)
+                
             })
         })
         let deleteCancelButton = UIAlertAction(title: "아니오", style: .default, handler: { (result) in
@@ -42,8 +42,8 @@ extension PressedMoreButtonAction{
         
         let blockConfirmButton = UIAlertAction(title: "네", style: .default, handler: { (result) in
             MDAPIManager.sharedManager.requestBlockUser(blockUser: (self.detailData?.userObject.UUID)!, completion: { (result) -> (Void) in
-                Toast(text: "이제부터 이 사용자의 모든 기억을 받지 않습니다.", duration: Delay.long).show()
                 self.navigationController?.popViewController(animated: true)
+                Toast(text: "이제부터 이 사용자의 모든 기억을 받지 않습니다.", duration: Delay.long).show()
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: "MDWriteSubmit"), object: nil)
                 
             })
@@ -55,8 +55,7 @@ extension PressedMoreButtonAction{
         blockUserAlert.addAction(deleteCancelButton)
         blockUserAlert.addAction(blockConfirmButton)
         
-        
-        self.navigationController!.present(blockUserAlert, animated: true, completion: nil)
+        self.present(blockUserAlert, animated: true, completion: nil)
         
     }
 }

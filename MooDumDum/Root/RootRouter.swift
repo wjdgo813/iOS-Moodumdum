@@ -24,7 +24,7 @@ class RootRouter{
                     window.rootViewController = UINavigationController(rootViewController: vc)
                 })
             }else{
-                //닉네임이 없음.
+//                닉네임이 없음.
                 let sb = UIStoryboard(name: "Home", bundle: nil)
                 let vc = sb.instantiateViewController(withIdentifier: "MDFirstDescriptViewController")
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 4, execute: {

@@ -25,7 +25,7 @@ class MDAPIManager{
      */
     func isRegisterUser(completion:@escaping (_ result : Bool)->(Void)){
         
-        Alamofire.request("\(api_url)api/user/\(MDDeviceInfo.getCurrentDeviceID())/").validate(statusCode: 200..<300).responseJSON { response in
+        Alamofire.request("\(api_url)api/user/\(MDDeviceInfo.getCurrentDeviceID())").validate(statusCode: 200..<300).responseJSON { response in
             switch response.result {
             case .success:
                 completion(true)
@@ -80,6 +80,7 @@ class MDAPIManager{
     }
     /*
      해당 board 좋아요 취소
+     3220D312-EACC-49F8-88C1-AAA9C9DD0BC8
      */
     func requestRemoveLike(boardID:String,completion:@escaping (_ result : JSON)->(Void)){
         Alamofire.request("\(api_url)api/board/like/\(MDDeviceInfo.getCurrentDeviceID())/\(boardID)",method:.delete).validate(statusCode: 200..<300).responseJSON { response in

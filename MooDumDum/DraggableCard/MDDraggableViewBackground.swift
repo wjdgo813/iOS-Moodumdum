@@ -225,7 +225,7 @@ class MDDraggableViewBackground: UIView, DraggableViewDelegate,UIGestureRecogniz
             })
             
             
-            guard !cardData.is_liked else{return}
+            guard !(newCard?.is_liked)! else{return}
             
             let parameters: Parameters = [
                 "board_id": cardData.id,

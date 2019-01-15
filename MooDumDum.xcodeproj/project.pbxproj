@@ -396,6 +396,18 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		A18BADA021EE21AB00580962 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A1B75C94203D8F16008B3EBF /* Home */,
+				35FBA72D20596AB300BD2119 /* Write */,
+				35FBA72E20596AC200BD2119 /* Mypage */,
+				A12936E1206021070087A074 /* ReadBoard */,
+				A1C60F78202F674D00E858A2 /* CategoryList */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		A1AA45C32098433D00F3EBF5 /* WriteSlideCollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -413,8 +425,8 @@
 				BADC6EEB20234B5500DC9181 /* MDHomeViewController.swift */,
 				A1D61929207CED810046C2E2 /* MDFirstDescriptViewController.swift */,
 				A1D6192B207CEE1C0046C2E2 /* MDFirstContentViewController.swift */,
-				A13C5F752036703C006E5485 /* Home.storyboard */,
 				A1704C6720B9C29800E5F1D0 /* MDDescripViewController.swift */,
+				A13C5F752036703C006E5485 /* Home.storyboard */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -643,14 +655,10 @@
 		BADC6EE820234B5500DC9181 /* MooDumDum */ = {
 			isa = PBXGroup;
 			children = (
-				A12936E1206021070087A074 /* ReadBoard */,
-				35FBA72E20596AC200BD2119 /* Mypage */,
-				35FBA72D20596AB300BD2119 /* Write */,
-				A1B75C94203D8F16008B3EBF /* Home */,
+				A18BADA021EE21AB00580962 /* ViewController */,
 				A1C60F72202F17D600E858A2 /* Common */,
 				A1C60F6A202F10E400E858A2 /* Root */,
 				A1C60F60202F109E00E858A2 /* DraggableCard */,
-				A1C60F78202F674D00E858A2 /* CategoryList */,
 				BADC6EE920234B5500DC9181 /* AppDelegate.swift */,
 				A1D61924207BACC30046C2E2 /* Supporting Files */,
 				BADC6EED20234B5500DC9181 /* Main.storyboard */,
@@ -1286,7 +1294,7 @@
 			baseConfigurationReference = 371195F30295A97495135176 /* Pods-MooDumDum.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;

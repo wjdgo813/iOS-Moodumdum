@@ -14,6 +14,7 @@ import Toaster
 
 
 class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate,PressedMoreButtonAction{
+    
 
     @IBOutlet weak var gradientView: UIView!
     @IBOutlet weak var commentBackForX: UIView!
@@ -161,6 +162,7 @@ class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate,Press
         
         let blockingButton = UIAlertAction(title: "차단하기", style: .default, handler: { (action) -> Void in
             print("Delete button tapped")
+            
             self.blockUser()
         })
         
@@ -207,6 +209,7 @@ class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate,Press
                 view?.likeButton.setImage(UIImage(named: "beforeLikeButton"), for: .normal)
             }
             
+            view?.is_liked = boardData.is_liked
             view?.commentCount.text = "\(boardData.comment_counnt)"
         }else if self.prevView is MDCategoryDetailCollectionViewCell{
             let view = self.prevView as? MDCategoryDetailCollectionViewCell
