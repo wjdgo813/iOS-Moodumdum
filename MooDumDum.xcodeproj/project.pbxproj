@@ -7,17 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		35428F4B203AB435002DF28E /* MD_PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35428F4A203AB435002DF28E /* MD_PhotoViewController.swift */; };
 		354D6A18206AC0AE0009C7AF /* Write.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 354D6A17206AC0AE0009C7AF /* Write.storyboard */; };
 		354D6A1B206AC2210009C7AF /* NickName.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 354D6A1A206AC2210009C7AF /* NickName.storyboard */; };
-		354D6A1E206AC39B0009C7AF /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 354D6A1D206AC39B0009C7AF /* Profile.storyboard */; };
 		3564DB1E2024382100FD9C7E /* MD_MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3564DB1D2024382100FD9C7E /* MD_MyPageViewController.swift */; };
 		356B0F7D2024C4C700218231 /* MD_WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356B0F7C2024C4C700218231 /* MD_WriteViewController.swift */; };
 		35A74E43202EDBB0009B29C7 /* MD_NickNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A74E42202EDBB0009B29C7 /* MD_NickNameViewController.swift */; };
 		35C5BB192076347100513A42 /* MD_UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C5BB182076347100513A42 /* MD_UserInfo.swift */; };
 		35CBE5472086F3A100C76C69 /* MD_UrlString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CBE5462086F3A100C76C69 /* MD_UrlString.swift */; };
-		35FBA73020596B3600BD2119 /* MD_ProfilePic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FBA72F20596B3600BD2119 /* MD_ProfilePic.swift */; };
-		35FBA73220596B7700BD2119 /* MD_ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FBA73120596B7700BD2119 /* MD_ProfileCell.swift */; };
 		35FBA73420596BA300BD2119 /* MD_PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FBA73320596BA300BD2119 /* MD_PhotoCell.swift */; };
 		422AFE21DB91615AD59B8A61 /* Pods_MooDumDum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C030EEABFF052DFC96157BBB /* Pods_MooDumDum.framework */; };
 		690CD71ABF62B0CC59A71118 /* Pods_MooDumDumUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E2F8626DA18E14AFB937EBA /* Pods_MooDumDumUITests.framework */; };
@@ -135,17 +131,13 @@
 		0F5AE4CA7DE57C812D1C5981 /* Pods_MooDumDumTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MooDumDumTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		110A0879232DE2397ECD7AC4 /* Pods-MooDumDum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MooDumDum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MooDumDum/Pods-MooDumDum.debug.xcconfig"; sourceTree = "<group>"; };
 		3282339DC75C19505221267E /* Pods-MooDumDumUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MooDumDumUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MooDumDumUITests/Pods-MooDumDumUITests.release.xcconfig"; sourceTree = "<group>"; };
-		35428F4A203AB435002DF28E /* MD_PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MD_PhotoViewController.swift; sourceTree = "<group>"; };
 		354D6A17206AC0AE0009C7AF /* Write.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Write.storyboard; sourceTree = "<group>"; };
 		354D6A1A206AC2210009C7AF /* NickName.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NickName.storyboard; sourceTree = "<group>"; };
-		354D6A1D206AC39B0009C7AF /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		3564DB1D2024382100FD9C7E /* MD_MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MD_MyPageViewController.swift; sourceTree = "<group>"; };
 		356B0F7C2024C4C700218231 /* MD_WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MD_WriteViewController.swift; sourceTree = "<group>"; };
 		35A74E42202EDBB0009B29C7 /* MD_NickNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MD_NickNameViewController.swift; sourceTree = "<group>"; };
 		35C5BB182076347100513A42 /* MD_UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MD_UserInfo.swift; sourceTree = "<group>"; };
 		35CBE5462086F3A100C76C69 /* MD_UrlString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MD_UrlString.swift; sourceTree = "<group>"; };
-		35FBA72F20596B3600BD2119 /* MD_ProfilePic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MD_ProfilePic.swift; sourceTree = "<group>"; };
-		35FBA73120596B7700BD2119 /* MD_ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MD_ProfileCell.swift; sourceTree = "<group>"; };
 		35FBA73320596BA300BD2119 /* MD_PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MD_PhotoCell.swift; sourceTree = "<group>"; };
 		371195F30295A97495135176 /* Pods-MooDumDum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MooDumDum.release.xcconfig"; path = "Pods/Target Support Files/Pods-MooDumDum/Pods-MooDumDum.release.xcconfig"; sourceTree = "<group>"; };
 		478354A7886B3BB123A03BF6 /* Pods-MooDumDumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MooDumDumTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MooDumDumTests/Pods-MooDumDumTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -296,7 +288,6 @@
 		35174BAD20616CEF0006ED4E /* User */ = {
 			isa = PBXGroup;
 			children = (
-				354D6A1C206AC3640009C7AF /* Profile */,
 				354D6A19206AC2040009C7AF /* Nickname */,
 			);
 			path = User;
@@ -311,23 +302,12 @@
 			path = Nickname;
 			sourceTree = "<group>";
 		};
-		354D6A1C206AC3640009C7AF /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				35FBA72F20596B3600BD2119 /* MD_ProfilePic.swift */,
-				35FBA73120596B7700BD2119 /* MD_ProfileCell.swift */,
-				354D6A1D206AC39B0009C7AF /* Profile.storyboard */,
-			);
-			path = Profile;
-			sourceTree = "<group>";
-		};
 		35FBA72D20596AB300BD2119 /* Write */ = {
 			isa = PBXGroup;
 			children = (
 				A1F3BF8D208CBED000E8F861 /* PickPhoto */,
 				A1AA45C32098433D00F3EBF5 /* WriteSlideCollectionView */,
 				356B0F7C2024C4C700218231 /* MD_WriteViewController.swift */,
-				35428F4A203AB435002DF28E /* MD_PhotoViewController.swift */,
 				35CBE5462086F3A100C76C69 /* MD_UrlString.swift */,
 				35C5BB182076347100513A42 /* MD_UserInfo.swift */,
 				35FBA73320596BA300BD2119 /* MD_PhotoCell.swift */,
@@ -854,7 +834,6 @@
 				A1263D9B207E3D53005E15CF /* MDSplashViewController.xib in Resources */,
 				A12936DE20600BAF0087A074 /* MDCategoryDetailCollectionViewCell.xib in Resources */,
 				A18BADA721EE2C3A00580962 /* MDTermsOfServiceViewController.xib in Resources */,
-				354D6A1E206AC39B0009C7AF /* Profile.storyboard in Resources */,
 				BADC6EEF20234B5500DC9181 /* Main.storyboard in Resources */,
 				A1B75CB2203DE678008B3EBF /* MDCategoryCollectionViewCell.xib in Resources */,
 				A12936F12062AA8A0087A074 /* MDHeaderCommentTableViewCell.xib in Resources */,
@@ -1056,7 +1035,6 @@
 				35C5BB192076347100513A42 /* MD_UserInfo.swift in Sources */,
 				A1C862F920FD05320053907F /* PressedMoreButtonAction.swift in Sources */,
 				A1F3BF91208CBF0F00E8F861 /* MDPickPhotoSet.swift in Sources */,
-				35428F4B203AB435002DF28E /* MD_PhotoViewController.swift in Sources */,
 				A17E36882036AAA50077F486 /* MDHomeViewController.swift in Sources */,
 				BAA0B52B2061FFDF00C82A84 /* MDCommentInfoSet.swift in Sources */,
 				A1263DA2207F9960005E15CF /* DraggableViewBackground.m in Sources */,
@@ -1078,9 +1056,7 @@
 				35A74E43202EDBB0009B29C7 /* MD_NickNameViewController.swift in Sources */,
 				BAD0E576203E6BD100D91725 /* MDCategoryCellViewModel.swift in Sources */,
 				A1B75CA9203DDE4D008B3EBF /* MDCategoryViewModel.swift in Sources */,
-				35FBA73020596B3600BD2119 /* MD_ProfilePic.swift in Sources */,
 				A12936D6205FFDBA0087A074 /* MDDetailCategoryCellViewModel.swift in Sources */,
-				35FBA73220596B7700BD2119 /* MD_ProfileCell.swift in Sources */,
 				BAD0E572203E654200D91725 /* MDCategoryData.swift in Sources */,
 				A1B75CA4203DD26E008B3EBF /* MDCategoryItemViewModel.swift in Sources */,
 				A15B6C3420833BBE00954831 /* MDAPIManager.swift in Sources */,

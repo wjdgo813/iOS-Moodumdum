@@ -28,7 +28,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Lyg-mb-enF" kind="show" id="mgY-Ub-2ae"/>
+                                    <action selector="pressedWriteButton:" destination="gj1-NY-hRk" eventType="touchUpInside" id="uRi-x2-ci0"/>
                                 </connections>
                             </button>
                         </subviews>

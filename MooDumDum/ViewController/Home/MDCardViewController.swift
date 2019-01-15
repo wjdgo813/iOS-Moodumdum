@@ -88,7 +88,16 @@ class MDCardViewController: MDPullUpController,MDDraggableViewBackgroundDelegate
         self.navigationController?.navigationBar.tintColor = UIColor(hexString: data.color)
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
     }
-
+    
+    
+    @IBAction func pressedWriteButton(_ sender: Any) {
+        //MD_WriteViewController
+        
+        let sb = UIStoryboard(name: "Write", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "MD_WriteViewController")
+        self.present(UINavigationController(rootViewController: vc), animated: true, completion: nil)
+    }
+    
     override var pullUpControllerPreferredSize: CGSize {
         return CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
     }

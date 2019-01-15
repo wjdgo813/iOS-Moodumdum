@@ -28,17 +28,17 @@ class MD_WriteViewController: UIViewController,UITextViewDelegate {
         WriteText.delegate = self
         WriteText.becomeFirstResponder()
         
-        self.navigationItem.rightBarButtonItem?.isEnabled = false
-        let leftItem = UIBarButtonItem(image: UIImage(named: "cancel"), style: .plain , target: self, action: #selector(exitButton))
-        self.navigationItem.leftBarButtonItem = leftItem
-        UIApplication.shared.statusBarStyle = .default
-        self.navigationController?.navigationBar.tintColor = UIColor.black;
+        
         initPlaceholderLabel()
         
         self.categortCollectionview.register(UINib(nibName: "MDWirteCategorySlideCell", bundle: nil), forCellWithReuseIdentifier: "MDWirteCategorySlideCell")
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(updateCategoryNumber(notification:)), name: NSNotification.Name(rawValue: "updateCategoryNumber"), object: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setupNavi()
     }
     
     
@@ -54,6 +54,24 @@ class MD_WriteViewController: UIViewController,UITextViewDelegate {
     }
     
     
+    private func setupNavi(){
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
+        
+        
+        if self.WriteText.text.isEmpty{
+            self.navigationItem.rightBarButtonItem?.isEnabled = false
+        }else{
+            self.navigationItem.rightBarButtonItem?.isEnabled = true
+        }
+        
+        let leftItem = UIBarButtonItem(image: UIImage(named: "cancel"), style: .plain , target: self, action: #selector(exitButton))
+        self.navigationItem.leftBarButtonItem = leftItem
+        UIApplication.shared.statusBarStyle = .default
+        self.navigationController?.navigationBar.tintColor = UIColor.black;
+    }
     
     
     
@@ -111,7 +129,7 @@ class MD_WriteViewController: UIViewController,UITextViewDelegate {
     }
     
     @objc func exitButton() {
-        navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
 }
 

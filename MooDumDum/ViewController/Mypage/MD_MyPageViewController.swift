@@ -79,6 +79,7 @@ class MD_MyPageViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         initNav()
+        self.title = "마이페이지"
         dataLoad(url: myUrl)
         segmentContainer.selectedSegmentIndex = 0
         mySelfListType = .MDMySelfWriteBoard

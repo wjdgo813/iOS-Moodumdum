@@ -58,8 +58,11 @@ class MDPickPhotoViewController: UIViewController {
         
         MDAPIManager.sharedManager.writeSubmit(parameters: param) { (result) -> (Void) in
             
-            self.navigationController!.popToRootViewController(animated: true)
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "MDWriteSubmit"), object: nil)
+//            self.navigationController!.popToRootViewController(animated: true)
+            self.dismiss(animated: true, completion: {
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "MDWriteSubmit"), object: nil)
+            })
+            
             
 
         }
