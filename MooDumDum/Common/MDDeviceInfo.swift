@@ -26,6 +26,7 @@ class MDDeviceInfo{
             UserDefaults.standard.setValue(string, forKey: "uniqueID")
         }
         return UUID ?? ""
+//        return "hodong"
     }
     
     /*

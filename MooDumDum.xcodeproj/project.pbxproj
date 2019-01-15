@@ -21,7 +21,6 @@
 		35FBA73420596BA300BD2119 /* MD_PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FBA73320596BA300BD2119 /* MD_PhotoCell.swift */; };
 		422AFE21DB91615AD59B8A61 /* Pods_MooDumDum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C030EEABFF052DFC96157BBB /* Pods_MooDumDum.framework */; };
 		690CD71ABF62B0CC59A71118 /* Pods_MooDumDumUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E2F8626DA18E14AFB937EBA /* Pods_MooDumDumUITests.framework */; };
-		A126040220961EDE00C14ADA /* MD_LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A126040120961EDE00C14ADA /* MD_LoadData.swift */; };
 		A126040520961F2100C14ADA /* MDMyBoardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A126040320961F2100C14ADA /* MDMyBoardCell.swift */; };
 		A126040620961F2100C14ADA /* MDMyBoardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A126040420961F2100C14ADA /* MDMyBoardCell.xib */; };
 		A1263D9A207E3D53005E15CF /* MDSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1263D98207E3D53005E15CF /* MDSplashViewController.swift */; };
@@ -56,6 +55,9 @@
 		A17E0CA420B7094600D11A68 /* movePetal.gif in Resources */ = {isa = PBXBuildFile; fileRef = A17E0CA120B7094600D11A68 /* movePetal.gif */; };
 		A17E0CA520B7094600D11A68 /* moveText.gif in Resources */ = {isa = PBXBuildFile; fileRef = A17E0CA220B7094600D11A68 /* moveText.gif */; };
 		A17E36882036AAA50077F486 /* MDHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC6EEB20234B5500DC9181 /* MDHomeViewController.swift */; };
+		A18BADA221EE250D00580962 /* MD_LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BADA121EE250D00580962 /* MD_LoadData.swift */; };
+		A18BADA621EE2C3A00580962 /* MDTermsOfServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BADA421EE2C3A00580962 /* MDTermsOfServiceViewController.swift */; };
+		A18BADA721EE2C3A00580962 /* MDTermsOfServiceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A18BADA521EE2C3A00580962 /* MDTermsOfServiceViewController.xib */; };
 		A1AA45C62098437100F3EBF5 /* MDWirteCategorySlideCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AA45C42098437100F3EBF5 /* MDWirteCategorySlideCell.swift */; };
 		A1AA45C72098437100F3EBF5 /* MDWirteCategorySlideCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1AA45C52098437100F3EBF5 /* MDWirteCategorySlideCell.xib */; };
 		A1AA45CB209846FB00F3EBF5 /* MDWriteSlideCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AA45CA209846FB00F3EBF5 /* MDWriteSlideCollectionViewController.swift */; };
@@ -148,7 +150,6 @@
 		371195F30295A97495135176 /* Pods-MooDumDum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MooDumDum.release.xcconfig"; path = "Pods/Target Support Files/Pods-MooDumDum/Pods-MooDumDum.release.xcconfig"; sourceTree = "<group>"; };
 		478354A7886B3BB123A03BF6 /* Pods-MooDumDumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MooDumDumTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MooDumDumTests/Pods-MooDumDumTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8E2F8626DA18E14AFB937EBA /* Pods_MooDumDumUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MooDumDumUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A126040120961EDE00C14ADA /* MD_LoadData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MD_LoadData.swift; path = MooDumDum/Mypage/MD_LoadData.swift; sourceTree = SOURCE_ROOT; };
 		A126040320961F2100C14ADA /* MDMyBoardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDMyBoardCell.swift; sourceTree = "<group>"; };
 		A126040420961F2100C14ADA /* MDMyBoardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MDMyBoardCell.xib; sourceTree = "<group>"; };
 		A1263D98207E3D53005E15CF /* MDSplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDSplashViewController.swift; sourceTree = "<group>"; };
@@ -183,6 +184,9 @@
 		A17E0CA020B7094600D11A68 /* moveFlower.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = moveFlower.gif; sourceTree = "<group>"; };
 		A17E0CA120B7094600D11A68 /* movePetal.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = movePetal.gif; sourceTree = "<group>"; };
 		A17E0CA220B7094600D11A68 /* moveText.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = moveText.gif; sourceTree = "<group>"; };
+		A18BADA121EE250D00580962 /* MD_LoadData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MD_LoadData.swift; path = MooDumDum/ViewController/Mypage/MD_LoadData.swift; sourceTree = SOURCE_ROOT; };
+		A18BADA421EE2C3A00580962 /* MDTermsOfServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDTermsOfServiceViewController.swift; sourceTree = "<group>"; };
+		A18BADA521EE2C3A00580962 /* MDTermsOfServiceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MDTermsOfServiceViewController.xib; sourceTree = "<group>"; };
 		A1AA45C42098437100F3EBF5 /* MDWirteCategorySlideCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDWirteCategorySlideCell.swift; sourceTree = "<group>"; };
 		A1AA45C52098437100F3EBF5 /* MDWirteCategorySlideCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MDWirteCategorySlideCell.xib; sourceTree = "<group>"; };
 		A1AA45CA209846FB00F3EBF5 /* MDWriteSlideCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDWriteSlideCollectionViewController.swift; sourceTree = "<group>"; };
@@ -335,6 +339,7 @@
 		35FBA72E20596AC200BD2119 /* Mypage */ = {
 			isa = PBXGroup;
 			children = (
+				A18BADA321EE2C1700580962 /* TermsOfService */,
 				A1C862EC20F623180053907F /* DeveloperInfoView */,
 				35174BAD20616CEF0006ED4E /* User */,
 				A126040320961F2100C14ADA /* MDMyBoardCell.swift */,
@@ -344,7 +349,6 @@
 				A17E0C9520B1D55F00D11A68 /* MDMySelfLikeEmptyCell.xib */,
 				A17E0C9020B1D2D600D11A68 /* MDMyBoardEmptyCell.swift */,
 				A17E0C9120B1D2D600D11A68 /* MDMyBoardEmptyCell.xib */,
-				A126040120961EDE00C14ADA /* MD_LoadData.swift */,
 			);
 			path = Mypage;
 			sourceTree = "<group>";
@@ -406,6 +410,15 @@
 				A1C60F78202F674D00E858A2 /* CategoryList */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A18BADA321EE2C1700580962 /* TermsOfService */ = {
+			isa = PBXGroup;
+			children = (
+				A18BADA421EE2C3A00580962 /* MDTermsOfServiceViewController.swift */,
+				A18BADA521EE2C3A00580962 /* MDTermsOfServiceViewController.xib */,
+			);
+			path = TermsOfService;
 			sourceTree = "<group>";
 		};
 		A1AA45C32098433D00F3EBF5 /* WriteSlideCollectionView */ = {
@@ -514,6 +527,7 @@
 				A1B75C97203D9385008B3EBF /* MDDeviceInfo.swift */,
 				A15B6C2F208268A300954831 /* MDUserAPIData.swift */,
 				A1704C6920B9CBAD00E5F1D0 /* MDSettingData.swift */,
+				A18BADA121EE250D00580962 /* MD_LoadData.swift */,
 				A15B6C3320833BBE00954831 /* MDAPIManager.swift */,
 			);
 			path = Common;
@@ -839,6 +853,7 @@
 				BADC6EF120234B5500DC9181 /* Assets.xcassets in Resources */,
 				A1263D9B207E3D53005E15CF /* MDSplashViewController.xib in Resources */,
 				A12936DE20600BAF0087A074 /* MDCategoryDetailCollectionViewCell.xib in Resources */,
+				A18BADA721EE2C3A00580962 /* MDTermsOfServiceViewController.xib in Resources */,
 				354D6A1E206AC39B0009C7AF /* Profile.storyboard in Resources */,
 				BADC6EEF20234B5500DC9181 /* Main.storyboard in Resources */,
 				A1B75CB2203DE678008B3EBF /* MDCategoryCollectionViewCell.xib in Resources */,
@@ -1071,9 +1086,11 @@
 				A15B6C3420833BBE00954831 /* MDAPIManager.swift in Sources */,
 				BA956A6820AAF34000F3E604 /* UIViewControllerExtension.swift in Sources */,
 				3564DB1E2024382100FD9C7E /* MD_MyPageViewController.swift in Sources */,
+				A18BADA621EE2C3A00580962 /* MDTermsOfServiceViewController.swift in Sources */,
 				A12936E7206024C60087A074 /* UIColorExtension.swift in Sources */,
 				A1F3BF98208CE28500E8F861 /* MDCommentEmptyCell.swift in Sources */,
 				356B0F7D2024C4C700218231 /* MD_WriteViewController.swift in Sources */,
+				A18BADA221EE250D00580962 /* MD_LoadData.swift in Sources */,
 				BAA0B52E206206AC00C82A84 /* MDCommentTableViewCell.swift in Sources */,
 				A1263D9A207E3D53005E15CF /* MDSplashViewController.swift in Sources */,
 				A1673751205FE90500DCE79A /* MDCategoryDetailViewModel.swift in Sources */,
@@ -1087,7 +1104,6 @@
 				BADC6EEA20234B5500DC9181 /* AppDelegate.swift in Sources */,
 				A1C60F6C202F10E400E858A2 /* RootRouter.swift in Sources */,
 				A1B75CA2203DD15A008B3EBF /* MDItemViewController.swift in Sources */,
-				A126040220961EDE00C14ADA /* MD_LoadData.swift in Sources */,
 				BAD0E578203E6D7A00D91725 /* MDCategoryItemCellViewModel.swift in Sources */,
 				A1C60F7C202F67CD00E858A2 /* MDCategoryListViewController.swift in Sources */,
 				A15B6C30208268A300954831 /* MDUserAPIData.swift in Sources */,

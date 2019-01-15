@@ -87,7 +87,6 @@ class MDCardViewController: MDPullUpController,MDDraggableViewBackgroundDelegate
         self.navigationController?.pushViewController(vc!, animated: true)
         self.navigationController?.navigationBar.tintColor = UIColor(hexString: data.color)
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
-
     }
 
     override var pullUpControllerPreferredSize: CGSize {

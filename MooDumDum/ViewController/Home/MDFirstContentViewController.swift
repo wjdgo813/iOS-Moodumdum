@@ -72,4 +72,10 @@ class MDFirstContentViewController: UIViewController {
         
         return nickNameArr[randomIndex]
     }
+    
+    
+    @IBAction func pressedTermOfService(_ sender: Any) {
+        let vc = MDTermsOfServiceViewController(nibName: "MDTermsOfServiceViewController", bundle: nil)
+        self.present(vc, animated: true, completion: nil)
+    }
 }

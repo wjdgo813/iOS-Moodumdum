@@ -29,6 +29,13 @@ class MDDeveloperInfoViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    
+    @IBAction func pressedTermsOfService(_ sender: Any) {
+        let vc = MDTermsOfServiceViewController(nibName: "MDTermsOfServiceViewController", bundle: nil)
+        self.present(vc, animated: true, completion: nil)
+    }
+    
 }
 
 extension MDDeveloperInfoViewController:UITableViewDelegate{

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MDTermsOfServiceViewController" customModule="MooDumDum" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6Su-Mn-1Sn">
+                    <rect key="frame" x="28" y="79" width="319" height="588"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <mutableString key="text">무덤덤(Moodumdum) 은 익명 네트워크 기반으로 운영합니다. 따라서 이용자분들은 아래 가이드라인을 상시 준수하여야 합니다. 아래 명시된 주제에만 국한되지는 않으며, 임의로 적합하지 않은 컨텐츠임으로 판단될 시 서비스로부터 거부 또는 퇴출할 수 있는 권리를 가집니다.   1.목적
+
+이 약관은 회사가 온라인으로 제공하는 디지털콘텐츠(이하 "콘텐츠"라고 한다) 및 제반서비스의 이용과 관련하여 회사와 이용자와의 권리, 의무 및 책임사항 등을 규정함을 목적으로 합니다.
+
+2. 정의
+
+2.1. “회사”라 함은 "콘텐츠" 산업과 관련된 경제활동을 영위하는 자로서 콘텐츠 및 제반서비스를 제공하는 자를 말합니다.
+
+2.2 ‘회원’이란 회사가 제공하는 서비스에 접속하여 본 약관에 따라 회사의 이용절차에 동의하고 회사가 제공하는 서비스를 이용하는 이용자를 말합니다.
+
+2.3 ‘콘텐츠’란 ‘회원’이 ‘서비스’에 접근하여 생하거나 볼 수 있는 이미지, 텍스트, 음악, 이미지, 동영상, 프로그램, 기타 코드 정보를 말합니다.
+
+
+3. 회원가입
+
+3.1 회원이 되고자 하는 자는 모바일 단말기로 서비스에 접속하여 서비스 시작 전, "동의", "확인" 등의 버튼을 누르는 방법으로 회원 가입을 완료합니다. 
+
+3.2 회원가입계약의 성립시기는 ‘사용자’가 ‘서비스’에 접속하여 ‘약관’의 동의, ‘확인’ 버튼을 클릭한 후 콘텐츠를 볼 수 있는 서비스 화면에 접속한 시점으로 합니다.
+
+
+4. 서비스의 제공 및 변경 
+이용자의 개인정보는 원칙적으로 계정 삭제 시 또는 개인정보의 수집 및 이용목적 달성 시 지체 없이 파기합니다. 단, 관계법령의 규정에 의하여 보존할 필요가 있는 경우 회사는 관계법령에서 정한 일정한 기간 동안 회원정보를 보관합니다. 
+
+5. 개인정보 보호 
+당사는 개인정보를 보호하기 위한 조치로 개인의 정보를 수집하는 것을 적극적으로 제한하며, 일부 수집되는 정보와 개인 정보는 회사의 개인정보취급방침이 적용됩니다. 
+
+6. 서비스의 중단 
+회사는 컴퓨터 등 정보통신설비의 보수점검•교체 및 고장, 통신의 두절 등의 사유가 발생한 경우에는 서비스의 제공을 일시적으로 중단할 수 있고, 새로운 서비스로의 교체, 기타 회사가 적절하다고 판단하는 사유에 기하여 현재 제공되는 서비스를 완전히 중단할 수 있습니다. 
+
+
+7. 회원 탈퇴 및 자격 상실 
+
+7.1 회원은 회사에 언제든지 회원 탈퇴를 요청할 수 있으며 회사는 위 요청을 받은 즉시 해당 회원의 회원의 정보 삭제를 위한 절차를 밟습니다.
+
+7.2 회원 탈퇴가 이루어지면 회원이 작성한 콘텐츠는 회원과의 연결을 모두 끊어 연관 관계가 없도록 조치됩니다. 
+
+7.3 회사는 서비스를 이용하는 ‘사용자’가 제 11조 1항에 위배한 사실이 반복되는 경우 적절한 조치를 통하여 자격을 임시 정지하거나 상실시킬 수 있습니다.
+
+
+8. 회원에 대한 통지 
+회사가 불특정다수 회원에 대한 통지를 하는 경우 7일 이상 공지사항 게시판에 게시함으로써 개별 통지에 갈음할 수 있습니다. 
+
+
+9.회사의 의무
+
+9.1 "회사"는 법령과 이 약관이 정하는 권리의 행사와 의무의 이행을 신의에 좇아 성실하게 하여야 합니다.
+
+9.2 "회사"는 "이용자"가 안전하게 "콘텐츠"를 이용할 수 있도록 개인정보(신용정보 포함)보호를 위해 보안시스템을 갖추어야 하며 개인정보보호정책을 공시하고 준수합니다.
+
+9.3 "회사"는 "이용자"가 콘텐츠이용 및 그 대금내역을 수시로 확인할 수 있도록 조치합니다.
+
+9.4 "회사"는 콘텐츠이용과 관련하여 "이용자"로부터 제기된 의견이나 불만이 정당하다고 인정할 경우에는 이를 지체없이 처리합니다. 이용자가 제기한 의견이나 불만사항에 대해서는 게시판을 활용하거나 전자우편 등을 통하여 그 처리과정 및 결과를 전달합니다.
+
+9.5 "회사"는 이 약관에서 정한 의무 위반으로 인하여 "이용자"가 입은 손해를 배상합니다.
+
+10. 회원의 의무
+
+10.1 회원은 다음 각 호의 행위를 하여서는 안됩니다.
+
+10.1.1 회사 및 제3자의 지적재산권을 침해하거나 회사의 권리와 업무 또는 제3자의 권리와 활동를 방해하는 행위
+
+10.1.2 관련 법령에 의하여 전송 또는 게시가 금지되는 정보(컴퓨터 프로그램 등)의 게시 또는 전송하는 행위
+
+10.1.3 컴퓨터 소프트웨어, 하드웨어, 전기통신 장비의 정상적인 가동을 방해, 파괴할 목적으로 고안된 소프트웨어 바이러스, 기타 다른 컴퓨터 코드, 파일, 프로그램을 포함하고 있는 자료를 게시하거나 전송하는 행위
+
+10.1.4 불특정 다수의 자를 대상으로 하여 광고 또는 선전을 게시하거나 음란물을 게시하는 행위
+
+10.2 제1항에 해당하는 행위를 한 회원이 있을 경우 회사는 본 약관 제7조에 정한 바에 따라 회원의 회원자격을 적절한 방법으로 제한 및 정지, 상실시킬 수 있습니다.
+
+10.3 회원은 그 귀책사유로 인하여 회사나 다른 회원이 입은 손해를 배상할 책임이 있습니다.
+
+
+11. ‘콘텐츠’의 삭제 또는 이용제한
+
+11.1 회원의 ‘콘텐츠’의 내용이 다음 각 호에 해당하는 경우 회사는 해당 ‘콘텐츠’에 대한 접근을 임시적으로 차단하거나 영구적으로 삭제하는 조치를 취할 수 있습니다.
+
+11.1.1. 다른 회원 또는 제3자를 비방하거나 중상 모략으로 명예를 손상시키는 내용
+
+11.1.2. 음란물, 욕설 등 공서양속에 위반되는 내용의 정보, 문장, 도형 등을 유포하는 내용
+
+11.1.3. 범죄행위와 관련이 있다고 판단되는 내용
+
+11.1.4. 다른 회원 또는 제3자의 저작권 등 기타 권리를 침해하는 내용
+
+11.1.5. 종교적, 정치적 분쟁을 야기하는 내용으로서, 이러한 분쟁으로 인하여 회사의 업무가 방해되거나 방해되리라고 판단되는 경우
+
+11.1.6. 타인의 개인정보, 사생활을 침해하거나 명예를 손상시키는 경우
+
+11.1.7. 동일한 내용을 중복하여 다수 게시하는 등 게시의 목적에 어긋나는 경우
+
+11.1.8. 불필요하거나 승인되지 않은 광고, 판촉물을 게재하는 경우
+
+11.2 회원이 작성한 ’콘텐츠’로 인한 법률상 이익 침해를 근거로, 다른 회원 또는 제3자가 회원 또는 회사를 대상으로 하여 민형사상의 법적 조치(예:고소, 가처분신청, 손해배상청구소송)를 취하는 동시에 법적 조치와 관련된 게시물의 삭제를 요청해오는 경우, 회사는 동 법적 조치의 결과(예: 검찰의 기소, 법원의 가처분결정, 손해배상판결)가 있을 때까지 관련 게시물에 대한 접근을 잠정적으로 제한할 수 있습니다.
+
+
+12.면책조항
+
+12.1 ”회사"는 천재지변 또는 이에 준하는 불가항력으로 인하여 "콘텐츠"를 제공할 수 없는 경우에는 "콘텐츠" 제공에 관한 책임이 면제됩니다.
+
+12.2  "회사"는 "이용자"의 귀책사유로 인한 콘텐츠이용의 장애에 대하여는 책임을 지지 않습니다.
+
+12.3 "회사"는 "회원"이 "콘텐츠"와 관련하여 게재한 정보, 자료, 사실의 신뢰도, 정확성 등의 내용에 관하여는 책임을 지지 않습니다.
+
+12.4 "회사"는 "이용자" 상호간 또는 "이용자"와 제3자 간에 "콘텐츠"를 매개로 하여 발생한 분쟁 등에 대하여 책임을 지지 않습니다.
+
+13.분쟁의 해결
+
+ "회사"는 분쟁이 발생하였을 경우에 "이용자"가 제기하는 정당한 의견이나 불만을 반영하여 적절하고 신속한 조치를 취합니다. 다만, 신속한 처리가 곤란한 경우에 "회사"는 "이용자"에게 그 사유와 처리일정을 통보합니다.</mutableString>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygL-qN-mUi">
+                    <rect key="frame" x="14" y="37" width="17" height="22"/>
+                    <state key="normal" image="cancel"/>
+                    <connections>
+                        <action selector="pressedClosed:" destination="-1" eventType="touchUpInside" id="c1V-FB-LwV"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사용자 약관동의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gnr-Y5-PxG">
+                    <rect key="frame" x="137" y="38" width="101.5" height="20"/>
+                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Gnr-Y5-PxG" firstAttribute="centerY" secondItem="ygL-qN-mUi" secondAttribute="centerY" id="00Z-BR-xuY"/>
+                <constraint firstItem="6Su-Mn-1Sn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="28" id="28T-wp-U7G"/>
+                <constraint firstItem="ygL-qN-mUi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="14" id="DXJ-Fv-Fy3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6Su-Mn-1Sn" secondAttribute="trailing" constant="28" id="OFc-HU-ilB"/>
+                <constraint firstItem="Gnr-Y5-PxG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ocm-aN-WP0"/>
+                <constraint firstItem="ygL-qN-mUi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="17" id="aIu-15-se9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6Su-Mn-1Sn" secondAttribute="bottom" id="j4f-a4-FgZ"/>
+                <constraint firstItem="6Su-Mn-1Sn" firstAttribute="top" secondItem="Gnr-Y5-PxG" secondAttribute="bottom" constant="21" id="tUj-Bq-YaT"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cancel" width="17" height="17"/>
+    </resources>
+</document>
