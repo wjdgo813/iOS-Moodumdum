@@ -63,8 +63,10 @@
         
         
         CAGradientLayer *gradient = [CAGradientLayer layer];
+        CGRect gradientFrame = self.gradientView.bounds;
+        gradientFrame.size.width = self.frame.size.width;
+        gradient.frame = gradientFrame;
         
-        gradient.frame = self.gradientView.bounds;
         gradient.colors = @[(id)[UIColor blackColor].CGColor,(id)[UIColor clearColor].CGColor];
         
         [self.gradientView.layer insertSublayer:gradient atIndex:0];

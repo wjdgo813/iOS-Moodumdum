@@ -138,7 +138,7 @@ class MDCommentViewController: MDPullUpController {
             }
             
             
-            self.view.setNeedsLayout()
+//            self.view.setNeedsLayout()
             self.view.layoutIfNeeded()
         }) {result in
             

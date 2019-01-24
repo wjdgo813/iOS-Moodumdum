@@ -54,6 +54,7 @@ class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate,Press
         
         let gradient = CAGradientLayer()
         gradient.frame = self.gradientView.bounds
+        gradient.frame.size.width = self.view.frame.width
         gradient.colors = [UIColor.black.cgColor,UIColor.clear.cgColor]
         self.gradientView.layer.insertSublayer(gradient, at: 0)
         self.gradientView.alpha = 0.5

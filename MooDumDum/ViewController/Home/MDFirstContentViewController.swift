@@ -14,21 +14,24 @@ import Toaster
 class MDFirstContentViewController: UIViewController {
 
     
-    var descriptionText : String?
-    var pageIndex : Int!
-    var firstImage : UIImage?
-    var titleImage : UIImage?
+    var descriptionText          : String?
+    var pageIndex                  : Int!
+    var firstImage                   : UIImage?
+    var titleImage                   : UIImage?
+    var termsOfButtonImage : UIImage?
     @IBOutlet weak var imageHeightConst: NSLayoutConstraint!
     @IBOutlet weak var firstImageView: UIImageView!
     @IBOutlet weak var titleImageView: UIImageView!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var termsOfServiceButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.imageHeightConst.constant = self.view.frame.height * (3/5)
         firstImageView.image = firstImage
         titleImageView.image = titleImage
+        termsOfServiceButton.setImage(termsOfButtonImage, for: .normal)
         self.descriptionLabel.text = descriptionText
         
         if pageIndex == 1 {

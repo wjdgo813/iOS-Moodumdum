@@ -33,10 +33,17 @@ class MDDeviceInfo{
      아이폰x인지 알려주는 메소드
      */
     class func isIphoneX() ->Bool{
-        if isIphone() && UIScreen.main.bounds.height == 812.0{
-            return true
+        if #available(iOS 11.0, *) {
+            let window = UIApplication.shared.keyWindow
+            let topPadding = window?.safeAreaInsets.top
+            if topPadding! > CGFloat(0) {
+                return true
+            }else{
+                return false
+            }
+        }else{
+            return false
         }
-        return false
     }
     
     /*
