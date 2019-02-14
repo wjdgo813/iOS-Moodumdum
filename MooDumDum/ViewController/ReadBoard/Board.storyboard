@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="content" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNw-ll-bSz">
-                                <rect key="frame" x="20" y="100" width="374" height="300"/>
+                                <rect key="frame" x="20" y="74" width="374" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="ZdE-Jo-VsV"/>
                                 </constraints>
@@ -130,7 +130,7 @@
                             <constraint firstItem="2Xv-OO-T2P" firstAttribute="top" secondItem="SLr-cA-mZf" secondAttribute="top" id="hig-PL-f1L"/>
                             <constraint firstItem="YIu-59-mWA" firstAttribute="leading" secondItem="XCJ-GB-U18" secondAttribute="leading" id="oFq-2x-ABO"/>
                             <constraint firstItem="XCJ-GB-U18" firstAttribute="trailing" secondItem="WNw-ll-bSz" secondAttribute="trailing" constant="20" id="r2K-ob-hhq"/>
-                            <constraint firstItem="WNw-ll-bSz" firstAttribute="top" secondItem="XCJ-GB-U18" secondAttribute="top" constant="56" id="suW-kV-Il5"/>
+                            <constraint firstItem="WNw-ll-bSz" firstAttribute="top" secondItem="XCJ-GB-U18" secondAttribute="top" constant="30" id="suW-kV-Il5"/>
                             <constraint firstItem="BtR-w5-t5x" firstAttribute="top" secondItem="YIu-59-mWA" secondAttribute="bottom" id="vI9-s7-s2K"/>
                             <constraint firstAttribute="bottom" secondItem="2Xv-OO-T2P" secondAttribute="bottom" id="xFs-a0-t0B"/>
                         </constraints>

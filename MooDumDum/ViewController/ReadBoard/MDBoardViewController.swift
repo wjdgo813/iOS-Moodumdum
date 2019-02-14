@@ -46,9 +46,10 @@ class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate,Press
         
         self.hideKeyBoardAddGesture()
         backgroundImageView.cacheSetImage(url : detailData.image_url)
+        content.isScrollEnabled = false
         content.text = detailData.description
         content.textColor = UIColor(hexString:detailData.color)
-        
+        content.setContentOffset(CGPoint(x: 0, y: 0), animated: false)
         
         initMotionView()
         
@@ -68,6 +69,10 @@ class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate,Press
     }
     
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        content.isScrollEnabled = true
+    }
     
     
     func initNavigationBar(){

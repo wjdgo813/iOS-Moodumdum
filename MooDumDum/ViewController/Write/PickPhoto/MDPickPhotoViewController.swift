@@ -12,7 +12,7 @@ import UIKit
 class MDPickPhotoViewController: UIViewController {
     var textview : String = ""
     var category : Int = 0
-    var photoData : MDPickPhotoSet!
+    var photoData : MDPickPhotoSet?
     
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var content: UITextView!
@@ -49,42 +49,41 @@ class MDPickPhotoViewController: UIViewController {
     }
     
     @objc func writeSubmit(){
+        guard var photoData = photoData else { return }
+        
+        
         let param : [String : Any] = [
             "category_id" : self.category,
             "description" : textview,
-            "image_url" : self.photoData.pickPhotoList[pickPhotoIndex].image_url.absoluteString,
-            "color" : self.photoData.pickPhotoList[pickPhotoIndex].font_color
+            "image_url" : photoData.pickPhotoList[pickPhotoIndex].image_url.absoluteString,
+            "color" : photoData.pickPhotoList[pickPhotoIndex].font_color
         ]
         
         MDAPIManager.sharedManager.writeSubmit(parameters: param) { (result) -> (Void) in
-            
-//            self.navigationController!.popToRootViewController(animated: true)
             self.dismiss(animated: true, completion: {
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: "MDWriteSubmit"), object: nil)
             })
             
-            
-
         }
     }
     
     func firstLoadImage(){
         MDAPIManager.sharedManager.requestWriteBackgroundImageList { (result) -> (Void) in
             self.photoData = MDPickPhotoSet(rawJson: result)
-            self.navigationController?.navigationBar.tintColor = UIColor(hexString: self.photoData.pickPhotoList[0].font_color)
-            self.content.textColor = UIColor(hexString: self.photoData.pickPhotoList[0].font_color)
-            self.backgroundImageView.cacheSetImage(url : self.photoData.pickPhotoList[0].image_url)
+            guard var photoData = self.photoData else { return }
+            
+            self.navigationController?.navigationBar.tintColor = UIColor(hexString: photoData.pickPhotoList[0].font_color)
+            self.content.textColor = UIColor(hexString: photoData.pickPhotoList[0].font_color)
+            self.backgroundImageView.cacheSetImage(url : photoData.pickPhotoList[0].image_url)
             self.photoCollectionView.reloadData()
         }
     }
     
     func loadMore(){
-        guard photoData != nil else { return }
-        guard photoData.nextUrl != nil else { return }
-        guard photoData.nextUrl != "" else { return }
+        guard var photoData = photoData else { return }
         
-        MDAPIManager.sharedManager.requestMoreWriteBackgroundImageList(url: photoData.nextUrl!, completion: { (result) -> (Void) in
-            self.photoData.loadMore(rawJson: result)
+        MDAPIManager.sharedManager.requestMoreWriteBackgroundImageList(url: photoData.nextUrl ?? "", completion: { (result) -> (Void) in
+            photoData.loadMore(rawJson: result)
             self.photoCollectionView.reloadData()
             self.isMoreLoading = false
         })
@@ -112,25 +111,27 @@ class MDPickPhotoViewController: UIViewController {
 
 extension MDPickPhotoViewController : UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard var photoData = photoData else { return }
         self.pickPhotoIndex = indexPath.row
-        navigationController?.navigationBar.tintColor = UIColor(hexString: self.photoData.pickPhotoList[indexPath.row].font_color)
-        self.content.textColor = UIColor(hexString: self.photoData.pickPhotoList[indexPath.row].font_color)
-        self.backgroundImageView.cacheSetImage(url: self.photoData.pickPhotoList[indexPath.row].image_url)
+        navigationController?.navigationBar.tintColor = UIColor(hexString: photoData.pickPhotoList[indexPath.row].font_color)
+        self.content.textColor = UIColor(hexString: photoData.pickPhotoList[indexPath.row].font_color)
+        self.backgroundImageView.cacheSetImage(url: photoData.pickPhotoList[indexPath.row].image_url)
     }
 }
 
 
 extension MDPickPhotoViewController : UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        guard self.photoData != nil else { return 0 }
-        return self.photoData.count!
+        guard let photoData = photoData else { return 0 }
+        return photoData.count ?? 0
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard var photoData = photoData else { return UICollectionViewCell() }
         
         let cell  = photoCollectionView?.dequeueReusableCell(withReuseIdentifier: "MDPickPhotoCell", for: indexPath)
         if let myCell = cell as? MDPickPhotoCell {
-            myCell.backgroundImageView.cacheSetImage(url: self.photoData.pickPhotoList[indexPath.row].image_url)
+            myCell.backgroundImageView.cacheSetImage(url: photoData.pickPhotoList[indexPath.row].image_url)
         }
         return cell!
     }

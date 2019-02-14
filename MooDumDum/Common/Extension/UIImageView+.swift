@@ -11,10 +11,13 @@ import Kingfisher
 
 extension UIImageView {
     func cacheSetImage(url : URL){
+        let processor = ResizingImageProcessor(referenceSize: self.frame.size, mode: .aspectFill)
         self.kf.setImage(with: url,
                          placeholder: UIImage(named: ""),
-                         options: [.transition(.fade(1)),
-                                   .cacheOriginalImage
-                                   ])
+                         options: [
+                            .processor(processor),
+                            .transition(.fade(1)),
+                            .cacheOriginalImage
+            ])
     }
 }
