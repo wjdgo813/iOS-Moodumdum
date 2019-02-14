@@ -42,12 +42,12 @@ class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate,Press
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.hideKeyBoardAddGesture()
+        guard let detailData = detailData else { return }
         
-        backgroundImageView.kf.setImage(with: detailData?.image_url)
-        content.text = detailData?.description
-        content.textColor = UIColor(hexString:(detailData?.color)!)
+        self.hideKeyBoardAddGesture()
+        backgroundImageView.cacheSetImage(url : detailData.image_url)
+        content.text = detailData.description
+        content.textColor = UIColor(hexString:detailData.color)
         
         
         initMotionView()
@@ -134,13 +134,9 @@ class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate,Press
     
     
     @objc func pressedMoreButton(){
-        print("Device info : \(MDDeviceInfo.getCurrentDeviceID())")
-        print("board info : \(detailData?.userObject.UUID)")
-        
-        
+        guard let detailData = detailData else { return }
         
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        
         
         let cancelButton = UIAlertAction(title: "취소", style: .cancel, handler: { (action) -> Void in
             print("Cancel button tapped")
@@ -158,7 +154,7 @@ class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate,Press
             vc.providesPresentationContextTransitionStyle = true;
             vc.definesPresentationContext = true;
             vc.modalPresentationStyle = UIModalPresentationStyle.custom
-            vc.board_id = self.detailData?.id
+            vc.board_id = detailData.id
             self.navigationController?.present(vc, animated: true, completion: nil)
         })
         
@@ -169,10 +165,7 @@ class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate,Press
         })
         
         
-        
-        
-        
-        if MDDeviceInfo.getCurrentDeviceID() == (detailData?.userObject.UUID)!{ //내가 쓴 글
+        if MDDeviceInfo.getCurrentDeviceID() == detailData.userObject.UUID{ //내가 쓴 글
             alertController.addAction(deleteButton)
         }else{
             alertController.addAction(declareButton)
@@ -180,20 +173,20 @@ class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate,Press
         }
         
         alertController.addAction(cancelButton)
-
-        self.navigationController!.present(alertController, animated: true, completion: nil)
+        
+        guard let navigationController = navigationController else { return }
+        navigationController.present(alertController, animated: true, completion: nil)
     }
     
     
     func requestBoardInfo(){
-        if let boardId = detailData?.id {
-            MDAPIManager.sharedManager.requestBoardInfo(boardId: boardId) { (result) -> (Void) in
-                self.detailData = nil
-                self.detailData = MDDetailCategoryData(rawJson: result)
-                
-                guard self.pullUpController == nil else{return}
-                self.addPullUpController()
-            }
+        guard let detailData = detailData else { return }
+        MDAPIManager.sharedManager.requestBoardInfo(boardId: detailData.id) { (result) -> (Void) in
+            self.detailData = nil
+            self.detailData = MDDetailCategoryData(rawJson: result)
+            
+            guard self.pullUpController == nil else{return}
+            self.addPullUpController()
         }
     }
     
@@ -225,7 +218,8 @@ class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate,Press
     
     
     @objc func handleDoubleTapGesture(recognizer : UITapGestureRecognizer){
-        pressedLikeButton(boardData: detailData!)
+        guard let detailData = detailData else { return }
+        pressedLikeButton(boardData: detailData)
     }
     
     
@@ -290,16 +284,16 @@ class MDBoardViewController: UIViewController ,UIGestureRecognizerDelegate,Press
         let parameters: Parameters = [
             "board_id": detailData?.id ?? "",
             "name":UserDefaults.standard.string(forKey: "nickname") ?? "",
-            "description":inputTextView.text!
+            "description":inputTextView.text ?? ""
         ]
-        var boardData = self.detailData
-        let commentCount = boardData?.comment_counnt
+        
+        guard var boardData = self.detailData else { return }
         
         MDAPIManager.sharedManager.requestRegisterReply(parameters: parameters) { (result) -> (Void) in
             self.pullUpController?.requestCommentInfo()
             
-            boardData?.comment_counnt = commentCount! + 1
-            self.refreshPrevInfo(boardData: boardData!)
+            boardData.comment_counnt = boardData.comment_counnt + 1
+            self.refreshPrevInfo(boardData: boardData)
             
             Toast(text: "댓글이 등록되었습니다.", duration: Delay.long).show()
 
@@ -327,11 +321,14 @@ extension MDBoardViewController : MDCommentViewControllerDelegate{
         var boardData = boardData
         animateLikeMotion()
         
-        guard !(boardData.is_liked) else {return}
+        guard !(boardData.is_liked),
+            let detailData = detailData else {
+                return
+        }
         
         let likeCount = boardData.like_count
         let parameters: Parameters = [
-            "board_id": detailData!.id,
+            "board_id": detailData.id,
             "user":MDDeviceInfo.getCurrentDeviceID(),
             ]
         
@@ -349,10 +346,11 @@ extension MDBoardViewController : MDCommentViewControllerDelegate{
     func removeLike(boardData:MDDetailCategoryData){
         var boardData = boardData
         
-        guard boardData.is_liked else {return}
+        guard boardData.is_liked,
+            let detailData = detailData else { return }
         let likeCount = boardData.like_count
         
-        MDAPIManager.sharedManager.requestRemoveLike(boardID: (detailData?.id)!) { (result) -> (Void) in
+        MDAPIManager.sharedManager.requestRemoveLike(boardID: detailData.id) { (result) -> (Void) in
             boardData.like_count = likeCount - 1
             boardData.is_liked = false
             self.refreshPrevInfo(boardData: boardData)
@@ -362,6 +360,8 @@ extension MDBoardViewController : MDCommentViewControllerDelegate{
             self.pullUpController?.tableView.reloadData()
         }
     }
+    
+    
     
     func animateLikeMotion(){
         if  self.motionFlowerImageView.isAnimatingGIF ||

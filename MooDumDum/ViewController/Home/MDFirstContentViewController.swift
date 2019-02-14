@@ -14,11 +14,12 @@ import Toaster
 class MDFirstContentViewController: UIViewController {
 
     
-    var descriptionText          : String?
-    var pageIndex                  : Int!
-    var firstImage                   : UIImage?
-    var titleImage                   : UIImage?
+    var descriptionText    : String?
+    var pageIndex          : Int!
+    var firstImage         : UIImage?
+    var titleImage         : UIImage?
     var termsOfButtonImage : UIImage?
+    
     @IBOutlet weak var imageHeightConst: NSLayoutConstraint!
     @IBOutlet weak var firstImageView: UIImageView!
     @IBOutlet weak var titleImageView: UIImageView!

@@ -109,45 +109,47 @@ class MDDraggableViewBackground: UIView, DraggableViewDelegate,UIGestureRecogniz
         var cardData = cardData
         let cardFrame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.height)
         let newCard = DraggableView(frameForXIB: cardFrame)
-        newCard?.content.text = cardData.description
-        newCard?.backgroundImageView.kf.setImage(with: cardData.image_url)
-        newCard?.commentCount.text = String((cardData.comment_counnt))
-        newCard?.likeCount.text = String((cardData.like_count))
-        newCard?.content.textColor = UIColor(hexString: cardData.color)
-        newCard?.is_liked = cardData.is_liked
+        guard let card = newCard else { return DraggableView() }
+        
+        card.content.text = cardData.description
+        card.backgroundImageView.cacheSetImage(url: cardData.image_url)
+        card.commentCount.text = String((cardData.comment_counnt))
+        card.likeCount.text = String((cardData.like_count))
+        card.content.textColor = UIColor(hexString: cardData.color)
+        card.is_liked = cardData.is_liked
         
 
         if cardData.color == "#ffffff"{
-            newCard?.commentImageView.image = UIImage(named: "commentWh")
-            newCard?.likeButton.setImage(UIImage(named: "beforeLikeWhiteButton"), for: .normal)
-            newCard?.commentCount.textColor = UIColor.white
-            newCard?.likeCount.textColor = UIColor.white
+            card.commentImageView.image = UIImage(named: "commentWh")
+            card.likeButton.setImage(UIImage(named: "beforeLikeWhiteButton"), for: .normal)
+            card.commentCount.textColor = UIColor.white
+            card.likeCount.textColor = UIColor.white
             
         }else{
-            newCard?.commentImageView.image = UIImage(named: "commentBl")
-            newCard?.likeButton.setImage(UIImage(named: "beforeLikeButton"), for: .normal)
-            newCard?.commentCount.textColor = UIColor.black
-            newCard?.likeCount.textColor = UIColor.black
+            card.commentImageView.image = UIImage(named: "commentBl")
+            card.likeButton.setImage(UIImage(named: "beforeLikeButton"), for: .normal)
+            card.commentCount.textColor = UIColor.black
+            card.likeCount.textColor = UIColor.black
         }
         
         if(cardData.is_liked){
-            newCard?.likeButton.setImage(UIImage(named: "afterLikeButton"), for: UIControlState.normal)
+            card.likeButton.setImage(UIImage(named: "afterLikeButton"), for: UIControlState.normal)
         }
         
-        newCard?.pressedCard = {
+        card.pressedCard = {
             self.delegate.pressedCardView(draggableView: newCard!, data: cardData)
         }
         
-        newCard?.removeLike = {
+        card.removeLike = {
             MDAPIManager.sharedManager.requestRemoveLike(boardID: cardData.id, completion: { (result) -> (Void) in
                 cardData.like_count = cardData.like_count - 1
                 cardData.is_liked = false
-                newCard?.likeCount.text = String(cardData.like_count)
-                newCard?.is_liked = false
+                card.likeCount.text = String(cardData.like_count)
+                card.is_liked = false
                 if cardData.color == "#ffffff"{
-                    newCard?.likeButton.setImage(UIImage(named: "beforeLikeWhiteButton"), for: .normal)
+                    card.likeButton.setImage(UIImage(named: "beforeLikeWhiteButton"), for: .normal)
                 }else{
-                    newCard?.likeButton.setImage(UIImage(named: "beforeLikeButton"), for: .normal)
+                    card.likeButton.setImage(UIImage(named: "beforeLikeButton"), for: .normal)
                 }
             })
         }
@@ -160,13 +162,13 @@ class MDDraggableViewBackground: UIView, DraggableViewDelegate,UIGestureRecogniz
         textLabel.font = UIFont(name: "System", size: 17)
         textLabel.sizeToFit()
         
-        petalImageView.center = CGPoint(x: (newCard?.center.x)!, y: petalImageView.center.y)
-        flowerImageView.center = (newCard?.center)!
-        textLabel.center = CGPoint(x: (newCard?.center.x)!, y: flowerImageView.center.y + flowerImageView.frame.height)
+        petalImageView.center = CGPoint(x: card.center.x, y: petalImageView.center.y)
+        flowerImageView.center = card.center
+        textLabel.center = CGPoint(x: card.center.x, y: flowerImageView.center.y + flowerImageView.frame.height)
         
-        newCard?.addSubview(petalImageView)
-        newCard?.addSubview(flowerImageView)
-        newCard?.addSubview(textLabel)
+        card.addSubview(petalImageView)
+        card.addSubview(flowerImageView)
+        card.addSubview(textLabel)
 
         
         petalImageView.isHidden = true
@@ -178,10 +180,8 @@ class MDDraggableViewBackground: UIView, DraggableViewDelegate,UIGestureRecogniz
         textLabel.alpha = 0
 
         
-        
-        
-        newCard?.backgroundAlpahView.alpha = 0
-        newCard?.doubleTapCard = {
+        card.backgroundAlpahView.alpha = 0
+        card.doubleTapCard = {
             if  petalImageView.isAnimatingGIF ||
                 flowerImageView.isAnimatingGIF {
                 return
@@ -200,11 +200,11 @@ class MDDraggableViewBackground: UIView, DraggableViewDelegate,UIGestureRecogniz
             
             
             UIView.animate(withDuration: 1, animations: {
-                newCard?.backgroundAlpahView.alpha = 0.5
+                card.backgroundAlpahView.alpha = 0.5
             })
             
             
-            newCard?.backgroundAlpahView.isHidden = false;
+            card.backgroundAlpahView.isHidden = false;
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2, execute: {
                 
                 
@@ -220,12 +220,12 @@ class MDDraggableViewBackground: UIView, DraggableViewDelegate,UIGestureRecogniz
                     petalImageView.isHidden = true
                     flowerImageView.isHidden = true
                     textLabel.isHidden = true
-                    newCard?.backgroundAlpahView.isHidden = true;
+                    card.backgroundAlpahView.isHidden = true;
                 })
             })
             
             
-            guard !(newCard?.is_liked)! else{return}
+            guard !(card.is_liked) else{return}
             
             let parameters: Parameters = [
                 "board_id": cardData.id,
@@ -236,12 +236,12 @@ class MDDraggableViewBackground: UIView, DraggableViewDelegate,UIGestureRecogniz
             MDAPIManager.sharedManager.reqeustBoardLike(parameters: parameters, completion: { (result) -> (Void) in
                 cardData.like_count = cardData.like_count + 1
                 cardData.is_liked = true
-                newCard?.likeCount.text = String(cardData.like_count)
-                newCard?.is_liked = true
-                newCard?.likeButton.setImage(UIImage(named: "afterLikeButton"), for: UIControlState.normal)
+                card.likeCount.text = String(cardData.like_count)
+                card.is_liked = true
+                card.likeButton.setImage(UIImage(named: "afterLikeButton"), for: UIControlState.normal)
             })
         }
-        return newCard!
+        return card
     }
     
     func requestMoreCardInfo(){

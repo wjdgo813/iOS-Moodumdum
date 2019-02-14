@@ -28,15 +28,13 @@ class MDCategoryDetailCollectionViewCell: UICollectionViewCell {
     }
     
     private func display(){
-        do {
-
-            content.text = viewModel?.description
-            nicknameLabel.text = viewModel?.name
-            likeCount.text = String((viewModel?.like_count)!)
-            replyCount.text = String((viewModel?.comment_count)!)
-            backgroundImg.kf.setImage(with: (viewModel?.image_url)!)
-        } catch  {
-        }
+        guard let viewModel = viewModel else { return }
+        
+        content.text = viewModel.description
+        nicknameLabel.text = viewModel.name
+        likeCount.text = String(viewModel.like_count)
+        replyCount.text = String(viewModel.comment_count)
+        backgroundImg.cacheSetImage(url: viewModel.image_url)
     }
 
 }

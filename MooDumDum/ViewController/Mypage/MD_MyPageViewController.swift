@@ -206,7 +206,13 @@ extension MD_MyPageViewController : UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if self.data?.count == 0 {
+        
+        guard var data = data else {
+            return UICollectionViewCell()
+        }
+        
+        
+        if data.count == 0 {
             if self.mySelfListType == .MDMySelfWriteBoard {
                 
                 let cell : MDMyBoardEmptyCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MDMyBoardEmptyCell", for: indexPath) as! MDMyBoardEmptyCell
@@ -217,20 +223,18 @@ extension MD_MyPageViewController : UICollectionViewDataSource {
                 let cell : MDMySelfLikeEmptyCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MDMySelfLikeEmptyCell", for: indexPath) as! MDMySelfLikeEmptyCell
                 return cell
             }
-            
-            
         }
         
         let cell : MDMyBoardCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MDMyBoardCell", for: indexPath) as! MDMyBoardCell
-        cell.backgroundImageView.kf.setImage(with: self.data?.categoryDetailList[indexPath.row].image_url)
-        cell.descriptionLabel.text = self.data?.categoryDetailList[indexPath.row].description
-        cell.descriptionLabel.textColor = UIColor(hexString: (self.data?.categoryDetailList[indexPath.row].color)!)
+        cell.backgroundImageView.cacheSetImage(url: data.categoryDetailList[indexPath.row].image_url)
+        cell.descriptionLabel.text = data.categoryDetailList[indexPath.row].description
+        cell.descriptionLabel.textColor = UIColor(hexString: data.categoryDetailList[indexPath.row].color)
         
         return cell
     }
-
-
 }
+
+
 
 extension MD_MyPageViewController : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -242,6 +246,8 @@ extension MD_MyPageViewController : UICollectionViewDelegateFlowLayout {
         return CGSize(width: cellWidth, height: cellWidth)
     }
 }
+
+
 
 extension MD_MyPageViewController : UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

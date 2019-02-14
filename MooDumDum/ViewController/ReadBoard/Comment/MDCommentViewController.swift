@@ -56,31 +56,32 @@ class MDCommentViewController: MDPullUpController {
 
     
     func requestCommentInfo(){
-        if let commentId = data?.id {
-            MDAPIManager.sharedManager.requestCommentInfo(commentId: commentId) { result -> (Void) in
-                self.commentItem = nil
-                self.commentItem = MDCommentInfoSet(rawJson: result)
-                
-                if (self.commentItem?.count)! > 0{
-                    self.commentState = .haveList
-                }else{
-                    self.commentState = .empty
-                }
-                
-                self.tableView.reloadData()
+        guard let data = data else { return }
+        
+        MDAPIManager.sharedManager.requestCommentInfo(commentId: data.id) { result -> (Void) in
+            
+            self.commentItem = nil
+            self.commentItem = MDCommentInfoSet(rawJson: result)
+            
+            guard let commentItem = self.commentItem else { return }
+            if commentItem.count ?? 0 > 0{
+                self.commentState = .haveList
+            }else{
+                self.commentState = .empty
             }
+            
+            self.tableView.reloadData()
         }
+        
     }
     
     func requestMoreCommentInfo(){
-        guard self.commentItem?.nextURL != nil else{ return }
-        guard self.commentItem != nil else{ return }
-        guard self.commentItem?.nextURL != "" else{ return }
+        guard var commentItem = self.commentItem else { return }
         
         Alamofire.request((self.commentItem?.nextURL)!).responseJSON { response in
             let json = JSON(response.result.value)
             
-            self.commentItem?.loadMore(rawJson:json)
+            commentItem.loadMore(rawJson:json)
             self.tableView.reloadData()
             self.isMoreLoading = false
         }
@@ -122,10 +123,17 @@ class MDCommentViewController: MDPullUpController {
     
     //MARK: overide PullUpController
     override var pullUpControllerPreferredSize: CGSize {
-        if MDDeviceInfo.isIphoneX(){
-            return CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - (self.navigationController?.navigationBar.frame.height)! - 45)
+        guard let navigationController = self.navigationController else {
+            return CGSize.zero
         }
-        return CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - (self.navigationController?.navigationBar.frame.height)! - 20)
+        
+        var differ : CGFloat = 20
+        if MDDeviceInfo.isIphoneX(){
+            differ = 45
+        }
+        
+        return CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - navigationController.navigationBar.frame.height - differ)
+        
     }
     override func handleSingTapGesture(_ gestureRecognizer: UIPanGestureRecognizer) {
         
@@ -137,8 +145,6 @@ class MDCommentViewController: MDPullUpController {
                 self.topConstraint?.constant = (self.navigationController?.navigationBar.frame.height)! + 20
             }
             
-            
-//            self.view.setNeedsLayout()
             self.view.layoutIfNeeded()
         }) {result in
             
@@ -161,7 +167,7 @@ class MDCommentViewController: MDPullUpController {
 
 extension MDCommentViewController : MDCommentTableViewCellDelegate{
     func pressedCommentLikeButton(cell: MDCommentTableViewCell, data: MDCommentItem) {
-
+        
         let parameters: Parameters = [
             "comment_id": (data.comment_id)!,
             "user":MDDeviceInfo.getCurrentDeviceID()
@@ -216,13 +222,19 @@ extension MDCommentViewController : MDCommentTableViewCellDelegate{
 
 extension MDCommentViewController : MDHeaderCommentTableViewCellDelegate{
     func pressedBoardLikeButton(cell: MDHeaderCommentTableViewCell) {
-        if delegate != nil {
-            if !(self.data?.is_liked)! {
-                self.delegate.pressedLikeButton(boardData: self.data!)
-            }else{
-                self.delegate.removeLike(boardData: self.data!)
-            }
+        guard delegate != nil,
+            let data = data
+        else {
+            return
         }
+        
+        
+        if !(data.is_liked) {
+            self.delegate.pressedLikeButton(boardData: data)
+        }else{
+            self.delegate.removeLike(boardData: data)
+        }
+        
     }
 }
 

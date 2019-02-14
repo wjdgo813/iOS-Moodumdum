@@ -24,10 +24,11 @@ class MDCategoryCollectionViewCell: UICollectionViewCell {
     }
     
     private func display(){
-        do {
-            backgroundImageView.kf.setImage(with: viewModel?.background_url)
-            titleImageView.kf.setImage(with: viewModel?.image_url)
-        } catch  {
+        guard let viewModel = viewModel else {
+            return
         }
+        
+        backgroundImageView.cacheSetImage(url: viewModel.background_url)
+        titleImageView.cacheSetImage(url: viewModel.image_url)
     }
 }

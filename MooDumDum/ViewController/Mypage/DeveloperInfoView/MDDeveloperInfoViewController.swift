@@ -21,7 +21,7 @@ class MDDeveloperInfoViewController: UIViewController {
         self.infoTableView.separatorStyle = UITableViewCellSeparatorStyle.none
         self.infoTableView.allowsSelection = false
         
-        nameArray = ["정해현","이주연","인정민","김소연","장호동"]
+        nameArray  = ["정해현","이주연","인정민","김소연","장호동"]
         emailArray = ["wjdgo50@gmail.com","dprocess@naver.com","wud4510@gmail.com","ese2003@naver.com","jhd9206@gmail.com"]
         
     }

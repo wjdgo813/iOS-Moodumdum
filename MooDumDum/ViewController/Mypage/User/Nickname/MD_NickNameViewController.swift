@@ -21,13 +21,13 @@ class MD_NickNameViewController: UIViewController, UITextFieldDelegate{
         super.viewDidLoad()
         self.NickTextField.text = nickname
         NickTextField.delegate = self as UITextFieldDelegate
-        let nickcount = nickname.characters.count
+        let nickcount = nickname.count
         self.countNick.text = "(\(nickcount)/10)"
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let text = textField.text else { return true }
-        let newLength = text.characters.count + string.characters.count - range.length
+        let newLength = text.count + string.count - range.length
         if(newLength <= limitLength){
             self.countNick.text = "(\(limitLength - newLength)/10)"
         }
@@ -39,7 +39,6 @@ class MD_NickNameViewController: UIViewController, UITextFieldDelegate{
         
         MDAPIManager.sharedManager.requestChangeNickname(nickname: self.NickTextField.text!) { (result) -> (Void) in
             UserDefaults.standard.set(self.NickTextField.text, forKey: "nickname")
-//            self.dismiss(animated: true, completion: nil)
             self.navigationController?.popViewController(animated: true)
         }
     }

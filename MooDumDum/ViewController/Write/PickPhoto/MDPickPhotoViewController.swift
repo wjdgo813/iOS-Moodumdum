@@ -73,7 +73,7 @@ class MDPickPhotoViewController: UIViewController {
             self.photoData = MDPickPhotoSet(rawJson: result)
             self.navigationController?.navigationBar.tintColor = UIColor(hexString: self.photoData.pickPhotoList[0].font_color)
             self.content.textColor = UIColor(hexString: self.photoData.pickPhotoList[0].font_color)
-            self.backgroundImageView.kf.setImage(with: self.photoData.pickPhotoList[0].image_url)
+            self.backgroundImageView.cacheSetImage(url : self.photoData.pickPhotoList[0].image_url)
             self.photoCollectionView.reloadData()
         }
     }
@@ -115,7 +115,7 @@ extension MDPickPhotoViewController : UICollectionViewDelegate{
         self.pickPhotoIndex = indexPath.row
         navigationController?.navigationBar.tintColor = UIColor(hexString: self.photoData.pickPhotoList[indexPath.row].font_color)
         self.content.textColor = UIColor(hexString: self.photoData.pickPhotoList[indexPath.row].font_color)
-        self.backgroundImageView.kf.setImage(with: self.photoData.pickPhotoList[indexPath.row].image_url)
+        self.backgroundImageView.cacheSetImage(url: self.photoData.pickPhotoList[indexPath.row].image_url)
     }
 }
 
@@ -130,7 +130,7 @@ extension MDPickPhotoViewController : UICollectionViewDataSource{
         
         let cell  = photoCollectionView?.dequeueReusableCell(withReuseIdentifier: "MDPickPhotoCell", for: indexPath)
         if let myCell = cell as? MDPickPhotoCell {
-            myCell.backgroundImageView.kf.setImage(with: self.photoData.pickPhotoList[indexPath.row].image_url)
+            myCell.backgroundImageView.cacheSetImage(url: self.photoData.pickPhotoList[indexPath.row].image_url)
         }
         return cell!
     }
