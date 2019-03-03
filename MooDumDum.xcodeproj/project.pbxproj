@@ -81,6 +81,7 @@
 		A1C862F920FD05320053907F /* PressedMoreButtonAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C862F820FD05320053907F /* PressedMoreButtonAction.swift */; };
 		A1C862FD2104961D0053907F /* MDDeclareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C862FB2104961D0053907F /* MDDeclareViewController.swift */; };
 		A1C862FE2104961D0053907F /* MDDeclareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1C862FC2104961D0053907F /* MDDeclareViewController.xib */; };
+		A1CE79AD222BAD4100AC4EA8 /* MDShowAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CE79AC222BAD4100AC4EA8 /* MDShowAlert.swift */; };
 		A1D61928207BAFF30046C2E2 /* likeMotion.gif in Resources */ = {isa = PBXBuildFile; fileRef = A1D61927207BAFF30046C2E2 /* likeMotion.gif */; };
 		A1D6192A207CED810046C2E2 /* MDFirstDescriptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D61929207CED810046C2E2 /* MDFirstDescriptViewController.swift */; };
 		A1D6192C207CEE1C0046C2E2 /* MDFirstContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D6192B207CEE1C0046C2E2 /* MDFirstContentViewController.swift */; };
@@ -210,6 +211,7 @@
 		A1C862F820FD05320053907F /* PressedMoreButtonAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PressedMoreButtonAction.swift; sourceTree = "<group>"; };
 		A1C862FB2104961D0053907F /* MDDeclareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDDeclareViewController.swift; sourceTree = "<group>"; };
 		A1C862FC2104961D0053907F /* MDDeclareViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MDDeclareViewController.xib; sourceTree = "<group>"; };
+		A1CE79AC222BAD4100AC4EA8 /* MDShowAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDShowAlert.swift; sourceTree = "<group>"; };
 		A1D61927207BAFF30046C2E2 /* likeMotion.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = likeMotion.gif; sourceTree = "<group>"; };
 		A1D61929207CED810046C2E2 /* MDFirstDescriptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDFirstDescriptViewController.swift; sourceTree = "<group>"; };
 		A1D6192B207CEE1C0046C2E2 /* MDFirstContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDFirstContentViewController.swift; sourceTree = "<group>"; };
@@ -543,6 +545,7 @@
 			isa = PBXGroup;
 			children = (
 				A1C862F820FD05320053907F /* PressedMoreButtonAction.swift */,
+				A1CE79AC222BAD4100AC4EA8 /* MDShowAlert.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -1067,6 +1070,7 @@
 				BA956A6820AAF34000F3E604 /* UIViewControllerExtension.swift in Sources */,
 				3564DB1E2024382100FD9C7E /* MD_MyPageViewController.swift in Sources */,
 				A18BADA621EE2C3A00580962 /* MDTermsOfServiceViewController.swift in Sources */,
+				A1CE79AD222BAD4100AC4EA8 /* MDShowAlert.swift in Sources */,
 				A12936E7206024C60087A074 /* UIColorExtension.swift in Sources */,
 				A1F3BF98208CE28500E8F861 /* MDCommentEmptyCell.swift in Sources */,
 				356B0F7D2024C4C700218231 /* MD_WriteViewController.swift in Sources */,

@@ -8,11 +8,11 @@
 
 import UIKit
 
+let appDelegate = UIApplication.shared.delegate as? AppDelegate
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-//    var user = UserInfo()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -44,5 +44,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+    //MARK: Search Front View Controller
+    func searchFrontViewController(_ viewController : UIViewController)->UIViewController{
+        var vc = viewController
+        if let presentVC = viewController.presentedViewController {
+            vc = self.searchFrontViewController(presentVC)
+        }
+        
+        return vc
+    }
+    
+    
+    
+    func searchFrontViewController()->UIViewController{
+        var vc = appDelegate?.window?.rootViewController
+        vc = self.searchFrontViewController(vc!)
+        return vc!
+    }
 }
 

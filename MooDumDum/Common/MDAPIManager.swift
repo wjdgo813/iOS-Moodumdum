@@ -23,14 +23,14 @@ class MDAPIManager{
     /*
      사용자의 기기가 회원가입이 되어있는지 체크
      */
-    func isRegisterUser(completion:@escaping (_ result : Bool)->(Void)){
+    func isRegisterUser(completion:@escaping (_ result : Int)->(Void)){
         
-        Alamofire.request("\(api_url)api/user/\(MDDeviceInfo.getCurrentDeviceID())").validate(statusCode: 200..<300).responseJSON { response in
+        Alamofire.request("\(api_url)api/user/\(MDDeviceInfo.getCurrentDeviceID())",method:.get).validate(statusCode: 200..<300).responseJSON { response in
             switch response.result {
             case .success:
-                completion(true)
+                completion(response.response?.statusCode ?? 0)
             case .failure(let error):
-                completion(false)
+                completion(response.response?.statusCode ?? 0)
             }
         }
     }
@@ -308,5 +308,9 @@ class MDAPIManager{
     
     func showFailMessage(){
         Toast(text: "네트워크에 문제가 있습니다. 네트워크 상태를 확인해주세요.", duration: Delay.long).show()
+    }
+    
+    func showBlockMessage(){
+        Toast(text: "이용 정지된 유저입니다. 문의 사항은 개발팀에게 연락 부탁드립니다.", duration: Delay.long).show()
     }
 }
