@@ -6,27 +6,6 @@
 //  Copyright © 2018년 MooDumdum. All rights reserved.
 //
 
-
-/*
- + (void)setFirstListPopupGuide:(BOOL)enabled
- {
- NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
- [prefs setBool:enabled forKey:@"firstListPopupGuide"];
- [prefs synchronize];
- 
- }
- 
- + (BOOL)firstListPopupGuide
- {
- NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
- 
- if([prefs boolForKey:@"firstListPopupGuide"]) {
- return [prefs boolForKey:@"firstListPopupGuide"];
- } else {
- return NO;
- }
- }
- */
 import Foundation
 
 class MDSettingData{

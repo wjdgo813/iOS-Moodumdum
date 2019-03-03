@@ -25,8 +25,8 @@ class MDDeviceInfo{
             UUID = string as String
             UserDefaults.standard.setValue(string, forKey: "uniqueID")
         }
-//        return UUID ?? ""
-        return "hodong"
+        return UUID ?? ""
+//        return "hodong"
     }
     
     /*
