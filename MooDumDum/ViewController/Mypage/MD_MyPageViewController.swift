@@ -155,9 +155,27 @@ class MD_MyPageViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    
     @objc func pressedInfoButton(){
-        let vc = MDDeveloperInfoViewController(nibName: "MDDeveloperInfoViewController", bundle: nil)
-        self.navigationController?.pushViewController(vc, animated: true)
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let cancelButton = UIAlertAction(title: "취소", style: .cancel, handler: { (action) -> Void in
+        })
+        
+        let developerInfo = UIAlertAction(title: "개발팀 연락처", style: .default, handler: { (action) -> Void in
+            let vc = MDDeveloperInfoViewController(nibName: "MDDeveloperInfoViewController", bundle: nil)
+            self.navigationController?.pushViewController(vc, animated: true)
+        })
+        
+        let termsOfService = UIAlertAction(title: "이용약관", style: .default, handler: { (action) -> Void in
+            let vc = MDTermsOfServiceViewController(nibName: "MDTermsOfServiceViewController", bundle: nil)
+            self.present(vc, animated: true, completion: nil)
+        })
+        
+        alertController.addAction(cancelButton)
+        alertController.addAction(developerInfo)
+        alertController.addAction(termsOfService)
+        
+        self.present(alertController, animated: true, completion: nil)
     }
     
     
