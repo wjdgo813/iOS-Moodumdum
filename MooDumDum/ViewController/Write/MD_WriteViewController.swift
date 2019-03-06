@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MD_WriteViewController: UIViewController,UITextViewDelegate {
+class MD_WriteViewController: UIViewController, UITextViewDelegate {
     
     
     @IBOutlet weak var WriteText: UITextView!

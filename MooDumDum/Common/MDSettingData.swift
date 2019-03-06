@@ -24,4 +24,19 @@ class MDSettingData{
             return false
         }
     }
+    
+    class func setFirstWriteButton(enabled:Bool){
+        let pref = UserDefaults.standard
+        pref.set(enabled, forKey: "firstWriteButton")
+        pref.synchronize()
+    }
+    
+    class func firstWriteButton() -> Bool {
+        let pref = UserDefaults.standard
+        if pref.bool(forKey: "firstWriteButton") {
+            return pref.bool(forKey: "firstWriteButton")
+        }else{
+            return false
+        }
+    }
 }

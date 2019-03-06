@@ -9,7 +9,7 @@
 import UIKit
 
 
-class MDPickPhotoViewController: UIViewController {
+class MDPickPhotoViewController: UIViewController, MDCanShowAlert {
     var textview : String = ""
     var category : Int = 0
     var photoData : MDPickPhotoSet?
@@ -59,12 +59,25 @@ class MDPickPhotoViewController: UIViewController {
             "color" : photoData.pickPhotoList[pickPhotoIndex].font_color
         ]
         
-        MDAPIManager.sharedManager.writeSubmit(parameters: param) { (result) -> (Void) in
-            self.dismiss(animated: true, completion: {
-                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "MDWriteSubmit"), object: nil)
-            })
-            
+        let writeClosure = {
+            MDAPIManager.sharedManager.writeSubmit(parameters: param) { (result) -> (Void) in
+                self.dismiss(animated: true, completion: {
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "MDWriteSubmit"), object: nil)
+                })
+                
+            }
         }
+        
+        if !MDSettingData.firstWriteButton() {
+            self.showAlert(title: "알림", message: "타인을 불편하게 하는 게시글일 경우 통보없이 삭제될 수 있으며 계정에 제재가 가해질 수 있습니다.", confirmButtonTitle: "확인", completion: {
+                MDSettingData.setFirstWriteButton(enabled: true)
+                writeClosure()
+            })
+        }else{
+            writeClosure()
+        }
+        
+       
     }
     
     func firstLoadImage(){
