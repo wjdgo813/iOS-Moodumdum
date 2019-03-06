@@ -73,8 +73,6 @@ class MDHomeViewController: UIViewController,UIGestureRecognizerDelegate {
         
         let nav = UINavigationController(rootViewController: vc)
         self.navigationController?.present(nav, animated: true, completion: nil)
-        
-
     }
     
     

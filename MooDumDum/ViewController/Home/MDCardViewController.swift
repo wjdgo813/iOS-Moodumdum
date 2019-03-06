@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MDCardViewController: MDPullUpController,MDDraggableViewBackgroundDelegate {
+class MDCardViewController: MDPullUpController, MDDraggableViewBackgroundDelegate, MDCanShowAlert {
 
     
     
@@ -54,19 +54,12 @@ class MDCardViewController: MDPullUpController,MDDraggableViewBackgroundDelegate
     }
     
     @objc func completeWriteSubmit(){
-        self.draggableView = nil
-        self.draggableView = MDDraggableViewBackground(frame: self.view.frame)
-        self.draggableView.delegate = self
+
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "MD_MyPageViewController")
         
-        for cardSubview in cardView.subviews {
-            cardSubview.removeFromSuperview()
-        }
-        
-        cardView.addSubview(draggableView)
-        
-        if MDDeviceInfo.isIphoneX() {
-            self.writeButton.setImage(UIImage(named: "writeButtonForX"), for: .normal)
-        }
+        let nav = UINavigationController(rootViewController: vc)
+        self.present(nav, animated: true, completion: nil)
     }
     
     
@@ -93,9 +86,20 @@ class MDCardViewController: MDPullUpController,MDDraggableViewBackgroundDelegate
     @IBAction func pressedWriteButton(_ sender: Any) {
         //MD_WriteViewController
         
-        let sb = UIStoryboard(name: "Write", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "MD_WriteViewController")
-        self.present(UINavigationController(rootViewController: vc), animated: true, completion: nil)
+        let goWriteVC = {
+            let sb = UIStoryboard(name: "Write", bundle: nil)
+            let vc = sb.instantiateViewController(withIdentifier: "MD_WriteViewController")
+            self.present(UINavigationController(rootViewController: vc), animated: true, completion: nil)
+        }
+        
+        if !MDSettingData.firstWriteButton() {
+            self.showAlert(title: "알림", message: "타인을 불편하게 하는 게시글일 경우 통보없이 삭제될 수 있으며 계정에 제재가 가해질 수 있습니다.", confirmButtonTitle: "확인", completion: {
+                MDSettingData.setFirstWriteButton(enabled: true)
+                goWriteVC()
+            })
+        }else{
+            goWriteVC()
+        }
     }
     
     override var pullUpControllerPreferredSize: CGSize {

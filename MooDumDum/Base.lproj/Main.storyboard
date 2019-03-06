@@ -169,7 +169,7 @@
                                 <rect key="frame" x="135.5" y="609" width="104" height="58"/>
                                 <state key="normal" image="plusBtnBl"/>
                                 <connections>
-                                    <segue destination="8h7-1x-kzt" kind="show" id="oek-w7-sgc"/>
+                                    <action selector="pressedWriteButton:" destination="Gty-um-SEh" eventType="touchUpInside" id="vGd-bY-wF7"/>
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="HdK-d0-Syt">
