@@ -8,12 +8,33 @@
 
 import UIKit
 
+enum MDServiceType{
+    case termsOfService(String,String)
+    case privacyPolicy(String,String)
+}
+
 class MDTermsOfServiceViewController: UIViewController {
 
+    @IBOutlet weak var contentView: UITextView!
+    var type : MDServiceType?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.title = "사용자 약관동의"
+        
+        guard let type = self.type else {
+            return
+        }
+        
+        switch type {
+        case .privacyPolicy(let title, let content):
+            self.title = title
+            self.contentView.text = content
+        case .termsOfService(let title, let content):
+            self.title = title
+            self.contentView.text = content
+        }
+//        self.title = "사용자 약관동의"
+        
     }
 
     @IBAction func pressedClosed(_ sender: Any) {

@@ -80,6 +80,7 @@ class MDFirstContentViewController: UIViewController {
     
     @IBAction func pressedTermOfService(_ sender: Any) {
         let vc = MDTermsOfServiceViewController(nibName: "MDTermsOfServiceViewController", bundle: nil)
+        vc.type = .termsOfService("사용자 약관동의",String.termsOfServiceContent)
         self.present(vc, animated: true, completion: nil)
     }
 }

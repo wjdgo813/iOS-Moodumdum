@@ -184,14 +184,22 @@ class MD_MyPageViewController: UIViewController, MDCanShowAlert {
             self.navigationController?.pushViewController(vc, animated: true)
         })
         
+        let privacyPolicy = UIAlertAction(title: "개인정보 처리방침", style: .default, handler: { (action) -> Void in
+            let vc = MDTermsOfServiceViewController(nibName: "MDTermsOfServiceViewController", bundle: nil)
+            vc.type = .termsOfService("개인정보 처리방침",String.privacyPolicyContent)
+            self.present(vc, animated: true, completion: nil)
+        })
+        
         let termsOfService = UIAlertAction(title: "이용약관", style: .default, handler: { (action) -> Void in
             let vc = MDTermsOfServiceViewController(nibName: "MDTermsOfServiceViewController", bundle: nil)
+            vc.type = .termsOfService("사용자 약관동의",String.termsOfServiceContent)
             self.present(vc, animated: true, completion: nil)
         })
         
         alertController.addAction(cancelButton)
         alertController.addAction(developerInfo)
         alertController.addAction(termsOfService)
+        alertController.addAction(privacyPolicy)
         
         self.present(alertController, animated: true, completion: nil)
     }

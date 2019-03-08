@@ -74,6 +74,7 @@
 		A1C60F7C202F67CD00E858A2 /* MDCategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C60F7B202F67CD00E858A2 /* MDCategoryListViewController.swift */; };
 		A1C60F802031E30800E858A2 /* MDCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C60F7F2031E30800E858A2 /* MDCardViewController.swift */; };
 		A1C60F822031E3C000E858A2 /* MDPullUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C60F812031E3C000E858A2 /* MDPullUpController.swift */; };
+		A1C6D5A52232C1AA00E6708A /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C6D5A42232C1AA00E6708A /* StringExtension.swift */; };
 		A1C862EF20F623470053907F /* MDDeveloperInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C862ED20F623470053907F /* MDDeveloperInfoViewController.swift */; };
 		A1C862F020F623470053907F /* MDDeveloperInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1C862EE20F623470053907F /* MDDeveloperInfoViewController.xib */; };
 		A1C862F320F62D260053907F /* MDDeveloperTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C862F120F62D260053907F /* MDDeveloperTableViewCell.swift */; };
@@ -204,6 +205,7 @@
 		A1C60F7B202F67CD00E858A2 /* MDCategoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDCategoryListViewController.swift; sourceTree = "<group>"; };
 		A1C60F7F2031E30800E858A2 /* MDCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDCardViewController.swift; sourceTree = "<group>"; };
 		A1C60F812031E3C000E858A2 /* MDPullUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDPullUpController.swift; sourceTree = "<group>"; };
+		A1C6D5A42232C1AA00E6708A /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		A1C862ED20F623470053907F /* MDDeveloperInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDDeveloperInfoViewController.swift; sourceTree = "<group>"; };
 		A1C862EE20F623470053907F /* MDDeveloperInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MDDeveloperInfoViewController.xib; sourceTree = "<group>"; };
 		A1C862F120F62D260053907F /* MDDeveloperTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDDeveloperTableViewCell.swift; sourceTree = "<group>"; };
@@ -323,6 +325,7 @@
 		35FBA72E20596AC200BD2119 /* Mypage */ = {
 			isa = PBXGroup;
 			children = (
+				A1C6D5A32232C03400E6708A /* AgreeTermsOfService */,
 				A18BADA321EE2C1700580962 /* TermsOfService */,
 				A1C862EC20F623180053907F /* DeveloperInfoView */,
 				35174BAD20616CEF0006ED4E /* User */,
@@ -344,6 +347,7 @@
 				A12936E6206024C60087A074 /* UIColorExtension.swift */,
 				BA956A6720AAF34000F3E604 /* UIViewControllerExtension.swift */,
 				A17AA4212215C2BB000AA905 /* UIImageView+.swift */,
+				A1C6D5A42232C1AA00E6708A /* StringExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -528,6 +532,13 @@
 				A1B75C9D203DD0FE008B3EBF /* View */,
 			);
 			path = CategoryList;
+			sourceTree = "<group>";
+		};
+		A1C6D5A32232C03400E6708A /* AgreeTermsOfService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AgreeTermsOfService;
 			sourceTree = "<group>";
 		};
 		A1C862EC20F623180053907F /* DeveloperInfoView */ = {
@@ -1076,6 +1087,7 @@
 				356B0F7D2024C4C700218231 /* MD_WriteViewController.swift in Sources */,
 				A18BADA221EE250D00580962 /* MD_LoadData.swift in Sources */,
 				BAA0B52E206206AC00C82A84 /* MDCommentTableViewCell.swift in Sources */,
+				A1C6D5A52232C1AA00E6708A /* StringExtension.swift in Sources */,
 				A1263D9A207E3D53005E15CF /* MDSplashViewController.swift in Sources */,
 				A1673751205FE90500DCE79A /* MDCategoryDetailViewModel.swift in Sources */,
 				A1F3BF8C208CBA9500E8F861 /* MDPickPhotoViewController.swift in Sources */,

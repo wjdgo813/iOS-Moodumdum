@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MDTermsOfServiceViewController" customModule="MooDumDum" customModuleProvider="target">
             <connections>
+                <outlet property="contentView" destination="6Su-Mn-1Sn" id="Lvv-RW-jjc"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,7 +24,7 @@
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6Su-Mn-1Sn">
                     <rect key="frame" x="28" y="79" width="319" height="588"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <mutableString key="text">무덤덤(Moodumdum) 은 익명 네트워크 기반으로 운영합니다. 따라서 이용자분들은 아래 가이드라인을 상시 준수하여야 합니다. 아래 명시된 주제에만 국한되지는 않으며, 임의로 적합하지 않은 컨텐츠임으로 판단될 시 서비스로부터 거부 또는 퇴출할 수 있는 권리를 가집니다.   1.목적
+                    <string key="text">무덤덤(Moodumdum) 은 익명 네트워크 기반으로 운영합니다. 따라서 이용자분들은 아래 가이드라인을 상시 준수하여야 합니다. 아래 명시된 주제에만 국한되지는 않으며, 임의로 적합하지 않은 컨텐츠임으로 판단될 시 서비스로부터 거부 또는 퇴출할 수 있는 권리를 가집니다.   1.목적
 
 이 약관은 회사가 온라인으로 제공하는 디지털콘텐츠(이하 "콘텐츠"라고 한다) 및 제반서비스의 이용과 관련하여 회사와 이용자와의 권리, 의무 및 책임사항 등을 규정함을 목적으로 합니다.
 
@@ -130,7 +131,7 @@
 
 13.분쟁의 해결
 
- "회사"는 분쟁이 발생하였을 경우에 "이용자"가 제기하는 정당한 의견이나 불만을 반영하여 적절하고 신속한 조치를 취합니다. 다만, 신속한 처리가 곤란한 경우에 "회사"는 "이용자"에게 그 사유와 처리일정을 통보합니다.</mutableString>
+ "회사"는 분쟁이 발생하였을 경우에 "이용자"가 제기하는 정당한 의견이나 불만을 반영하여 적절하고 신속한 조치를 취합니다. 다만, 신속한 처리가 곤란한 경우에 "회사"는 "이용자"에게 그 사유와 처리일정을 통보합니다.</string>
                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
