@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,15 +15,15 @@
             <objects>
                 <viewController storyboardIdentifier="MDCardViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gj1-NY-hRk" customClass="MDCardViewController" customModule="MooDumDum" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S6N-cm-DMH">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="onE-JC-azz">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
                                 <color key="backgroundColor" red="1" green="0.25358500029999997" blue="0.33199943910000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INw-28-IdZ">
-                                <rect key="frame" x="108" y="510" width="104" height="58"/>
+                                <rect key="frame" x="135.66666666666666" y="720" width="104" height="58"/>
                                 <state key="normal" image="plusBtnBl">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -65,22 +65,22 @@
             <objects>
                 <viewController storyboardIdentifier="MDDescripViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XuY-15-yYw" customClass="MDDescripViewController" customModule="MooDumDum" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zu9-WZ-IMK">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ll8-lB-NDN">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="OFZ-Q4-BcV">
-                                <rect key="frame" x="140" y="251" width="40" height="26"/>
+                                <rect key="frame" x="167.66666666666666" y="373" width="40" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="8o3-AU-cBY"/>
                                     <constraint firstAttribute="height" constant="26" id="fdP-qm-TxA"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="위로 글을 올려보세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUE-Aq-FKJ">
-                                <rect key="frame" x="87" y="292" width="146" height="21"/>
+                                <rect key="frame" x="114.66666666666669" y="414" width="146" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -109,11 +109,11 @@
             <objects>
                 <viewController storyboardIdentifier="MDFirstDescriptViewController" id="muc-Ai-e2j" customClass="MDFirstDescriptViewController" customModule="MooDumDum" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lxk-kE-ZF2">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="S6K-pJ-PFU">
-                                <rect key="frame" x="148.5" y="531" width="23" height="37"/>
+                                <rect key="frame" x="176" y="741" width="23" height="37"/>
                                 <color key="pageIndicatorTintColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="currentPageIndicatorTintColor" cocoaTouchSystemColor="darkTextColor"/>
                             </pageControl>
@@ -146,30 +146,30 @@
             <objects>
                 <viewController storyboardIdentifier="MDFirstContentViewController" id="NSl-2B-cpB" customClass="MDFirstContentViewController" customModule="MooDumDum" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="str-D3-7w4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FaF-gx-iff">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="276"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="276"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="276" id="vRS-Vg-8WO"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JJp-bI-VJv">
-                                <rect key="frame" x="131" y="90" width="58" height="156"/>
+                                <rect key="frame" x="158.66666666666666" y="70" width="58" height="156"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="156" id="N1k-Ap-q1g"/>
                                     <constraint firstAttribute="width" constant="58" id="e1V-YM-v5O"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3CO-gG-fh7">
-                                <rect key="frame" x="54" y="320" width="52.5" height="26.5"/>
+                                <rect key="frame" x="54" y="320" width="52.333333333333343" height="26.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="0.44313725490196076" green="0.44313725490196076" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9WL-Ua-GcG">
-                                <rect key="frame" x="98" y="478" width="124" height="50"/>
+                                <rect key="frame" x="125.66666666666669" y="688" width="124" height="50"/>
                                 <state key="normal" image="startButton"/>
                                 <connections>
                                     <action selector="startMoodumdum:" destination="NSl-2B-cpB" eventType="touchUpInside" id="IEK-K7-ofe"/>
@@ -180,12 +180,12 @@
                             <constraint firstItem="3CO-gG-fh7" firstAttribute="leading" secondItem="1Eh-46-D3l" secondAttribute="leading" constant="54" id="32o-dR-6ns"/>
                             <constraint firstItem="FaF-gx-iff" firstAttribute="leading" secondItem="1Eh-46-D3l" secondAttribute="leading" id="DCP-Bm-1cK"/>
                             <constraint firstItem="JJp-bI-VJv" firstAttribute="centerX" secondItem="str-D3-7w4" secondAttribute="centerX" id="JS0-S8-1zT"/>
+                            <constraint firstItem="JJp-bI-VJv" firstAttribute="bottom" secondItem="FaF-gx-iff" secondAttribute="bottom" constant="-50" id="Tz5-W7-A34"/>
                             <constraint firstItem="FaF-gx-iff" firstAttribute="top" secondItem="str-D3-7w4" secondAttribute="top" id="Uk0-pq-vWC"/>
                             <constraint firstItem="FaF-gx-iff" firstAttribute="trailing" secondItem="1Eh-46-D3l" secondAttribute="trailing" id="bJq-7r-ZPO"/>
                             <constraint firstItem="9WL-Ua-GcG" firstAttribute="centerX" secondItem="str-D3-7w4" secondAttribute="centerX" id="btz-te-ZPW"/>
                             <constraint firstItem="3CO-gG-fh7" firstAttribute="top" secondItem="FaF-gx-iff" secondAttribute="bottom" constant="44" id="hEC-HR-CtG"/>
                             <constraint firstItem="1Eh-46-D3l" firstAttribute="bottom" secondItem="9WL-Ua-GcG" secondAttribute="bottom" constant="40" id="tOW-DT-MAH"/>
-                            <constraint firstItem="JJp-bI-VJv" firstAttribute="top" secondItem="1Eh-46-D3l" secondAttribute="top" constant="70" id="xI8-Gw-crA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1Eh-46-D3l"/>
                     </view>

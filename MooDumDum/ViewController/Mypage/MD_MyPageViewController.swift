@@ -191,7 +191,19 @@ class MD_MyPageViewController: UIViewController, MDCanShowAlert {
             mc.setMessageBody(messageBody, isHTML: false)
             mc.setToRecipients(toRecipents)
             
-            self.present(mc, animated: true, completion: nil)
+
+            if mc == nil {
+                if let url = URL(string: "mailto:wjdgo50@gmail.com") {
+                    if #available(iOS 10.0, *) {
+                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                    } else {
+                        
+                    }
+                }
+            }else{
+                self.present(mc, animated: true, completion: nil)
+            }
+            
         })
         
         let privacyPolicy = UIAlertAction(title: "개인정보 처리방침", style: .default, handler: { (action) -> Void in

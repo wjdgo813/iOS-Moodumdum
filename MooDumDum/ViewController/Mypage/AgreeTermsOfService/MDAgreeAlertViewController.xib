@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MDAgreeAlertViewController" customModule="MooDumDum" customModuleProvider="target">
             <connections>
+                <outlet property="contentView" destination="Ish-Nk-8S9" id="jq3-a6-fGe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -149,7 +150,7 @@
                 <constraint firstItem="T5L-Wm-9G0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="O6I-fX-DRD"/>
                 <constraint firstItem="Ish-Nk-8S9" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="YsT-iX-cMi"/>
                 <constraint firstItem="Ish-Nk-8S9" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ivX-sN-n0y"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="T5L-Wm-9G0" secondAttribute="bottom" id="sDo-d1-9C6"/>
+                <constraint firstAttribute="bottom" secondItem="T5L-Wm-9G0" secondAttribute="bottom" id="sDo-d1-9C6"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="T5L-Wm-9G0" secondAttribute="trailing" id="zNZ-Xq-toS"/>
                 <constraint firstItem="T5L-Wm-9G0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="zVW-Cc-v3d"/>
             </constraints>

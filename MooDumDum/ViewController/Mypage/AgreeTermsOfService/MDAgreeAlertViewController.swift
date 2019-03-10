@@ -13,9 +13,10 @@ import Toaster
 
 class MDAgreeAlertViewController: UIViewController {
 
+    @IBOutlet weak var contentView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.contentView.layer.cornerRadius = 2.0
 
     }
     

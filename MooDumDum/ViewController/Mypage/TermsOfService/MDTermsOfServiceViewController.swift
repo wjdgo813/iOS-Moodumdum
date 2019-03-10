@@ -15,6 +15,7 @@ enum MDServiceType{
 
 class MDTermsOfServiceViewController: UIViewController {
 
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contentView: UITextView!
     var type : MDServiceType?
     
@@ -27,10 +28,10 @@ class MDTermsOfServiceViewController: UIViewController {
         
         switch type {
         case .privacyPolicy(let title, let content):
-            self.title = title
+            self.titleLabel.text = title
             self.contentView.text = content
         case .termsOfService(let title, let content):
-            self.title = title
+            self.titleLabel.text = title
             self.contentView.text = content
         }
 //        self.title = "사용자 약관동의"
