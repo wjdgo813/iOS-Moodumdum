@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import MessageUI
 
 enum MDMySelfListType {
     case MDMySelfWriteBoard
@@ -179,9 +180,18 @@ class MD_MyPageViewController: UIViewController, MDCanShowAlert {
         let cancelButton = UIAlertAction(title: "취소", style: .cancel, handler: { (action) -> Void in
         })
         
-        let developerInfo = UIAlertAction(title: "개발팀 연락처", style: .default, handler: { (action) -> Void in
-            let vc = MDDeveloperInfoViewController(nibName: "MDDeveloperInfoViewController", bundle: nil)
-            self.navigationController?.pushViewController(vc, animated: true)
+        let developerInfo = UIAlertAction(title: "의견 보내기/신고하기", style: .default, handler: { (action) -> Void in
+            let emailTitle = "무덤덤, 의견 보내기"
+            let messageBody = "소중한 의견 업데이트에 반영하겠습니다."
+            let toRecipents = ["wjdgo50@gmail.com"]
+            let mc = MFMailComposeViewController()
+            
+            mc.mailComposeDelegate = self
+            mc.setSubject(emailTitle)
+            mc.setMessageBody(messageBody, isHTML: false)
+            mc.setToRecipients(toRecipents)
+            
+            self.present(mc, animated: true, completion: nil)
         })
         
         let privacyPolicy = UIAlertAction(title: "개인정보 처리방침", style: .default, handler: { (action) -> Void in
@@ -198,8 +208,9 @@ class MD_MyPageViewController: UIViewController, MDCanShowAlert {
         
         alertController.addAction(cancelButton)
         alertController.addAction(developerInfo)
-        alertController.addAction(termsOfService)
         alertController.addAction(privacyPolicy)
+        alertController.addAction(termsOfService)
+        
         
         self.present(alertController, animated: true, completion: nil)
     }
@@ -241,6 +252,22 @@ class MD_MyPageViewController: UIViewController, MDCanShowAlert {
     
 }
 
+
+extension MD_MyPageViewController : MFMailComposeViewControllerDelegate{
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        switch result {
+        case .cancelled:
+            print("cancled")
+        case .failed:
+            print("failed")
+        case .saved:
+            print("save")
+        case .sent:
+            print("sent")
+        }
+        controller.dismiss(animated: true, completion: nil)
+    }
+}
 
 extension MD_MyPageViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

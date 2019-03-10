@@ -75,6 +75,8 @@
 		A1C60F802031E30800E858A2 /* MDCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C60F7F2031E30800E858A2 /* MDCardViewController.swift */; };
 		A1C60F822031E3C000E858A2 /* MDPullUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C60F812031E3C000E858A2 /* MDPullUpController.swift */; };
 		A1C6D5A52232C1AA00E6708A /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C6D5A42232C1AA00E6708A /* StringExtension.swift */; };
+		A1C6D5A82235352300E6708A /* MDAgreeAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C6D5A62235352300E6708A /* MDAgreeAlertViewController.swift */; };
+		A1C6D5A92235352300E6708A /* MDAgreeAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1C6D5A72235352300E6708A /* MDAgreeAlertViewController.xib */; };
 		A1C862EF20F623470053907F /* MDDeveloperInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C862ED20F623470053907F /* MDDeveloperInfoViewController.swift */; };
 		A1C862F020F623470053907F /* MDDeveloperInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1C862EE20F623470053907F /* MDDeveloperInfoViewController.xib */; };
 		A1C862F320F62D260053907F /* MDDeveloperTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C862F120F62D260053907F /* MDDeveloperTableViewCell.swift */; };
@@ -206,6 +208,8 @@
 		A1C60F7F2031E30800E858A2 /* MDCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDCardViewController.swift; sourceTree = "<group>"; };
 		A1C60F812031E3C000E858A2 /* MDPullUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDPullUpController.swift; sourceTree = "<group>"; };
 		A1C6D5A42232C1AA00E6708A /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		A1C6D5A62235352300E6708A /* MDAgreeAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDAgreeAlertViewController.swift; sourceTree = "<group>"; };
+		A1C6D5A72235352300E6708A /* MDAgreeAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MDAgreeAlertViewController.xib; sourceTree = "<group>"; };
 		A1C862ED20F623470053907F /* MDDeveloperInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDDeveloperInfoViewController.swift; sourceTree = "<group>"; };
 		A1C862EE20F623470053907F /* MDDeveloperInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MDDeveloperInfoViewController.xib; sourceTree = "<group>"; };
 		A1C862F120F62D260053907F /* MDDeveloperTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDDeveloperTableViewCell.swift; sourceTree = "<group>"; };
@@ -537,6 +541,8 @@
 		A1C6D5A32232C03400E6708A /* AgreeTermsOfService */ = {
 			isa = PBXGroup;
 			children = (
+				A1C6D5A62235352300E6708A /* MDAgreeAlertViewController.swift */,
+				A1C6D5A72235352300E6708A /* MDAgreeAlertViewController.xib */,
 			);
 			path = AgreeTermsOfService;
 			sourceTree = "<group>";
@@ -839,6 +845,7 @@
 				A1AA45C72098437100F3EBF5 /* MDWirteCategorySlideCell.xib in Resources */,
 				A1C60F76202F671C00E858A2 /* MDCategoryList.storyboard in Resources */,
 				A17E0CA520B7094600D11A68 /* moveText.gif in Resources */,
+				A1C6D5A92235352300E6708A /* MDAgreeAlertViewController.xib in Resources */,
 				A1C862FE2104961D0053907F /* MDDeclareViewController.xib in Resources */,
 				A17E0CA420B7094600D11A68 /* movePetal.gif in Resources */,
 				A1263D9F207E3E24005E15CF /* moveSplash.gif in Resources */,
@@ -1065,6 +1072,7 @@
 				A1C862FD2104961D0053907F /* MDDeclareViewController.swift in Sources */,
 				A1B75CB1203DE678008B3EBF /* MDCategoryCollectionViewCell.swift in Sources */,
 				A17AA4222215C2BB000AA905 /* UIImageView+.swift in Sources */,
+				A1C6D5A82235352300E6708A /* MDAgreeAlertViewController.swift in Sources */,
 				A1F3BF8F208CBEEC00E8F861 /* MDPickPhotoData.swift in Sources */,
 				A1C60F68202F109E00E858A2 /* OverlayView.m in Sources */,
 				BAD0E57E203E978F00D91725 /* MDCategoryDetailViewController.swift in Sources */,
@@ -1288,7 +1296,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 594TR8CRP9;
 				INFOPLIST_FILE = MooDumDum/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nexters.MooDumDum;
 				PRODUCT_MODULE_NAME = MooDumDum;
@@ -1312,7 +1320,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 594TR8CRP9;
 				INFOPLIST_FILE = MooDumDum/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nexters.MooDumDum;
 				PRODUCT_MODULE_NAME = MooDumDum;

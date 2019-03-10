@@ -47,12 +47,10 @@ class MDFirstDescriptViewController: UIViewController,UIPageViewControllerDataSo
             vc.descriptionText = (self.pageTitles[index] as? String)!
             vc.firstImage = UIImage(named: "firstBackground")
             vc.titleImage = UIImage(named: "titleImage")
-            vc.termsOfButtonImage = UIImage(named: "termsOfServiceBlack")
         case 1:
             vc.descriptionText = (self.pageTitles[index] as? String)!
             vc.firstImage = UIImage(named: "firstBackground2")
             vc.titleImage = UIImage(named: "titleImage2")
-            vc.termsOfButtonImage = UIImage(named: "termsOfServiceWhite")
         default: break
             
         }
