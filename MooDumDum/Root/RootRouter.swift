@@ -21,26 +21,24 @@ class RootRouter : MDCanShowAlert{
             if result == 404 {
                 let sb = UIStoryboard(name: "Home", bundle: nil)
                 let vc = sb.instantiateViewController(withIdentifier: "MDFirstDescriptViewController")
-                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 4, execute: {
-                    window.rootViewController = vc
-                })
+
+                window.rootViewController = vc
+                
             } else if result == 403 {
                 //이용 정지 유저
                 let sb = UIStoryboard(name: "Home", bundle: nil)
                 let vc = sb.instantiateViewController(withIdentifier: "MDFirstDescriptViewController")
-                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 4, execute: {
-                    window.rootViewController = vc
-                    self.showAlert(title: "알림", message: "이용 정지된 유저입니다. 문의 사항은 개발팀에게 연락 부탁드립니다.", confirmButtonTitle: "확인", completion: {
-                        exit(0)
-                    })
+                
+                window.rootViewController = vc
+                self.showAlert(title: "알림", message: "이용 정지된 유저입니다. 문의 사항은 개발팀에게 연락 부탁드립니다.", confirmButtonTitle: "확인", completion: {
+                    exit(0)
                 })
+                
             }else {
                 //닉네임이 있음.
                 let sb = UIStoryboard(name: "Main", bundle: nil)
                 let vc = sb.instantiateViewController(withIdentifier: "MDHomeViewController")
-                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 4, execute: {
-                    window.rootViewController = UINavigationController(rootViewController: vc)
-                })
+                window.rootViewController = UINavigationController(rootViewController: vc)
             }
         }
         
